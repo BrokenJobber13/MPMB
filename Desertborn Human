@@ -1,0 +1,36 @@
+RaceList["Desertborn Human"] = {
+
+	regExpSearch : /desertborn human/i, 
+	name : "Desertborn Human", 
+	sortname : "Desertborn Human", 
+	source : ["HB", 0],
+	plural : "Desertborns", 
+	size : 3, 
+	speed : { walk : { spd : 30, enc : 20 } },
+	languageProfs : ["Common", "From Human"], 
+	savetxt : { adv_vs : ["extreme heat"] },
+	weaponprofs : [false, false, ["scimitars", "whips", "shortbows"]],
+	armor : [true, false, false, false],
+	skills : ["Athletics"], ["Survival"],
+	age : " reach adulthood in their late teens and live around 100 years", 
+	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")",
+	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
+	heightMetric : " range from 1,5 to over 1,8 metres tall (145 + 5d8 cm)", 
+	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", 
+	improvements : "Desertborn Human: +1 Free Choice, +2 Dexerity;", 
+	scores : [0, 2, 0, 0, 0, 0], 
+	features : { "born in the desert" : { 
+
+			name : "Born in the Heat", 
+			minlevel : 1,
+			usages : 1, 
+			recovery : "long rest", 
+			tooltip : " (Born in the Desert)", //optional; the tooltip added to the entry in the Limited Feature section, this example will read "Lesser Restoration is gained from Something Catlike (Celestial Legacy)"
+			action : ["action"], //optional; adds the name of the feature to the action list when chosen. The options are "action", "bonus action", and "reaction" //the second value in the array is added as a suffix for the "name" of the feature when entered into the action field
+
+			},
+              },
+trait : "Desertborn Human (+1 Free Choice, +2 Dexerity)\nBorn in the Heat.\nYou have advantage on saving throws against extreme heat. In addition, once per long rest when you would gain a level of exhaustion, you can choose to not gain a level of exhaustion.\nDune Warrior\nWhen you score a critical hit with any of this weapons, you can roll one of the weapon ' s damage dice one additional time and add it to the extra damage of the critical hit."
+
+};
+
