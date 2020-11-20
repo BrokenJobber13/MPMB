@@ -13,7 +13,7 @@ RaceList["fishmen"] = {
 	},
 
 	languageProfs : ["Common", 1], 
-	weapons : ["Bite"], 
+	weapons : ["Sharks Bite"], 
 	vision : ["Darkvision", 60], 
 	savetxt : { 
 		adv_vs : ["on athletics in water"] 	},
