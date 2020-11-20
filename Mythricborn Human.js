@@ -9,7 +9,7 @@ RaceList["mythricborn human"] = {
 	plural : "Mythricborn Human", 
 	size : 3, 
 	speed : { 	walk : { spd : 30, enc : 20 }, },
-	languageProfs : [2, "Common", "Celestial"], 
+	languageProfs : [ "Common", "Celestial", 2], 
 	savetxt : { 	adv_vs : ["on Persuasion to Good alignments"] 	},
 	weaponprofs : [false, false, ["gladius", "spears", "claymore", "crossbow"]], 
 	skillstxt : "Choose any two skills",  
