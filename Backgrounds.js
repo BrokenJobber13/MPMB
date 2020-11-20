@@ -286,95 +286,87 @@ BackgroundList["princess"] = {
 	name : "Princess", 
 	source : ["HB", 0], 
 	skills : ["Arcana", "Performance"], 
-	gold : 20, 
-	equipleft : [ //optional; syntax is: ["description", "amount", "weight"]. Put "" if it is nothing, don't put 0
+	gold : 50, 
+	equipleft : [ 
 		["Scroll of pedigree", "", ""],
-		["Skin of fine zzar or wine", "", 5],
-	], //items as they are added to the left column of the Equipment section on the second page when selecting "Background's items and gold" from the "Add Equipment" menu.
+		["Royal signet ring", "", ""],
+	], 
 
-	equipright : [ //optional; samy syntax as "equipleft"
+	equipright : [ 
 		["Quality fine clothes", "", 2],
 		["Disguise kit", 2, 3],
 		["Belt pouch (with coins)", "", 1],
 	],
 
 	feature : "Diamond amoung the Rough", 
+	featureAlt : "Force of Personality",
 
 	trait : [
 		"I speak eloquently and correctly, and encourage others to do the same.",
 		"I am graceful in my movements and ways, almost as if performing a dance with every step.",
 		"No matter how I try and hide it, my voice commands respect.",
-		"I am very uncertain about the world and often appear timid  until I know more about it.",
+		"I am very uncertain about the world and often appear timid until I know more about it.",
 		"I yearn for adventure, and will not be stopped from experiencing all that life has to offer before I am returned to my cage.",
-		"I still enjoy a good party, and will drop everything to join in  the fun.",
+		"I still enjoy a good party, and will drop everything to join in the fun.",
 		"Animals must be able to sense my nobility. The flock to me and we sing the songs of the world together.",
-		"I prize the most handsome of clothes, but know better than to wear them in my new life"
-	], 
+		"I prize the most handsome of clothes, but know better than to wear them in my new life.",
+	],  
 
 	ideal : [
-		["Honor",
-			"Honor: I don't steal from others in the trade. (Lawful)"
+		["Equalty",
+			"Equality: I believe that in their hearts, everyone is the same. They just wear different hats. (Good)"
+		],
+		["Respect",
+			"Respect. Even in secrecy, I demand respect be given to me and to those around me. (Lawful)"
 		],
 		["Freedom",
-			"Freedom: Chains are meant to be broken, as are those who would forge them. (Chaotic)"
+			"Freedom. People should be allowed to do as they wish, regardless of station. (Chaotic)"
 		],
-		["Charity",
-			"Charity: I steal from the wealthy so that I can help people in need. (Good)"
+		["Servitude",
+			"Servitude.In time, everyone will live to serve me. For now, I gauge how best to use them. (Evil)"
 		],
-		["Greed",
-			"Greed: I will do whatever it takes to become wealthy. (Evil)"
+		["Independence",
+			"Independence. I do not wish for any obligation to be thrown at me. I simply wish to live. (Neutral)"
 		],
-		["People",
-			"People: I'm loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care. (Neutral)"
+		["Rule",
+			"Rule.I will one day rule the lands. I hope to learn all I can about them before then. (Any)"
 		],
-		["Redemption",
-			"Redemption: There's a spark of good in everyone. (Good)"
-		],
-	], //required; A list of the  ideals that can be chosen using the "Add Features" button on the second page. This list can be any length. Take note of the two-step build for every ideal, this is essential!
-
+	], 
+	
 	bond : [
-		"I'm trying to pay off an old debt I owe to a generous benefactor.",
-		"My ill-gotten gains go to support my family.",
-		"Something important was taken from me, and I aim to steal it back.",
-		"I will become the greatest thief that ever lived.",
-		"I'm guilty of a terrible crime. I hope I can redeem myself for it.",
-		"Someone I loved died because of a mistake I made. That will never happen again."
-	], //required; A list of the bonds that can be chosen using the "Add Features" button on the second page. This list can be any length.
-
+		"I greatly respect my parents, not because of their birth right but because of their accomplishments. I hope to someday meet, and then surpass, their expectations of me.",
+		"It is my tutors I have to thank for instilling a wanderlust in my heart, and I wish to continue to learn in their memory.",
+		"It was a poor merchant's child who first showed my life beyond the castle walls, and who taught me the thrill of adventure.",
+		"My older sibling got to ride off to war while I was young, and I still envy them that opportunity.",
+		"I was kidnapped as a child, and while a terrifying experience thank those responsible for showing me the world is far bigger than my own inside the castle.",
+		"I've had a fascination with the tales heroes all my life, and wish that I can one day be as great as them"
+	], 
+	
 	flaw : [
-		"When I see something valuable, I can't think about anything but how to steal it.",
-		"When faced with a choice between money and my friends, I usually choose the money.",
-		"If there's a plan, I'll forget it. If I don't forget it, I'll ignore it.",
-		"I have a \"tell\" that reveals when I'm lying.",
-		"I turn tail and run when things look bad.",
-		"An innocent person is in prison for a crime that I committed. I'm okay with that."
-	],  //required; A list of the bonds that can be chosen using the "Add Features" button on the second page. This list can be any length.
+		"I am prone to revealing my position when I do not get my way.",
+		"I prefer not to touch things, especially if they might be dirty.",
+		"I refuse to do any hard labor, and will trick or pay others to work in my place.",
+		"I will one day rule these lands. Everyone is below me.",
+		"I still enjoy a good party, and will drop everything to join in the fun. Perhaps a little too much.",
+		"I believe in excess and will spend my coin on extra food, drink and clothing",
+	],  
 
-	extra : [
-		"Select a Criminal Specialty",
-		"Blackmailer",
-		"Burglar",
-		"Enforcer",
-		"Fence",
-		"Highway robber",
-		"Hired killer",
-		"Pickpocket",
-		"Smuggler",
-		"Spy"
-	], //optional; the extra options the background gives on the first page of the sheet (in line Background at the top there are two drop-down menus). The first entry in this array is what is used for the mouseover text. If your background offers no extra features, simply delete this entry. Make sure that text you enter here fits into the field, or it won't look as good
 
-/* SYNTAX CHANGE v12.998 >> old syntax for 'tools' and 'languages' are no longer supported!! */
-	toolProfs : [["Musical instrument", 3], ["Thieves' tools", "Dex"]], // optional; this is an array with the tool proficiencies gained. Each entry can be its own array of 2 entries. The first entry is the name of the tool and the second entry is either 1) a number if the tool is yet to be chosen, or 2) the 3-letter ability score abbreviation if the tool is to be listed in the skill section and have a bonus calculated
-
-	languageProfs : [1, "Elvish"], // optional; this is an array of the language proficiencies gained. An entry can either be 1) a string that represents the language learned or 2) a number which is the number of language gained that can be chosen by the player
-
-	variant : ["urban bounty hunter", "pirate"], //optional; the variants this background has, using the exact names of the entry of the variant in the BackgroundSubList. If you don't want to define a variant, you can remove this line
-
-	lifestyle : "comfortable", //optional; sets the lifestyle of the sheet. Options are: "wretched", "squalid", "poor", "modest", "comfortable", "wealthy", or "aristocratic"
+	toolProfs : ["Disguise kit", "Cha"], 
+	languageProfs : ["Common", "Elven", 1], 
+	lifestyle : "aristocratic", 
 };
 
-BackgroundFeatureList["exceptional quality"] = {  //Note the use of only lower case!
-	description : "My accent, mannerisms, figures of speech all mark me as foreign. Curious glances are directed my way wherever I go. A nuisance, but I also gain the friendly interest of the curious. I can parley this attention into access I might not otherwise have, for me and my companions. Nobles, scholars, merchants, and guilds, might be among the interested.", //required; the description of the feature as it will be put on the sheet. Make sure that this fits into the field or it won't look so pretty.
+BackgroundFeatureList["diamond amoung the rough"] = {  
+	description : "Choose an alter ego. This person may not be someone that already exists. You have all the required paperwork involved in being of your alter ego's station, and have advantage on any checksinvolved in playing that person. Disguising yourself as your alter ego takes half the time necessary.", 
 
-	source : ["HB", 0], //required; the source and the page number of the feature
+	source : ["HB", 0], 
 };
+
+BackgroundFeatureList["force of personality"] = {  
+	description : "You have been told all your life that you can be whatever you wish to be, allowing your innate magical ability to fill in the gaps of knowledge. You may replace either Wisdom or Intelligence with Charisma for all features of a spellcasting class of your choice.", 
+
+	source : ["HB", 0], 
+};
+
+
