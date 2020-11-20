@@ -23,13 +23,11 @@ RaceList["succubus"] = {
 	scores : [0, 0, 0, 1, 0, 2], 
 	trait : "Succubus (+2 Charisma, +1 Intelligence)\nTraits Details here.", 
 	spellcastingAbility : 6, 
-	spellcastingBonus : { 
-		name : "Succubus Arts", 
-		spells : ["charm person"], 
-		selection : ["charm person"], 
-		times : 2, 
-		prepared : true, 
-		atwill : true, 	},
+	spellcastingBonus : {
+		name : "Succubus Arts",
+		spells : ["Charm Person"],
+		selection : ["charm person"],
+		firstCol : "atwill"	},	
 	features : { 
 		"transmorph" : { 
 			name : "Transmorph", 
