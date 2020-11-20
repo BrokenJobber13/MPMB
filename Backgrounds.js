@@ -451,3 +451,85 @@ BackgroundFeatureList["exceptional quality"] = {
 	source : ["HB", 0], 
 };
 
+
+BackgroundList["dragon slayer"] = { //Object name; Note the use of only lower case! Also note the absence of the word "var" and the use of brackets []
+	regExpSearch : /dragon slayer/i, //required; regular expression of what to look for (i.e. now it looks for any entry that has the consecutive words "where", "i", "am", and "from" in it, disregarding capitalization or words in between). If this looks too complicated, just write: /where i am from/i
+
+	name : "Dragon Slayer", //required; the name as used
+
+	source : ["HB", 0], //required; the source and the page number. "HB" stands for homebrew. See the "Complete SourceList" for an overview of sources that are already defined. Or define a new source using the "Homebrew Syntax - SourceList.js". // This can be an array of arrays to indicate the things appears in multiple sources. For example, if something appears on page 7 of the Elemental Evil Player's Companion and on page 115 of the Sword Coast Adventure Guide, use the following: [["E", 7], ["S", 115]]
+
+	skills : ["Survival", "Stealth"], 
+	gold : 15, 
+
+	equipleft : [ //optional; syntax is: ["description", "amount", "weight"]. Put "" if it is nothing, don't put 0
+		["Marked Map", "", ""],
+	], 
+
+	equipright : [ //optional; samy syntax as "equipleft"
+		["Traveller's clothes", "", 3],
+		["Belt pouch (with coins)", "", 1],
+	],
+
+	feature : "Dragon Slayer", 
+
+	trait : [
+		"I love the attention that comes with slaying dragons.",
+		"I take my time to understand the threat before making a decision.",
+		"I can't sit still knowing a dragon's lair is nearby.",
+		"I can't help but empathize with those I meet who have faced a dragon and lived to tell the tale.",
+		"I focus intently on my work resulting in terrible self awareness.",
+		"I focus so much on other's problems that I have little self awareness.",
+		"A respectable metallic dragon gave me their blessing.",
+		"I believe I am incredibly lucky to be alive after a close encounter in a dragon's lair",
+	], 
+
+	ideal : [
+		["Kindness",
+			"Kindness:  I'll help those suffering whenever I can. (Good)"
+		],
+		["Discovery",
+			"Discovery: Finding and eradicating dragon lairs is the only way we can protect ourselves."
+		],
+		["Fun",
+			"Fun: I love hunting dragons! There is nothing I would rather do."
+		],
+		["Justice",
+			"Justice: The murderous chromatics must be brought before my might."
+		],
+		["Aspiration",
+			"Aspiration: My dreams call me toward the slaying of an Ancient threat"
+		],
+		["Unity",
+			"Unity: If we don't do our part, we will be doomed to draconic servitude."
+		],
+	], 
+
+	bond : [
+		"The Dragonstalker who taught me is closer to me than family.",
+		"I know someone affected by a dragon's attack and must avenge their pain.",
+		"The first people to be hurt by dragonkind will be the common folk. I need to protect them.",
+		"A fellow Dragonstalker and I are racing to be the first to slay a powerful dragon.",
+		"I was meant to be sacrificed to a dragon and escaped.",
+		"I seek to force a dragon to serve my will.",
+	], 
+
+	flaw : [
+		"I have a hard time fitting in with civilized areas.",
+		"I long for the next test against a worthy opponent.",
+		"My belief in vengeance sometimes leads me astray.",
+		"Wide open spaces make me uncomfortable.",
+		"I am haunted by the nightmares of a dragon's attack.",
+		"All winged lizards make me uneasy no matter their size",
+	],  
+
+	toolProfs : [["Leatherworker's tools", "Int"], ["Smith's tools", "Dex"]], 
+	languageProfs : ["Common", "Draconic"], 
+	lifestyle : "comfortable", 
+};
+
+BackgroundFeatureList["dragon slayer"] = {  
+	description : "As a Dragonstalker you've picked up useful knowledge for dealing with a dragon threat. When you discover a threat you automatically recall some useful facts about the dragon type based on the information available. This can include and is not limited to historical knowledge of the dragon. If you spend 8 hours in a city you can surmise a great deal about the local area - if a dragon threat is present, what the dragon age and type.", 
+
+	source : ["HB", 0], 
+};
