@@ -533,3 +533,94 @@ BackgroundFeatureList["dragon slayer"] = {
 
 	source : ["HB", 0], 
 };
+
+
+BackgroundList["beauty"] = { 
+	regExpSearch : /beauty/i, 
+	name : "Beauty", 
+	source : ["HB", 0], 
+	skills : ["Pursasion", "Performance"], 
+	gold : 15, 
+	equipleft : [ 
+		["A Hand Miror", "", ""],
+		["Grooming kit", "", 5], 
+],
+	equipright : [ 
+		["Fine clothes", "", 2],
+		["Token of affection", "", ""],
+		["Small powder box", "", 2],
+		["Belt pouch (with coins)", "", 1],
+	],
+  
+	feature : "Enhancing Features", 
+	
+	trait : [
+		"I go to great lengths to disguise myself to stay unnoticed.",
+		"With the impractical outfits I wear into battle, it's a wonder I'm still alive.",
+		"I jump at the chance to give anyone a makeover.",
+		"There's no shame in using my charm to get my way.",
+		"I'm worried my looks intimidate people. I don't think I'm better than you, I swear!",
+		"I strike a pose at any opportunity, even in the midst of battle. I don't realize I do this.",
+		"I am stubbornly oblivious about my own attractiveness.",
+		"I can't stand grime, so I clean myself obsessively",
+	], 
+
+	ideal : [
+		["Beauty",
+			"Beauty: I want to be the embodiment of all that is beautiful. (Any)"
+		],
+		["Fun",
+			"Fun: I want to see how much my looks will let me get away with. (Chaotic)"
+		],
+		["Control",
+			"Control: I gleefully manipulate others to get my way. (Evil)"
+		],
+		["Inspiration",
+			"Inspiration: I want my presence to uplift those around me. (Good)"
+		],
+		["Expectation",
+			"Expectation: I will be exactly what society wants and needs me to be, in fashion and behavior. (Lawful)"
+		],
+		["Aspiration",
+			"Aspiration: I want to be as beautiful on the inside as I am on the outside. (Good)"
+		],
+	], 
+
+	bond : [
+		"I am a close consort to a monarch or noble and I will do whatever I can to honor them.",
+		"I am a representative of an organization hired to advertise them across the world.",
+		"No one takes me seriously as an adventurer because I'm so high-maintenance. I will prove them wrong.",
+		"An evil person took advantage of me when I was young and naive, and I want revenge.",
+		"I seek immortality so that I may stay young and beautiful forever.",
+		"My wealthy family only saved me from poverty because of my beauty, but I still owe them my life.",
+	], 
+
+	flaw : [
+		"My looks are superior, so I must be superior in every other way.",
+		"Sometimes, my fear of soiling my beauty keeps me from taking risks and doing dirty work.",
+		"I always expect other people to do things for me.",
+		"I have been used in traumatizing ways too many times for trust to come easily.",
+		"I waste my money on luxuries and pampering.",
+		"I could stare at myself in the mirror all day.",
+	],  
+
+	extra : [
+		"Select a cause of beauty",
+		"Divine Blessing, Reward",
+		"Divine Blessing, Tool",
+		"Parents made deal with demon",
+		"Genie granted wish",
+		"Granted by powerful spellcaster",
+		"Average beauty, talent for makeup",
+		"Natural Beauty",
+	], 
+	
+	languageProfs :  [2], 
+	lifestyle : "comfortable", 
+};
+
+BackgroundFeatureList["enhancing features"] = {  
+	description : "My appearance means that folk may treat me differently. They will be more willing to chat or give you special treatment. However your interactions are more likely to be mistaken as flirtatious. They may flirt, get upset at rejection, get jealous etc.", 
+
+	source : ["HB", 0], 
+};
