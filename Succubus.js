@@ -1,4 +1,4 @@
-var iFileName = "Succubus.js"; // Optional; This is how the file will be named in the sheet if you import it as a file and not copy-paste its content. Only the first occurrence of this variable will be used
+var iFileName = "Succubus.js"; 
 RequiredSheetVersion(12.999); 
 RaceList["succubus"] = { 
 	regExpSearch : /Succubus/i, 
@@ -44,7 +44,6 @@ RaceList["succubus"] = {
 				selection : ["polymorph"],
 				oncelr : true,			},
     				},
-	},
   "draining kiss" : {
 			name : "Draining Kiss",
 			minlevel : 1,
@@ -54,6 +53,6 @@ RaceList["succubus"] = {
 			tooltip : "",
 
 			action : ["action", ""], 	},
-	
+  },
 
   };
