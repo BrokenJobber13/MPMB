@@ -47,4 +47,5 @@ RaceList["cambion"] = {
 				selection : ["charm person"],
 				firstCol : "oncelr"		},
 									},
+},
 };
