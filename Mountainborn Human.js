@@ -1,4 +1,4 @@
-var iFileName = "Homebrew Syntax - RaceList.js"; // Optional; This is how the file will be named in the sheet if you import it as a file and not copy-paste its content. Only the first occurrence of this variable will be used
+var iFileName = "Mountainborn Human.js"; // Optional; This is how the file will be named in the sheet if you import it as a file and not copy-paste its content. Only the first occurrence of this variable will be used
 RequiredSheetVersion(12.999); 
 
 RaceList["mountainborn human"] = { //Object name; Note the use of only lower case! Also note the absence of the word "var" and the use of brackets []
