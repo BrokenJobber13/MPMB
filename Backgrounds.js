@@ -370,3 +370,84 @@ BackgroundFeatureList["force of personality"] = {
 };
 
 
+BackgroundList["fairy tale child"] = { 
+	regExpSearch : /fairy tale child/i, 
+	name : "Fairy Tale Child", 
+	source : ["HB", 0], 
+	skills : ["Animal Handling", "Performance"], 
+	gold : 20, 
+	equipleft : [ 
+		["Small Diary", "", ""],
+		["Nice Common Clothes", "", 2],
+	], 
+	equipright : [ 
+		["Belt pouch (with coins)", "", 1],
+	],
+
+	feature : "Little Helpers", 
+
+	trait : [
+		"I crave new experiences.",
+		"Every night, I wish upon a star.",
+		"Having full conversations with animals that can’t talk back is normal for me.",
+		"I break out into song for absolutely no reason and without warning.",
+		"Inanimate objects have names, such as ‘mister table’ or ‘missus chair’.",
+		"I often narrate my life for my own amusement",
+		"I brush my hair 100 times before bed.",
+		"I fuss over those I care about, wanting them to look their best",
+		"I blow up at the slightest insult."
+	], //required; A list of the personality traits that can be chosen using the "Add Features" button on the second page. This list can be any length.
+
+	ideal : [
+		["Optimism",
+			"Optimism : Every cloud has a silver lining. (Any)"
+		],
+		["Altruism",
+			"Altruism : Life is a wonderful gift, and it should be wonderful for everyone. (Good)"
+		],
+		["Planning",
+			"Planning : A story that lacks structure won’t have a happy ending. (Lawful)"
+		],
+		["Determinism",
+			"Determinism : We go wherever we’re fated to go, and do what we’re fated to do. (Neutral)"
+		],
+		["Control",
+			"Control : Being free means taking matters into your own hands. (Chaotic)"
+		],
+		["Reprisal",
+			"Reprisal : A bad deed deserves a cruel punishment. (Evil)"
+		],
+	], 
+
+	bond : [
+		"The despot that rules my home must be deposed once I am strong enough to face them.",
+		"I will do great things with my life to make up for the time I lost.",
+		"I was told my prince/princess would find me, but I have decided to find them first.",
+		"I will return home someday.",
+		"I have heard tales of a relative abusing the magical gifts they were given from birth. I intend to set them right.",
+		"I must find out what put me where I ended up.",
+		"There is a secret I must uncover"
+	], 
+
+	flaw : [
+		"I am quick to assume I have found my one true love.",
+		"I truly believe I am the fairest in the land.",
+		"I am royalty and believe people should treat me as such.",
+		"I talk through my decision making processes out loud",
+		"I am more concerned with aesthetics than I am practicality.",
+		"I insist on telling anyone who will listen the tale of my ‘harrowing’ childhood"
+	],  
+
+
+	toolProfs : ["Choose any 3", 3], 
+	languageProfs : ["Elvish", 1], 
+
+	lifestyle : "wealthy", 
+};
+
+BackgroundFeatureList["exceptional quality"] = {  
+	description : "Wherever there is wildlife, you are with friends. Tiny creatures will complete menial tasks for you without you even having to ask, such as setting a table or putting your coat on. You are fully in control of whether they do so or not simply by willing it. These creatures will flee if provoked or startled but are able to return quickly after it becomes safe to do so.", 
+
+	source : ["HB", 0], 
+};
+
