@@ -94,5 +94,187 @@ BackgroundList["advisor"] = { //Object name; Note the use of only lower case! Al
 BackgroundFeatureList["position of power"] = {  //Note the use of only lower case!
 	description : "Because of your position, you command a certain respect. People who both know who you are and also have a vested interested in pleasing your liege tend to give you the benefit of the doubt and will go out of their way not to draw your ire, lest they potentially incur the wrath of your superior. Others within the organization you are a part of are also likely to curry favor from you however they can. Beware, however, as there could also be some close to you who are jealous of your position and may wish for your downfall.", //required; the description of the feature as it will be put on the sheet. Make sure that this fits into the field or it won't look so pretty.
 
-	source : ["HB", 0], //required; the source and the page number of the feature
+
+BackgroundList["demon hunter"] = { 
+	regExpSearch : /demon hunter/i, 
+	name : "Demon Hunter", 
+	source : ["HB", 0], 
+	skills : ["Religion", "Survival"], 
+	gold : 15, 
+	equipleft : [ 
+		["Scroll of personal bonds", "", ""],
+		["Holy Symbol", "", ""],
+	], 
+
+	equipright : [ 
+		["Dark, common clothes with hood", "", 3],
+		["Wooden Stake", "", ""],
+		["Belt pouch (with coins)", "", 1],
+	],
+
+	feature : "Discovery", 
+
+	trait : [
+		"I am always calm, no matter what the situation. I never let my emotions control me.",
+		"I idolize a particular hero of my faith and try to live up to his example",
+		"Swift justice for all evildoers",
+		"If my foes wreak ruin on the world, it's because I failed to stop them. I must help those harmed by them.",
+		"I am incredibly slow to trust. Those who seem the fairest often have the most to hide.",
+		"I don't play attention to the risks in a situation. Never tell me the odds.",
+		"Ordinary foes might win my mercy, but my sworn enemies do not.",
+		"My qualms can’t get in the way of exterminating my foes."
+	], 
+
+	ideal : [
+		["Retribution",
+			"Retribution: I will do whatever it takes to punish those that deserve it. (Lawful)"
+		],
+		["Justice",
+			"Justice: Everyone must take responsibility for their own actions. (Lawful)"
+		],
+		["Might",
+			"Might: If I become strong enough, I can rid the world of evil once and for all. (Neutral)"
+		],
+
+		["Destiny",
+			"Destiny: No one can steer me away from my higher calling. (Neutral)"
+		],
+		["Logic",
+			"Logic: Emotions must not cloud our sense of what is right and true, or our logical thinking. (Lawful)"
+		],
+		["Independence",
+			"Independence.  I must prove I can handle myself against the forces of evil without the help of others. (Chaotic)"
+		],
+	], 
+
+	bond : [
+		"I will do my best to serve my god by punishing those that break the tenets of my religion",
+		"I have done bad things in the past, and the only way I can make up for it is to help rid the world of evil.",
+		"Everything I do is to make the world a better place for my loved ones. They likely think I am dead.",
+		"I wanted to become a paladin, but was turned down by the order. I aim to show them I am better than them.",
+		"I protect the weak by killing the threat before it gets to them",
+		"Should my discovery come to light, it might bring ruin to the world. Only I can prevent this."
+	], 
+
+	flaw : [
+		"I judge other's harshl and myself even more severely.",
+		"I am completely oblivious to the fact that my ways might be considered hypocritical.",
+		"I become obsessed with hunting my target to the detriment of everything else in my life.",
+		"I am too focused on my goal, and sometimes don't stop to consider the risks involved.",
+		"I work alone and take a long time to trust others.",
+		"The people who knew me when I was young, know of my shameful past, and I can never go home again."
+	], 
+
+	extra : [
+		"Select a Criminal Specialty",
+		"First Call",
+		"Experinced",
+		"Priest",
+		"Veteran",
+	], 
+
+	toolProfs : ["Artisan's tools", 1], 
+	languageProfs : [1, ""], 
+	lifestyle : "poor", 
+};
+
+BackgroundFeatureList["discovery"] = {  
+	description : "My lengthy contemplation over the best way to punish evil has given you access to a unique and powerful discovery. You might have found out about a unique weapon or a powerful enemy or maybe you know of a location with a hidden powerful artifact. It could be a long forgotten site of holy power that no one else has ever seen. Y ou might have uncovered a fact that has long been forgotten, or unearthed some relic infused with fiendish powers that could rewrite history . It might be information that would result in catastophic consequences in the wrong hands, so you have deicded to make sure you get to it first.", 
+
+	source : ["HB", 0], 
+};
+	
+	
+	
+
+BackgroundList["doctor"] = { 
+	regExpSearch : /doctor/i, 
+
+	name : "Doctor", 
+	source : ["HB", 0], 
+	skills : ["Persuasion", "Medicine"], 
+	gold : 15, 
+	equipleft : [ //optional; syntax is: ["description", "amount", "weight"]. Put "" if it is nothing, don't put 0
+		["Set of doctors tools", "", "1"],
+		["healers kit", "", 2],
+	], 
+	equipright : [ 
+		["Common clothes with hood", "", 3],
+		["Token from a Patient", "", ""],
+		["Belt pouch (with coins)", "", 1],
+	],
+
+	feature : "House Calls", //required; the name of the background feature as it will appear on the sheet. The feature is then retrieved from the BackgroundFeatureList, see below
+
+	trait : [
+		"I am sympathetic to anyone in pain",
+		"I have a tendency to become focused on my work to the exclusion of everything else.",
+		"When someone is injured, I will drop all other responsibilities to tend to them.",
+		"I have seen too much horror to be affected by scenes of suffering.",
+		"I am skeptical of magic, instead trusting in science.",
+		"I like to explain my theories of medicine to anyone who will listen.",
+		"I am constantly taking note of potential signs and symptoms in the people I meet.",
+		"I take every opportunity I can get to wash my hands.",
+	], 
+
+	ideal : [
+		["Empathy",
+			"Empathy. All I care about is the relief my skills bring to others. (Good)"
+		],
+		["Change",
+			"Change. Those who seek to cure must be as adaptable as those who seek to harm. (Chaotic)"
+		],
+		["Respect",
+			"Respect. The sick and dying deserve to be treated with dignity. (Good)"
+		],
+		["Greed",
+			"Greed. Those in need of my services will pay through the nose to get them. (Evil)"
+		],
+		["Efficiency",
+			"Efficiency. I must not let emotions cloud my ability to do my job. (Lawful)"
+		],
+		["Preservation",
+			"Preservation. Life must be preserved by any means. (Any)"
+		],
+	], 
+
+	bond : [
+		"I'll always remember the place where I learned my medical skills.",
+		"Nothing is more important than my patients.",
+		"I am working on a cure for the plague that decimated my home.",
+		"Someone I loved died of an illness. I want to spare others from that same fate.",
+		"I am compiling my medical discoveries in a series of tomes, which I hope will educate future generations.",
+		"I have a terminal disease and am trying to find a cure before it's too late."
+	], 
+
+	flaw : [
+		"I am haunted by the memories of every patient I could not save.",
+		"I use hard drink to numb myself to stress.",
+		"I am disgusted by the body's potential for filth and disease.",
+		"I once made a mistake that cost a patient their life. I must make sure that no one finds out.",
+		"I have a tendency to see my patients as opportunities rather than people.",
+		"I am hesitant to injure others, even in self-defense."
+	],  //required; A list of the bonds that can be chosen using the "Add Features" button on the second page. This list can be any length.
+
+	extra : [
+		"Select a Doctor Specialty",
+		"Apothecary",
+		"Battlefield medic",
+		"Dentist",
+		"Folk healer",
+		"Herbalist",
+		"Nurse",
+		"Surgeon",
+		"Veterinarian"
+	], 
+
+	toolProfs : [["Gaming Set", 1], ["Herbalism Kit", "Wis"]], 
+	languageProfs : [1, ""], 
+	lifestyle : "comfortable", 
+};
+
+BackgroundFeatureList["house calls"] = {  
+	description : "My talents make you highly sought after particularly in regions or communities with little access to medicine. Those who recognize you as a doctor may request your services, and may offer you a reward in return, should you choose to provide them. You might be able to receive free or discounted food and lodging or gain access to normally off-limits locations by leveraging your position as a healer , if your services are needed.",
+
+	source : ["HB", 0], 
 };
