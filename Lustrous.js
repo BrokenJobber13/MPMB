@@ -31,7 +31,7 @@ armorOptions : {
 	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
 	improvements : "Android: +2 Constitution, +2 Strength, +1 Intelligence;", 
 	scores : [2, 0, 2, 1, 0, 0], 
-	trait : "Android (+2 Constitution, +2 Strength, +1 Intelligence)\n   .", //required; th (note that "\n" is a line break).
+	trait : "Android (+2 Constitution, +2 Strength, +1 Intelligence)\nAndroid Nature: Because of my build, I dont need to eat or suffer exhuastion but I do need to shut down for 4hours a day.\nGem Genetics:As part of the long rest, I can comsume gems for a benefit. See table..", //required; th (note that "\n" is a line break).
 
 	abilitySave : 3,  
 	spellcastingAbility : 6, 
