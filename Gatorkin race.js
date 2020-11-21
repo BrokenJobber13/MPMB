@@ -15,18 +15,18 @@ RaceList["gatorkin"] = {
 	skillstxt : "Choose any two skills",
 	languageProfs : ["Draconic", 1],
 	weaponOptions : {
-		baseWeapon : "sharks greater bite",
-		regExpSearch : /sharks greater bite/i,
-		name : "Sharks Greater Bite",
+		baseWeapon : "gators greater bite",
+		regExpSearch : /gators greater bite/i,
+		name : "Gators Greater Bite",
 		source : ["HB", 0],
 		damage : [2, 6, "piercing"]
 	},
-	weaponsAdd : ["Sharks Greater Bite"],
+	weaponsAdd : ["Gators Greater Bite"],
 	armorOptions : {
 		regExpSearch : /^(?=.*natural)(?=.*armou?r).*$/i,
 		name : "Natural Armor",
 		source : ["V", 113],
-		ac : 13
+		ac : 15
 	},
 	armorAdd : "Natural Armor",
   	savetxt : { 
@@ -59,3 +59,17 @@ RaceList["gatorkin"] = {
 	},
 	
 };
+
+
+WeaponsList["gators greater bite"] = {
+	regExpSearch : /gators greater bite/i,
+	name : "Gators Greater Bite",
+	source : ["HB", 0],
+	list : "Natural",
+	ability : 1,
+	type : "Martial",
+	damage : [2, 6, "Piercing"],
+	range : "Melee",
+	description : "Lunge 10ft, Finesse, Brutal Reroll 1's.",
+	abilitytodamage : true,
+}; 
