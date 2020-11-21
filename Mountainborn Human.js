@@ -47,4 +47,5 @@ RaceList["mountainborn human"] = { //Object name; Note the use of only lower cas
 
 	trait : "Mountainborn Human (+1 Free Choice, +2 Strength)\nMountaineer\nWhenever you make a Strength(Athletics) check to climb rocks, you are considered proficient in the Athletics skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.\nStrong as a Rock\nYour hit point maximum increases by 1 and by 1 every time you gain a level.",
 	carryingCapacity : 2
+
 };
