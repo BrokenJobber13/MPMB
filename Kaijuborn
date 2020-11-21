@@ -9,9 +9,15 @@ Language.  Common and +1 .
 adv saves vs - frightened and charmed
 
 
-Energy  Weapon. Y ou can use your action to exhale or emitdestructive energy . Y our kaiju ancestry determines the size,shape, and damage type of the energy . When you use yourenergy weapon, each creature in the area of the exhalationmust make a saving throw , the type of which is determined byyour kaiju ancestry . The DC for this saving throw equals 8 +your Constitution modifier + your proficiency bonus. Acreature takes 2d6 damage on a failed save, and half as muchdamage on a successful one. The damage increases to 3d6 at5th level , 4d6 at 11th level , and 5d6 at 17th level . After youuse your energy weapon, you can ’ t use it again until youcomplete a short or long rest.
+Energy  Weapon. Y ou can use your action to exhale or emitdestructive energy . Y our kaiju ancestry determines the size,shape, and damage type of the energy . 
+When you use yourenergy weapon, each creature in the area of the exhalationmust make a saving throw , the type of which is determined byyour kaiju ancestry . 
+The DC for this saving throw equals 8 +your Constitution modifier + your proficiency bonus. Acreature takes 2d6 damage on a failed save, 
+and half as muchdamage on a successful one. The damage increases to 3d6 at5th level , 4d6 at 11th level , and 5d6 at 17th level . 
+After youuse your energy weapon, you can ’ t use it again until youcomplete a short or long rest.
 
-Natural  Armor .  When you aren ’ t wearing armor , your AC is13 + your Dexterity modifier . Y ou can use your natural armorto determine your AC if the armor you wear would leave youwith a lower AC. A shield’ s benefits apply as normal while youuse your natural armor .
+Natural  Armor .  When you aren ’ t wearing armor , your AC is13 + your Dexterity modifier . 
+Y ou can use your natural armorto determine your AC if the armor you wear would leave youwith a lower AC. 
+A shield’ s benefits apply as normal while youuse your natural armor .
 
 
 Godzilla Kaijuborn
@@ -28,78 +34,33 @@ but you take half of thedamage from this attack and must make a Consitution savi
 
 
 
-var iFileName = "Homebrew Syntax - RaceList.js"; // Optional; This is how the file will be named in the sheet if you import it as a file and not copy-paste its content. Only the first occurrence of this variable will be used
-RequiredSheetVersion(12.999); // Optional; This is the minimum required version number of the sheet for the script to work. If the sheet being used to import the script is of an earlier version, the user will be warned
+var iFileName = "Kaijuborn.js"; 
+RequiredSheetVersion(12.999); 
 
-RaceList["kaijuborn"] = { //Object name; Note the use of only lower case! Also note the absence of the word "var" and the use of brackets []
+RaceList["kaijuborn"] = { 
+	regExpSearch : /kaijuborn/i, 
+	name : "Kaijuborn", 
+	sortname : "Kaijuborn", 
+	source : ["HB", 0], 
+	plural : "Kaijuborn", 
+	size : 3, 
+	speed : { 
+		walk : { spd : 30, enc : 20 }, 
+		swim : { spd : "30", enc : "20" }, 	},
 
-	regExpSearch : /^(?=.*something)(?=.*catlike).*$/i, //required; regular expression of what to look for (i.e. now it looks for any entry that has both the words "something" and "catlike" in it, disregarding capitalization). If this looks too complicated, just write: /something catlike/i
+	languageProfs : ["Common", 1], 
+	addarmor : "Natural Armor", 
+	vision : ["Darkvision", 60], 
 
-	name : "Something Catlike", //required; the name to use for the race
+	savetxt : { 
+		adv_vs : ["frightened", "charmed"] 	},
 
-	sortname : "Catlike, Something", //optional; this is the name used to fill the drop-down boxes. If you don't include this, the 'name' will used instead
-
-	source : ["HB", 0], //required; the source and the page number. "HB" stands for homebrew. See the "Complete SourceList" for an overview of sources that are already defined. Or define a new source using the "Homebrew Syntax - SourceList.js". // This can be an array of arrays to indicate the things appears in multiple sources. For example, if something appears on page 7 of the Elemental Evil Player's Companion and on page 115 of the Sword Coast Adventure Guide, use the following: [["E", 7], ["S", 115]]
-
-	plural : "Somethings Catlike", //required; the name to use for the race when the plural form is used
-
-	size : 3, //required;  the size of the race (Gargantuan = 0, Huge = 1, Large = 2, Medium = 3, Small = 4, Tiny = 5)
-
-	speed : { //required; This sets a value for one or more speed modes, and/or a value to be added to a specific speed mode or to all speed modes // the attributes of this object can be "walk", "burrow", "climb", "fly", "swim", and "allModes"
-
-		// all of the following attributes are optional and you can add more ("burrow" isn't part of this example!)
-
-		walk : { spd : 30, enc : 20 }, // the objects "walk", "burrow", "climb", "fly", "swim" are all the same, they are an object with two attributes, 'spd' for the speed in feet, and 'enc' for the encumbered speed in feet.
-
-		climb : { spd : "+50", enc : 0 }, // instead of numbers, you can also have modifiers. Modifiers are a string, starting with a mathematical operator, followed by a number (e.g. "-10", "+20"). // a value that is zero is ignored
-
-		fly : { spd : "walk", enc : 0 }, // instead of a number/modifier, you can also set the attribute to "walk". This makes the speed mode assume the walking speed // Using an underscore as the first character means the value is only added if the value would be non-zero
-
-		swim : { spd : "fixed 60", enc : "fixed 60" }, // if you include the word "fixed" together with a number, the movement mode will be that number, without any modifiers from other sources (like the Monk's speed bonus). However, if another entry that isn't 'fixed' does end up with a higher total while including any modifiers, that speed is used instead
-
-		allModes : "+10" // the 'allModes' attribute can only consist of a modifier. This modifier is applied to all speed modes, both normal and encumbered. It is only applied if the speed mode exists, it won't give the character a burrow speed if it would otherwise have none, for example
-	},
-
-/* SYNTAX CHANGE v12.998 >> old syntax for 'tools' and 'languages' are no longer supported!! */
-	toolProfs : [["Musical instrument", 3], ["Thieves' tools", "Dex"], "Tinker's tools"], // optional; this is an array with the tool proficiencies gained. Each entry can be its own array of 2 entries (but doesn't have to be). The first entry is the name of the tool and the second entry is either 1) a number if the tool is yet to be chosen, or 2) the 3-letter ability score abbreviation if the tool is to be listed in the skill section and have a bonus calculated
-
-	languageProfs : [1, "Elvish"], // optional; this is an array of the language proficiencies gained. An entry can either be 1) a string that represents the language learned or 2) a number which is the number of language gained that can be chosen by the player
-
-	weapons : ["talons"], //optional; an array of weapons that are added to the attacks section; This will be the name of the weapon how it appears in the attack section, not necessarily the object name in the WeaponsList
-
-	addarmor : "Natural Armor", //optional; a string of the name of the armour that is literally put in the Armor Description field when the class feature is applicable, and removed if not
-
-	vision : [["Darkvision", 60], ["Sunlight Sensitivity", 0]], //optional; An array of arrays that each have a length of 2; This adds the first value of each array to the Senses field. The second value is the range in feet. If no range is needed, put a 0 there. You can also add a modifier like "+30" or "*2" to have the appropriate calculation done with the range of sense
-
-	dmgres : ["Necrotic", "Radiant"], //optional; damage resistance(s) the race has. This line can be deleted if you don't have anything to put here // If the resistance has a condition attached to it, like only being against nonmagical attacks, substitute the entry in the array with an array of 2: [the damage type, the damage type with the condition]. // For example: [["Bludgeoning", "Bludg. (nonmagical)"], ["Piercing", "Pierc. (nonmagical)"], ["Slashing", "Slash. (nonmagical)"]]
-
-	savetxt : { // Optional; this attribute defines entries to add to the field for "Saving Throw Advantages / Disadvantages"
-
-		text : ["Dex save vs. area effects: fail \u2015 half dmg, success \u2015 no dmg", "Magic can't put me to sleep"], // Optional; this is an array of strings, and each of those strings is added to the field exactly as presented here
-
-		immune : ["poison", "disease"], // Optional; this is an array of strings that the character is immune to. This is put in the field after the text "Immune to ", so in this example it would result in "Immune to poison and disease"
-
-		adv_vs : ["traps", "charmed"] // Optional; this is an array of things that the character has advantage on saves against. This is put in the field after the text "Adv. on saves vs. ", so in this example it would result in "Adv. on saves vs. traps and charmed"
-	},
-
-	weaponprofs : [false, false, ["longsword", "shortsword", "longbow", "shortbow"]], //optoinal; Weapon proficiencies the race has. This line can be deleted if you don't have anything to put here //the 3 entries are for: ["simple", "martial", "other"]
-
-	armor : [false, false, false, true], //optoinal; Armour proficiencies the race has. This line can be deleted if you don't have anything to put here //the 4 entries are for proficiency in: ["light", "medium", "heavy", "shields"]
-
-	skills : ["Perception", "Deception"], //optional; Skill proficiencies the race has. This line can be deleted if you don't have anything to put here. If the race doesn't give fixed proficiencies, but instead gives a choice, delete this line and use the line below, "skillstxt"
-
-	skillstxt : "Choose any two skills",  //optional; Skill proficiencies the race has. This line can be deleted if you don't have anything to put here. If the race only gives fixed skill proficiencies (no choices), then delete this line and only use "skills" above
-
-	age : " reach adulthood in their late teens and live around 100 years", //optional; the age tooltip/mouseover text (will be displayed in combination with the "plural" entry)
-
-	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", //optional; the height tooltip/mouseover text (will be displayed in combination with the "plural" entry)
-
-	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", //optional; the weight tooltip/mouseover text (will be displayed in combination with the "plural" entry)
-
-	heightMetric : " range from 1,5 to over 1,8 metres tall (145 + 5d8 cm)", //optional; the height tooltip/mouseover text (will be displayed in combination with the "plural" entry), when the metric system is chosen
-
-	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", //optional; the weight tooltip/mouseover text (will be displayed in combination with the "plural" entry), when the metric system is chosen
-
+	skillstxt : "Choose any two skills",  
+	age : " Their life span is unknown. Kaijuborn have beenknown to live for as long as the true dragons, if not longer. They reach maturity around 100 years old", 
+	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", 
+	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
+	heightMetric : " range from 1,5 to over 1,8 metres tall (145 + 5d8 cm)", 
+	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", 
 	improvements : "Something Catlike: +1 Dexterity, +2 Wisdom;", //required; the text that is displayed when listing all the ability score improvements
 
 	scores : [0, 1, 0, 0, 2, 0], //required; the ability score improvements as used by the Ability Score dialog. The syntax is: [Str, Dex, Con, Int, Wis, Cha]
