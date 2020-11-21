@@ -28,12 +28,13 @@ RaceList["cambion"] = {
 
 	spellcastingAbility : 6, 
 	spellcastingBonus : {
-		name : "Fiend Magic (level 1)",
+		name : "Fiend Magic",
 		spells : ["Fire Bolt"],
 		selection : ["fire bolt"],
-		firstCol : "atwill"
-	},
-
+		times : 2, 
+		prepared : true, 
+		atwill : true, },
+	
 		features : {
 		"charm person" : {
 			name : "Fiend Magic (level 3)",
