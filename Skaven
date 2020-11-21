@@ -1,81 +1,22 @@
-Abi l i ty  Score  Increase.  Y our Dexterity score increases by 2 .
-Age.  Skaven reach adulthood in one year , and rarely live longer than 30 years.
-Al i gnment.  Growing up in Skaven culture makes it so that
-most Skaven are of the chaotic evil alignment. Skaven
-believe the world to be theirs, and that their race is
-superior to all others. Skaven are generally very focused on
-their own survival and care little about their peers.
 
-Disease  Resistant.  The majority of Skaven live in a highly unsanitary environment, so their bodies have adapted . Y ou have advantage on saving throws to resist the effects of disease.
-Keen  Smel l .  Y ou have advantage on Wisdom (Perception) checks that rely on smell .
-Fl exi bl e  Bones.  Skaven can manoeuvre through cramped spaces with relative ease. Y ou can move through small sized spaces as if you were small size.
-Si ze.  Skaven stand between 4 and 5 feet tall and average about 40 pounds. Y our size is medium.
-Speed .  Y our base walking speed is 30 feet.
-Superi or Darkvi si on.  Y ou have darkvision in a radius of 120 feet.
-Swim.  Y ou have a swimming speed of 30 feet. Skaven excrete a nearly waterproof oil from their skin that allows them to glide through the water with very little resistance.
-Languages.  Y ou can speak, read and write Common and Queekish.
-Subrace.  There are three varieties of Skaven, from which you must choose.
+var iFileName = "Homebrew Syntax - RaceList.js"; 
+RequiredSheetVersion(12.999); 
 
-Brownfur
-Most Skaven have brown, dirty and greasy fur . They are incredibly numerous, and live in a ruthless environment. All kinds of Skaven are dead set on advancing their own
-interest. F or brownfurs, that rarely means anything more than getting to live another day .
-Abi l i ty  Score  Increase.  Y our Wisdom score increases by 1 .
-Smel l   Emoti on.  When a creature experiences a certain emotion, it sometimes produces a scent that Skaven can pick up on and recognize. Y ou have advantage on Wisdom
-(Insight) checks to determine what emotion a creature is experiencing.
+RaceList["Skaven"] = { 
+	regExpSearch : /Skaven/i, 
+	name : "Skaven", 
+	source : ["HB", 0], 
+	plural : "Skaven", 
+	size : 3, 
+	speed : { 
+		walk : { spd : 30, enc : 20 }, 
+		swim : { spd : "30", enc : "20" }, 	},
 
-Blackfur
-Black fur is seen by Skaven society as the mark of a true killer . Elite Skaven troops tend to only recruit blackfurs. The association between black fur and strength
-is so strong that the rare brownfurs that do make it into elite forces die their fur black as a badge of honour .
-Abi l i ty  Score  Increase.  Y our Strength score increases by 1 .
-T rue Ki l l er .  Y our teeth and claws are honed for killing. Y ou are proficient with your unarmed strikes, which deal 1d6 slashing or piercing damage on a hit.
-
-Greyfur
-Skaven with grey or white fur are destined to become the priests and magicians of Skaven society . Albinos are regarded highest of all and will often become royal guards.
-It is considered very unwise for a Skaven ruler not to heed the council of the greyfurs around him. As a result, greyfur elites tend to be the de facto rulers of Skaven society
-unless an exceptionally strong leader holds power .
-Abi l i ty  Score  Increase.  Y our Intelligence score increases by 1 .
-Oi l  Magi c.  When you reach 3rd level , you gain the ability to cast grease once with this trait, and you regain the ability to cast it when you finish a long rest.
-
-
-var iFileName = "Homebrew Syntax - RaceList.js"; // Optional; This is how the file will be named in the sheet if you import it as a file and not copy-paste its content. Only the first occurrence of this variable will be used
-RequiredSheetVersion(12.999); // Optional; This is the minimum required version number of the sheet for the script to work. If the sheet being used to import the script is of an earlier version, the user will be warned
-
-RaceList["something catlike"] = { //Object name; Note the use of only lower case! Also note the absence of the word "var" and the use of brackets []
-
-	regExpSearch : /^(?=.*something)(?=.*catlike).*$/i, //required; regular expression of what to look for (i.e. now it looks for any entry that has both the words "something" and "catlike" in it, disregarding capitalization). If this looks too complicated, just write: /something catlike/i
-
-	name : "Something Catlike", //required; the name to use for the race
-
-	sortname : "Catlike, Something", //optional; this is the name used to fill the drop-down boxes. If you don't include this, the 'name' will used instead
-
-	source : ["HB", 0], //required; the source and the page number. "HB" stands for homebrew. See the "Complete SourceList" for an overview of sources that are already defined. Or define a new source using the "Homebrew Syntax - SourceList.js". // This can be an array of arrays to indicate the things appears in multiple sources. For example, if something appears on page 7 of the Elemental Evil Player's Companion and on page 115 of the Sword Coast Adventure Guide, use the following: [["E", 7], ["S", 115]]
-
-	plural : "Somethings Catlike", //required; the name to use for the race when the plural form is used
-
-	size : 3, //required;  the size of the race (Gargantuan = 0, Huge = 1, Large = 2, Medium = 3, Small = 4, Tiny = 5)
-
-	speed : { //required; This sets a value for one or more speed modes, and/or a value to be added to a specific speed mode or to all speed modes // the attributes of this object can be "walk", "burrow", "climb", "fly", "swim", and "allModes"
-
-		// all of the following attributes are optional and you can add more ("burrow" isn't part of this example!)
-
-		walk : { spd : 30, enc : 20 }, // the objects "walk", "burrow", "climb", "fly", "swim" are all the same, they are an object with two attributes, 'spd' for the speed in feet, and 'enc' for the encumbered speed in feet.
-
-		climb : { spd : "+50", enc : 0 }, // instead of numbers, you can also have modifiers. Modifiers are a string, starting with a mathematical operator, followed by a number (e.g. "-10", "+20"). // a value that is zero is ignored
-
-		fly : { spd : "walk", enc : 0 }, // instead of a number/modifier, you can also set the attribute to "walk". This makes the speed mode assume the walking speed // Using an underscore as the first character means the value is only added if the value would be non-zero
-
-		swim : { spd : "fixed 60", enc : "fixed 60" }, // if you include the word "fixed" together with a number, the movement mode will be that number, without any modifiers from other sources (like the Monk's speed bonus). However, if another entry that isn't 'fixed' does end up with a higher total while including any modifiers, that speed is used instead
-
-		allModes : "+10" // the 'allModes' attribute can only consist of a modifier. This modifier is applied to all speed modes, both normal and encumbered. It is only applied if the speed mode exists, it won't give the character a burrow speed if it would otherwise have none, for example
-	},
-
-/* SYNTAX CHANGE v12.998 >> old syntax for 'tools' and 'languages' are no longer supported!! */
-	toolProfs : [["Musical instrument", 3], ["Thieves' tools", "Dex"], "Tinker's tools"], // optional; this is an array with the tool proficiencies gained. Each entry can be its own array of 2 entries (but doesn't have to be). The first entry is the name of the tool and the second entry is either 1) a number if the tool is yet to be chosen, or 2) the 3-letter ability score abbreviation if the tool is to be listed in the skill section and have a bonus calculated
-
-	languageProfs : [1, "Elvish"], // optional; this is an array of the language proficiencies gained. An entry can either be 1) a string that represents the language learned or 2) a number which is the number of language gained that can be chosen by the player
-
-	weapons : ["talons"], //optional; an array of weapons that are added to the attacks section; This will be the name of the weapon how it appears in the attack section, not necessarily the object name in the WeaponsList
-
+	toolProfs : ["Mason's tool or Tinkers", 1], 
+	languageProfs : ["Skaven", "Undercommon"], 
+	weapons : ["Skaven Bite", "Skaven Claws], 
+	
+	
 	addarmor : "Natural Armor", //optional; a string of the name of the armour that is literally put in the Armor Description field when the class feature is applicable, and removed if not
 
 	vision : [["Darkvision", 60], ["Sunlight Sensitivity", 0]], //optional; An array of arrays that each have a length of 2; This adds the first value of each array to the Senses field. The second value is the range in feet. If no range is needed, put a 0 there. You can also add a modifier like "+30" or "*2" to have the appropriate calculation done with the range of sense
@@ -217,3 +158,29 @@ RaceList["something catlike"] = { //Object name; Note the use of only lower case
 	}
 
 };
+
+WeaponsList["skaven bite"] = { 
+	regExpSearch : /skaven bite/i, 
+	name : "Skaven Bite", 
+	source : ["HB", 0], 
+	list : "melee", 
+	ability : 1, 
+	type : "Natural", 
+	damage : [1, 6, "piercing"], 
+	range : "Melee", 
+  description : "Brutal: Reroll 1's. Target-DC15 Con save or take 1d6poison damage.", 
+	abilitytodamage : true, 
+	modifiers : [1, 1], 
+};
+WeaponsList["skaven claws"] = { 
+	regExpSearch : /skaven claws/i, 
+	name : "Skaven Claws", 
+	source : ["HB", 0], 
+	list : "melee", 
+	ability : 1, 
+	type : "Natural", 
+	damage : [1, 6, "slashing"], 
+	range : "Melee", 
+	description : "Light. Concealed", 
+	abilitytodamage : true, 
+	modifiers : [1, 1], 
