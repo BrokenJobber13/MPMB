@@ -10,7 +10,7 @@ RaceList["cambion"] = {
 	size : 3, 
 	speed : { 
 		walk : { spd : 30, enc : 20 }, 
-		fly : { spd : "walk", enc : 0 }, 	},
+		fly : { spd : 30, enc : 20 }, 	},
 	languageProfs : [ "Common", "Abyssal", "Infernal"], 
 	vision : ["Darkvision", 120], 
 	dmgres : ["Necrotic"], 
