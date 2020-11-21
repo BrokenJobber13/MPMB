@@ -43,15 +43,11 @@ RaceList["lizardfolk blackscale"] = {
 			usages : 1,
 			recovery : "short rest",
 		},
-		"aggressive" : {
-			name : "Aggressive",
-			minlevel : 1,
-			usages : 1,
-			recovery : "short rest",
-			action : ["bonus action", ""],
-		}
+		
 	},
-	trait : "Lizardfolk Blackscale (+2 Constitution, +1 Strength) Bite: I can use my fanged maw to make unarmed strikes dealing 1d6 piercing damage." + (typePF ? "\n" : " ") + "Cunning Artisan: As part of a short rest I can harvest parts of a slain creature to make a shield, club, javelin, or 1d4 darts/blowgun needles. This requires a suitable corpse and appropriate tools." + (typePF ? "\n" : " ") + "Hold Breath: I can hold my breath for up to 15 minutes at a time." + (typePF ? "\n" : " ") + "Natural Armor: I have an AC of 13 + Dexterity modifier + shield." + (typePF ? "\n" : " ") + "Acid Resistance – You have resistance to acid damage.\nAggressive – as a bonus action, you can move up to your speed toward an enemy of you choice that you can see or hear. You must end this move closer to the enemy than you started.\nPowerful build – You count as one size larger."
+	trait : "Lizardfolk Blackscale (+2 Constitution, +1 Strength) Bite: I can use my fanged maw to make unarmed strikes dealing 1d6 piercing damage." + (typePF ? "\n" : " ") + "Cunning Artisan: As part of a short rest I can harvest parts of a slain creature to make a shield, club, javelin, or 1d4 darts/blowgun needles." + (typePF ? "\n" : " ") + "Hold Breath: I can hold my breath for up to 15 minutes at a time." + (typePF ? "\n" : " ") + "Natural Armor: I have an AC of 13 + Dexterity modifier + shield." + (typePF ? "\n" : " ") + "Acid Resistance – You have resistance to acid damage.\nPowerful Build: I count as one size larger when determining my carrying capacity and the weight I can push, drag, or lift.\n\nAggressive: As a bonus action, I can move up to my speed toward an enemy that I can see or hear. I must end my move closer to this enemy than I started.",
+	action : ["bonus action", "Aggressive (dash to enemy)"],
+	carryingCapacity : 2
 };
 
 
