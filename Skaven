@@ -16,6 +16,8 @@ RaceList["Skaven"] = {
 	languageProfs : ["Skaven", "Undercommon"], 
 	weapons : ["Skaven Bite", "Skaven Claws], 
 	
+		weaponsAdd : ["Taxabi Claws"],
+	
 	
 	addarmor : "Natural Armor", //optional; a string of the name of the armour that is literally put in the Armor Description field when the class feature is applicable, and removed if not
 
