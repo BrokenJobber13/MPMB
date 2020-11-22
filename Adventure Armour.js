@@ -2,6 +2,43 @@ var iFileName = "Adventure Armour.js";
 RequiredSheetVersion(12.999); 
 
 
+
+
+ArmourList["dragon scale"] = { 
+	regExpSearch : /Dragon Scale/i, 
+	name : "Dragon Scale", 
+	source : ["HB", 0], 
+	type : "heavy", 
+	ac : 18, 
+	stealthdis : true, 
+	weight : 60, 
+	strReq : 14, 
+	invName : "Dragon Scale", 
+};
+
+ArmourList["shinobi jacket"] = { 
+	regExpSearch : /Shinobi Jacket/i, 
+	name : "Shinobi Jacket", 
+	source : ["HB", 0], 
+	type : "medium", 
+	ac : 13, 
+	dex : 3,
+	stealthdis : false, 
+	weight : 20, 
+	strReq : 12, 
+	invName : "Shinobi Jacket", 
+};
+ArmourList["full samurai armour"] = { 
+	regExpSearch : /Full Samurai Armour/i, 
+	name : "Full Samurai Armour", 
+	source : ["HB", 0], 
+	type : "heavy", 
+	ac : 18, 
+	stealthdis : true, 
+	weight : 50, 
+	strReq : 15, 
+	invName : "Full Samurai Armour", 
+};
 ArmourList["bronze cuirass"] = { 
 	regExpSearch : /Bronze Cuirass/i, 
 	name : "Bronze Cuirass", 
