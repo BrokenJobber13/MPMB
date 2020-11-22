@@ -1,0 +1,81 @@
+var iFileName = "Weapons v13.js";
+
+WeaponsList["sword of purple"] = {
+
+	name : "Sword of Purple",
+	source : ["HB", 0],
+	defaultExcluded : true,
+
+	regExpSearch : /    /i,
+	type : "Martial",
+/*	type // REQUIRED //
+	
+		"AlwaysProf"		// none of the other types apply, always proficient
+		"Natural"			// natural weapons (always proficient)
+		"Simple"			// simple weapons
+		"Martial"			// martial weapons
+		"Cantrip"			// cantrips (always proficient)
+		"Spell"				// 1st-level and higher spells (always proficient)
+		"Improvised Weapons"// improvised weapons such as vial of acid
+	   Firearms?
+     
+	ability : 1,
+	TYPE:	number corresponding to the ability score (1 = Str, 2 = Dex, 3 = Con, 4 = Int, 5 = Wis, 6 = Cha)
+
+	abilitytodamage : true,
+  
+	damage : [2, 4, "piercing"],
+			"acid", "bludgeoning", "cold", "fire", "force", "lightning", "necrotic",
+			"piercing", "poison", "psychic", "radiant", "slashing", and "thunder"
+	
+	range : "Melee, 20/60 ft",
+	For short- and long ranges, use the notation [short]/[long] [unit]."Melee".
+*/
+	description : "Finesse, light",
+
+*/
+	list : "melee",
+
+		"melee"		// melee weapons
+		"ranged"	// ranged weapons
+		"spell"		// cantrips and spells
+		"improvised"// improvised weapons such as vial of acid
+	If you use any other string than the four options given above,
+	the weapon will appear at the end of the drop-down options.
+	The 'list' attribute is ignored for WeaponsList objects used in the 'weaponOptions' attribute.
+	Instead, all things added using the 'weaponOptions' attribute will always be added at the top of the drop-down field.
+*/
+	weight : 24,
+
+	modifiers : [1, ""],
+
+	isMagicWeapon : true,
+/*	isMagicWeapon // OPTIONAL //
+	TYPE:	boolean
+	USE:	whether (true) or not (false) this weapon is a magical weapon
+	This attribute only has an effect for attack calculations and magic item selection.
+	Add this if you don't want class features and the like to add modifiers or write "Counts as magical" in the description of this attack.
+	Also add this if you don't want this weapon to be an option for magical weapons to add their attributes to.
+	Note that if you set the 'type' attribute to "Cantrip" or "Spell", it will already be treated as a magical attack.
+	Weapons added by magic items using the 'weaponOptions' attribute will always have this attribute added and set to 'true'.
+	Setting this to false is the same as not including this attribute.
+*/
+	isAlwaysProf : true,
+/*	isAlwaysProf // OPTIONAL //
+	TYPE:	boolean
+	USE:	whether (true) or not (false) the proficiency bonus should always be added for this weapon
+	This attribute only has an effect if the character would otherwise not be proficient with this weapon.
+	Add this for weapons where the normal way of determining proficiency would not produce the correct result.
+	For example, if you set 'type' above to 'Cantrip', setting this to 'true' will have no effect.
+	Another example, if you set 'type' above to 'Simple', setting this to 'true' will add proficiency
+	even if the character is not proficient with simple weapons (or has the weapon listed in 'other weapon proficiencies').
+	Setting this to false is the same as not including this attribute.
+*/
+	ammo : "bolt",
+ "arrow", "bolt", "bullet", "dagger", "dart", "flask", "axe", "javelin",
+	"hammer", "needle", "spear", "trident", and "vial" [note the use of only lower case!].
+	This list of options can be greater if you add another AmmoList object using the "ammunition (AmmoList).js" syntax file.
+	
+
+
+}
