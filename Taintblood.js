@@ -8,13 +8,11 @@ RaceList["Taintblood Devil"] = {
 	size : 3, 
 	speed : { 
 		walk : { spd : 30, enc : 20 }, 	},
-
 	languageProfs : ["Common", "Infernal"], 
 	vision : ["Darkvision", 30], 
 	dmgres : ["Poison"], 
 	savetxt : { 
 		text : ["Adv on social checks with demons.", "Disadv on social checks demons make on me."], 	},
-
 	age : " A taintblood lives for about two centuries, reaching maturity at the age of 20", 
 	height : " range from 5 to over 7 feet tall (4'9\" + 2d8\")", 
 	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
@@ -22,13 +20,8 @@ RaceList["Taintblood Devil"] = {
 	scores : [0, 2, 0, 0, 0, 1], 
 	trait : "Taintblood Devil (+2 Dexterity, +1 Charisma)\nHeritage:\nI bear a mark on my body from my evil parent\nMask of the Taint:\nI can make minor changes to my looks like having normal eyes, hide teeth to appear human.\nPoisonous Veins: If a creature consumes my blood, it takes a Con save throw DC8+Prof+Spellcasting ability mod.\n on fail is Poisoned for 1min, also 2d6 damage a start of turn, target can repeat at end of their turn.", 
 	abilitySave : 5,  
-	},
 };
 
-
-
-var iFileName = "Taintblood Demon.js"; 
-RequiredSheetVersion(12.999); 
 RaceList["taintblood demon"] = { 
 	regExpSearch : /Taintblood Demon/i, 
 	name : "Taintblood Demon", 
