@@ -5,7 +5,6 @@ WeaponsList["sword of purple"] = {
 	name : "Sword of Purple",
 	source : ["HB", 0],
 	defaultExcluded : true,
-
 	regExpSearch : /    /i,
 	type : "Martial",
 /*	type // REQUIRED //
@@ -75,7 +74,133 @@ WeaponsList["sword of purple"] = {
  "arrow", "bolt", "bullet", "dagger", "dart", "flask", "axe", "javelin",
 	"hammer", "needle", "spear", "trident", and "vial" [note the use of only lower case!].
 	This list of options can be greater if you add another AmmoList object using the "ammunition (AmmoList).js" syntax file.
+}
+
+
+
+var iFileName = "Homebrew Syntax - ToolsList.js";
+RequiredSheetVersion("13");
+
+ToolsList["purplemancer's tools"] = {
+	infoname : "Purplemancer's tools [500 gp]",
+	name : "Purplemancer's tools",
+	amount : "",
+	weight : 12,
+	type : "artisan's tools",
+		source : ["HB", 0], };
+/*
+		"artisan's tools"
+		"gaming set"
+		"musical instrument"
+		"New subset x2 min" *\
+	
+
+var iFileName = "Homebrew Syntax - GearList.js";
+RequiredSheetVersion("13");
+
+GearList["purple bullets"] = {
+	infoname : "Bullets, Purple (10) [5 sp]",
+	name : "Purple Bullets",
+	amount : 10,
+	weight : 0.05,
+	type : "ammunition",
+	source : ["HB", 0],
+}
+/*
+		"ammunition"
+		"arcane focus"
+		"clothes"
+		"druidic focus"
+		"holy symbol"
+		"saddle"
+		"new subset x2 min
+*/
 	
 
 
+
+var iFileName = "Homebrew Syntax - PacksList.js";
+RequiredSheetVersion("13");
+
+PacksList["purplepack"] = {
+	name : "Purple pack (10 gp)",
+	source : ["HB", 0],
+	items : [
+		["Backpack, with:", "", 5],
+		["Rations, days of", 5, 2],
+		["Tinderbox", "", 1],
+		["Waterskin", "", 5],
+		["Hempen rope, feet of", 50, 0.2]
+	]
 }
+
+
+
+
+var iFileName = "Homebrew Syntax - AmmoList.js";
+RequiredSheetVersion("13");
+
+AmmoList["purple bullets"] = {
+	name : "Purple Bullets",
+	source : ["HB", 0],
+	defaultExcluded : true,
+	icon : "Bullets",
+	weight : 24,
+	isMagicAmmo : true,
+}
+
+/*
+		"Arrows" default
+		"Axes"
+		"Bullets"
+		"Daggers"
+		"Flasks"
+		"Hammers"
+		"Spears"
+		"Vials" */
+	
+
+
+
+
+
+var iFileName = "Homebrew Syntax - ArmourList.js";
+RequiredSheetVersion("13");
+
+ArmourList["purple mail"] = {
+	name : "Purple Mail",
+	source : ["HB", 0],
+	defaultExcluded : true,
+	regExpSearch : /purple mail/i,
+	ac : 12,
+	type : "heavy",
+	dex : 3,
+	stealthdis : true,
+	addMod : true,
+	weight : 24,
+	strReq : 15,
+}	
+/*	dex // OPTIONAL //
+	TYPE:	number
+	USE:	the maximum Dexterity modifier that can be added to the AC with this armour
+	When you set this attribute to -10, the sheet will never add the Dexterity modifier to AC, regardless of its value.
+	Doing so essentially works the same as the rules for heavy armour.
+	Note that this is normally determined by the 'type' attribute set above.
+	For example, if you set the 'type' to "medium", the max Dex mod is 2.
+	And when you set the 'type' to "heavy", the Dex mod added to AC is always 0.
+	Simply don't include this attribute if the max Dex mod is determined by the armour type or if there is no limit.
+*/
+	
+/*	addMod // OPTIONAL //
+	TYPE:	boolean
+	USE:	set to 'true' if the armour can have a secondary ability score modifier added to the AC
+	This secondary ability score is taken from the name of the armour.
+	If the name includes, in brackets the three-letter abbreviation of an ability score
+	or "Prof" for the proficiency bonus, that modifier will be added to the AC total.
+	For example, if this attribute is true and the name is "Purple Mail (Con)",
+	the total AC will the AC of this armour + the Dex mod + the Con mod.
+	Even if this attribute is set to true, the armour doesn't need a secondary modifier and
+	will work perfectly fine without it being present in the name.
+	Setting this to false is the same as not including this attribute.
+*/
+	
