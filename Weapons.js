@@ -2,6 +2,77 @@ var iFileName = "Weapons.js";
 RequiredSheetVersion(12.999); 
 
 
+
+WeaponsList["assassins hidden blade"] = { 
+	regExpSearch : /Assassins Hidden Blade/i, 
+	name : "Assassins Hidden Blade", 
+	source : ["HB", 0], 
+	list : "melee", 
+	ability : 2, 
+	type : "Martial", 
+	damage : [4, 4, "slash/pierc"], 
+	range : "Melee", 
+	description : "Affixed, Light, Finesse, Concealed, Special: Adv to keep hidden.", 
+	abilitytodamage : true, 
+	weight : 2, 
+	modifiers : [1, "DEX"], 
+};
+WeaponsList["hidden blade"] = { 
+	regExpSearch : /Hidden Blade/i, 
+	name : "Hidden Blade", 
+	source : ["HB", 0], 
+	list : "melee", 
+	ability : 2, 
+	type : "Simple", 
+	damage : [2, 4, "slash/pierc"], 
+	range : "Melee", 
+	description : "Affixed, Light, Finesse, Concealed, Special: Adv to keep hidden.", 
+	abilitytodamage : true, 
+	weight : 2, 
+	modifiers : ["", "DEX"], 
+};
+WeaponsList["boot dagger"] = { 
+	regExpSearch : /Boot Dagger/i, 
+	name : "Boot Dagger", 
+	source : ["HB", 0], 
+	list : "melee", 
+	ability : 2, 
+	type : "Martial", 
+	damage : [1, 8, "slashing"], 
+	range : "Melee", 
+	description : "Light, Finesse, Concealed, Special: Adv to keep hidden.", 
+	abilitytodamage : true, 
+	weight : 2, 
+	modifiers : [1, "DEX"], 
+};
+WeaponsList["explosive tag"] = { 
+	regExpSearch : /Explosive Tag/i, 
+	name : "Exposive Tag", 
+	source : ["HB", 0], 
+	list : "ranged", 
+	ability : 2, 
+	type : "Martial", 
+	damage : [5, 4, "fire"], 
+	range : "Range 30ft", 
+	description : "Thrown, Range 30ft, All within 10ft make Dex save DC13, half damage on success.", 
+	abilitytodamage : true, 
+	weight : 1, 
+	modifiers : [1, "DEX"], 
+};
+WeaponsList["boarding axe"] = { 
+	regExpSearch : /Boarding Axe/i, 
+	name : "Boarding Axe", 
+	source : ["HB", 0], 
+	list : "melee", 
+	ability : 1, 
+	type : "Simple", 
+	damage : [1, 6, "slashing"], 
+	range : "Melee", 
+	description : "Light, Special: Adv to Str checks for climbing.", 
+	abilitytodamage : true, 
+	weight : 3, 
+	modifiers : [1, "STR"], 
+};
 WeaponsList["spiked sickle"] = { 
 	regExpSearch : /Spiked Sickle/i, 
 	name : "Spiked Sickle", 
@@ -15,6 +86,45 @@ WeaponsList["spiked sickle"] = {
 	abilitytodamage : true, 
 	weight : 3, 
 };
+AmmoList["cannon ball"] = { 
+	name : "Cannon Ball", 
+	source : ["HB", 0], 
+	weight : 8.00, 
+	icon : "Bullets", 
+	checks : [".Bullet"], 
+	display : 50, 
+	invName : "Ball, Cannon", 
+};
+WeaponsList["great cannon"] = {
+	regExpSearch : /Great Cannon/i,
+	name : "Great Cannon",
+	source : ["HB", 0],
+	list : "Other",
+	ability : 4,
+	type : "Simple",
+	damage : [3, 6, "force"],
+	range : "Ranged 40/200",
+	weight : 3,
+	ammo : "lead ball", 
+	dc : true, 
+	description : "Launch (40/200), Firearm, Ammunition, Misfire (1), Reload:Bonus Action",
+	abilitytodamage : true
+}; 
+WeaponsList["standard cannon"] = {
+	regExpSearch : /Standard Cannon/i,
+	name : "Standard Cannon",
+	source : ["HB", 0],
+	list : "Other",
+	ability : 4,
+	type : "Simple",
+	damage : [2, 6, "force"],
+	range : "Ranged 40/200",
+	weight : 3,
+	ammo : "lead ball", 
+	dc : true, 
+	description : "Launch (40/200), Firearm, Ammunition, Misfire (1), Reload:Action",
+	abilitytodamage : true
+}; 
 WeaponsList["small cannon"] = {
 	regExpSearch : /Small Cannon/i,
 	name : "Small Cannon",
@@ -27,7 +137,7 @@ WeaponsList["small cannon"] = {
 	weight : 3,
 	ammo : "lead ball", 
 	dc : true, 
-	description : "Launch (40/200), Firearm, Ammunition",
+	description : "Launch (40/200), Firearm, Ammunition, Misfire (4), Reload:Action",
 	abilitytodamage : true
 }; 
 WeaponsList["odachi katana"] = { 
@@ -271,7 +381,7 @@ WeaponsList["elven bladed bow"] = {
 	abilitytodamage : true
 };
 
-WeaponsList["Gnomish Repeatng Crossbow"] = {
+WeaponsList["gnomish repeatng crossbow"] = {
 	regExpSearch : /Gnomish Repeating Crossbow/i,
 	name : "Gnomsh Repeating Crossbow",
 	source : ["HB", 0],
