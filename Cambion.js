@@ -36,6 +36,19 @@ RaceList["cambion"] = {
 		atwill : true, },
 	
 		features : {
+			"fire bolt" : { 
+			name : "Fiend Magic (Level 1)", 
+      			limfeaname : "fire bolt",
+			minlevel : 1, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Fiend Magic (level 1)",
+				spells : ["fire bolt"],
+				selection : ["fire bolt"],
+				atwill : true,
+			},
+    },
+			
 		"charm person" : {
 			name : "Fiend Magic (level 3)",
 			limfeaname : "Charm Person",
