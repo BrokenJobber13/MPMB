@@ -2,6 +2,19 @@ var iFileName = "Weapons.js";
 RequiredSheetVersion(12.999); 
 
 
+WeaponsList["spiked sickle"] = { 
+	regExpSearch : /Spiked Sickle/i, 
+	name : "Spiked Sickle", 
+	source : ["HB", 0], 
+	list : "melee", 
+	ability : 2,  
+	type : "Martial", 
+	damage : [2, 8, "slashing"], 
+	range : "Melee", 
+	description : "Light, Brutal: Reroll 1's", 
+	abilitytodamage : true, 
+	weight : 3, 
+};
 WeaponsList["small cannon"] = {
 	regExpSearch : /Small Cannon/i,
 	name : "Small Cannon",
