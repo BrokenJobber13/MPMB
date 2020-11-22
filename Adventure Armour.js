@@ -1,6 +1,47 @@
 var iFileName = "Adventure Armour.js"; 
 RequiredSheetVersion(12.999); 
 
+
+ArmourList["bronze cuirass"] = { 
+	regExpSearch : /Bronze Cuirass/i, 
+	name : "Bronze Cuirass", 
+	source : ["HB", 0], 
+	type : "medium", 
+	ac : 14, 
+	dex : 3, 
+	stealthdis : true, 
+	weight : 30, 
+	strReq : 10, 
+	invName : "Bronze Cuirass", 
+	addMod : true, 
+};
+
+ArmourList["scaled leather"] = { 
+	regExpSearch : /Scaled Leather/i, 
+	name : "Scaled Leather", 
+	source : ["HB", 0], 
+	type : "light", 
+	ac : 13, 
+	stealthdis : true, 
+	weight : 15, 
+	strReq : 10, 
+	invName : "Scaled Leather", 
+	addMod : true, 
+}
+ArmourList["forge dwarf plate"] = { 
+	regExpSearch : /Forge Dwarf Plate/i, 
+	name : "Forge Dwarf Plate",
+	source : ["HB", 0], 
+	type : "heavy", 
+	ac : 18, 
+	dex : 0, 
+	stealthdis : true, 
+	weight : 80, 
+	strReq : 17, 
+	invName : "Forge Dwarf Plate", 
+	addMod : false, 
+};
+
 ArmourList["heavy longcoat"] = { 
 	regExpSearch : /Heavy Longcoat/i, 
 	name : "Heavy Longcoat", 
