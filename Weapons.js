@@ -1,89 +1,81 @@
-var iFileName = "Homebrew Syntax - Weapons.js"; // Optional; This is how the file will be named in the sheet if you import it as a file and not copy-paste its content. Only the first occurrence of this variable will be used
-RequiredSheetVersion(12.999); // Optional; This is the minimum required version number of the sheet for the script to work. If the sheet being used to import the script is of an earlier version, the user will be warned
+var iFileName = "Weapons.js"; 
+RequiredSheetVersion(12.999); 
 
-WeaponsList["cutlass"] = { //Object name; Note the use of only lower case! Also note the absence of the word "var" and the use of brackets []
 
-	regExpSearch : /Cutlass/i, // Required; regular expression of what to look for (i.e. now it looks for any entry that has the word "le" followed by the word "attack" in it, disregarding capitalization). If this looks too complicated, just write: /leattack/i
-
-	name : "Cutlass", // Required; name of the weapon
-
-	source : ["HB", 0], //required; the source and the page number. "HB" stands for homebrew. See the "Complete SourceList" for an overview of sources that are already defined. Or define a new source using the "Homebrew Syntax - SourceList.js". // This can be an array of arrays to indicate the things appears in multiple sources. For example, if something appears on page 7 of the Elemental Evil Player's Companion and on page 115 of the Sword Coast Adventure Guide, use the following: [["E", 7], ["S", 115]]
-
-	list : "melee", //optional; by having this attribute, the attack will appear in the dropdown fields. It will be grouped according to what you enter. The lists of weapons in the sheet are: "melee", "ranged", "spell", and "improvised" // However, you can define your own groupings. These will always appear below all the weapons that are included in the sheet
-
-	ability : 1, // Required; the ability score used to calculate the to hit modifier (and the damage if applicable, see below). [Str=1, Dex=2, Con=3, Int=4, Wis=5, Cha=6]
-
-	type : "Simple", // Required; the type of the weapon. Alternatives are "Cantrip", "Martial", "Natural" (= always proficient), "Other", "Spell", or "Improvised Weapons" // Alternatively, you can define a type yourself. If this type matches a word in the 'Other Weapon Proficiencies' field, the character will be considered proficient with the weapon
-
-	damage : [1, 6, "slashing"], // Required; the damage it does. First entry is the amount of dice, second is the type of dice, and third is the damage type. This example is 2d4 worth of piercing damage. //if you want the amount of dice to be an amount determined by the Character Level, then put "C" as the first value. Alternatively, you can use "B" for the value minus 1 (such as with Green-Flame Blade)
-
-	range : "Melee", // Required; the range of the weapon
-
-	description : "Finesse, Light, Special: Adv against being Disarmed.", // Required; the description of the attack. If you have nothing to put here, just put two quotation marks ("").
-
-	abilitytodamage : true, // Required; whether or not the ability score modifier is added to the damage (true or false)
-
-	weight : 4, // Optional; the weight in lb. If the attack has no weight, just remove this line. If this line is not present, the item will be ignored when adding weapons to the inventory.
-
-	modifiers : [1, "STR"], // Optional; bonuses to: [to hit, to damage]; "" means ignore. These values are added to the corresponding Modifier/Blue-Text fields. // You can also enter the three-letter abbreviation of an ability score (Str, Dex, Con, Int, Wis, or Cha), to have that ability's modifier added to it.
-
+WeaponsList["small cannon"] = {
+	regExpSearch : /Small Cannon/i,
+	name : "Small Cannon",
+	source : ["HB", 0],
+	list : "Other",
+	ability : 4,
+	type : "Simple",
+	damage : [2, 6, "force"],
+	range : "Ranged 40/200",
+	weight : 3,
+	ammo : "lead ball", 
+	dc : true, 
+	description : "Launch (40/200), Firearm, Ammunition",
+	abilitytodamage : true
+}; 
+WeaponsList["odachi katana"] = { 
+	regExpSearch : /Odachi Katana/i, 
+	name : "Odachi Katana", 
+	source : ["HB", 0], 
+	list : "melee", 
+	ability : 1, 
+	type : "Martial", 
+	damage : [1, 12, "slashing"], 
+	range : "Melee", 
+	description : "Two Handed. Special: Adv against being Disarmed.", 
+	abilitytodamage : true, 
+	weight : 4, 
+	modifiers : [1, "STR"], 
 };
 
-WeaponsList["harpoon"] = { //Object name; Note the use of only lower case! Also note the absence of the word "var" and the use of brackets []
-
-	regExpSearch : /Harpoon/i, // Required; regular expression of what to look for (i.e. now it looks for any entry that has the word "le" followed by the word "attack" in it, disregarding capitalization). If this looks too complicated, just write: /leattack/i
-
-	name : "Harpoon", // Required; name of the weapon
-
-	source : ["HB", 0], //required; the source and the page number. "HB" stands for homebrew. See the "Complete SourceList" for an overview of sources that are already defined. Or define a new source using the "Homebrew Syntax - SourceList.js". // This can be an array of arrays to indicate the things appears in multiple sources. For example, if something appears on page 7 of the Elemental Evil Player's Companion and on page 115 of the Sword Coast Adventure Guide, use the following: [["E", 7], ["S", 115]]
-
-	list : "Melee", //optional; by having this attribute, the attack will appear in the dropdown fields. It will be grouped according to what you enter. The lists of weapons in the sheet are: "melee", "ranged", "spell", and "improvised" // However, you can define your own groupings. These will always appear below all the weapons that are included in the sheet
-
-	ability : 2, // Required; the ability score used to calculate the to hit modifier (and the damage if applicable, see below). [Str=1, Dex=2, Con=3, Int=4, Wis=5, Cha=6]
-
-	type : "Simple", // Required; the type of the weapon. Alternatives are "Cantrip", "Martial", "Natural" (= always proficient), "Other", "Spell", or "Improvised Weapons" // Alternatively, you can define a type yourself. If this type matches a word in the 'Other Weapon Proficiencies' field, the character will be considered proficient with the weapon
-
-	damage : [1, 10, "piercing"], // Required; the damage it does. First entry is the amount of dice, second is the type of dice, and third is the damage type. This example is 2d4 worth of piercing damage. //if you want the amount of dice to be an amount determined by the Character Level, then put "C" as the first value. Alternatively, you can use "B" for the value minus 1 (such as with Green-Flame Blade)
-
-	range : "Melee, 10/80 ft", // Required; the range of the weapon
-
-	description : "Special, Thrown (10/80)", // Required; the description of the attack. If you have nothing to put here, just put two quotation marks ("").
-
-	abilitytodamage : true, // Required; whether or not the ability score modifier is added to the damage (true or false)
-
-	weight : 6, // Optional; the weight in lb. If the attack has no weight, just remove this line. If this line is not present, the item will be ignored when adding weapons to the inventory.
-
-	modifiers : [1, "Dex"], // Optional; bonuses to: [to hit, to damage]; "" means ignore. These values are added to the corresponding Modifier/Blue-Text fields. // You can also enter the three-letter abbreviation of an ability score (Str, Dex, Con, Int, Wis, or Cha), to have that ability's modifier added to it.
+WeaponsList["cutlass"] = { 
+	regExpSearch : /Cutlass/i, 
+	name : "Cutlass", 
+	source : ["HB", 0], 
+	list : "melee", 
+	ability : 1, 
+	type : "Simple", 
+	damage : [1, 6, "slashing"], 
+	range : "Melee", 
+	description : "Finesse, Light, Special: Adv against being Disarmed.", 
+	abilitytodamage : true, 
+	weight : 4, 
+	modifiers : [1, "STR"], 
 };
 
-WeaponsList["kunai"] = { //Object name; Note the use of only lower case! Also note the absence of the word "var" and the use of brackets []
+WeaponsList["harpoon"] = { 
+	regExpSearch : /Harpoon/i, 
+	name : "Harpoon", 
+	source : ["HB", 0], 
+	list : "Melee", 
+	ability : 2, 
+	type : "Simple", 
+	damage : [1, 10, "piercing"], 
+	range : "Melee, 10/80 ft", 
+	description : "Special, Thrown (10/80)", 
+	abilitytodamage : true, 
+	weight : 6, 
+	modifiers : [1, "Dex"], 
+};
 
-	regExpSearch : /^ninja(?=.*kunai).*$/i, // Required; regular expression of what to look for (i.e. now it looks for any entry that has the word "le" followed by the word "attack" in it, disregarding capitalization). If this looks too complicated, just write: /leattack/i
-
-	name : "Kunai", // Required; name of the weapon
-
-	source : ["HB", 0], //required; the source and the page number. "HB" stands for homebrew. See the "Complete SourceList" for an overview of sources that are already defined. Or define a new source using the "Homebrew Syntax - SourceList.js". // This can be an array of arrays to indicate the things appears in multiple sources. For example, if something appears on page 7 of the Elemental Evil Player's Companion and on page 115 of the Sword Coast Adventure Guide, use the following: [["E", 7], ["S", 115]]
-
-	list : "Ranged", //optional; by having this attribute, the attack will appear in the dropdown fields. It will be grouped according to what you enter. The lists of weapons in the sheet are: "melee", "ranged", "spell", and "improvised" // However, you can define your own groupings. These will always appear below all the weapons that are included in the sheet
-
-	ability : 2, // Required; the ability score used to calculate the to hit modifier (and the damage if applicable, see below). [Str=1, Dex=2, Con=3, Int=4, Wis=5, Cha=6]
-
-	type : "Martial", // Required; the type of the weapon. Alternatives are "Cantrip", "Martial", "Natural" (= always proficient), "Other", "Spell", or "Improvised Weapons" // Alternatively, you can define a type yourself. If this type matches a word in the 'Other Weapon Proficiencies' field, the character will be considered proficient with the weapon
-
-	damage : [1, 4, "piercing"], // Required; the damage it does. First entry is the amount of dice, second is the type of dice, and third is the damage type. This example is 2d4 worth of piercing damage. //if you want the amount of dice to be an amount determined by the Character Level, then put "C" as the first value. Alternatively, you can use "B" for the value minus 1 (such as with Green-Flame Blade)
-
-	range : "Ranged, 10/80 ft", // Required; the range of the weapon
-
-	description : "Light, Thrown(10/80)", // Required; the description of the attack. If you have nothing to put here, just put two quotation marks ("").
-
-	abilitytodamage : true, // Required; whether or not the ability score modifier is added to the damage (true or false)
-
-	weight : 1, // Optional; the weight in lb. If the attack has no weight, just remove this line. If this line is not present, the item will be ignored when adding weapons to the inventory.
-
-	monkweapon : false, // Optional; whether or not the items counts as a monk weapon (true or false)
-
-	modifiers : [1, "DEX"], // Optional; bonuses to: [to hit, to damage]; "" means ignore. These values are added to the corresponding Modifier/Blue-Text fields. // You can also enter the three-letter abbreviation of an ability score (Str, Dex, Con, Int, Wis, or Cha), to have that ability's modifier added to it.
-
+WeaponsList["kunai"] = { 
+	regExpSearch : /^ninja(?=.*kunai).*$/i, 
+	name : "Kunai", 
+	source : ["HB", 0], 
+	list : "Ranged", 
+	ability : 2, 
+	type : "Martial", 
+	damage : [1, 4, "piercing"], 
+	range : "Ranged, 10/80 ft", 
+	description : "Light, Thrown(10/80)", 
+	abilitytodamage : true, 
+	weight : 1, 
+	monkweapon : false, 
+	modifiers : [1, "DEX"], 
 };
 
 WeaponsList["sharks powerful bite"] = {
@@ -240,25 +232,15 @@ WeaponsList["hand cannon"] = {
 };
 
 
-AmmoList["lead ball"] = { //Object name; Note the use of only lower case! Also note the absence of the word "var" and the use of brackets []. The spelling here is used to identify the ammo with.
-
-	name : "Lead Ball", //Required; the name of the ammunition
-
-	source : ["HB", 0], //required; the source and the page number. "HB" stands for homebrew. See the "Complete SourceList" for an overview of sources that are already defined. Or define a new source using the "Homebrew Syntax - SourceList.js". // This can be an array of arrays to indicate the things appears in multiple sources. For example, if something appears on page 7 of the Elemental Evil Player's Companion and on page 115 of the Sword Coast Adventure Guide, use the following: [["E", 7], ["S", 115]]
-
-	weight : 0.06, //Required; the weight in lb
-
-	icon : "Bullets", //Required; the icon to use for the ammunition. Depending on the icon you choose, the display and checks have to be assigned correctly. See below for the different options
-
-	checks : [".Bullet"], //Required; the type of checkboxes to display
-
-	display : 50, //Required; the amount of checkboxes to display
-
-	invName : "Ball, Lead", //Optional; the name as it will be added to the equipment section if selected to do so in the equipment menu. If you omit this, the sheet will use the above defined 'name' when adding this to the equipment section
+AmmoList["lead ball"] = { 
+	name : "Lead Ball", 
+	source : ["HB", 0], 
+	weight : 0.06, 
+	icon : "Bullets", 
+	checks : [".Bullet"], 
+	display : 50, 
+	invName : "Ball, Lead", 
 };
-
-
-
 
 
 WeaponsList["elven bladed bow"] = {
