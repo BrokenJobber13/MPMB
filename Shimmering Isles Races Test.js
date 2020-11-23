@@ -1,8 +1,9 @@
 var iFileName = "Shimmering Isles Races Test.js"; 
 RequiredSheetVersion(12.999); 
 
+
 RaceList["mountainborn human"] = { 
-	regExpSearch : /^(?=.*mountainborn)(?=.*human).*$/i, 
+	regExpSearch : /Mountainborn Human/i, 
 
 	name : "Mountainborn Human", 
 	source : ["HB", 0], 
@@ -217,7 +218,8 @@ RaceList["taintblood demon"] = {
 				atwill : true,
 			},
     },		
-};
+},
+},
 
 RaceList["winterborn human"] = { 
 	regExpSearch : /^(?=.*winterborn)(?=.*human).*$/i, 
@@ -266,7 +268,7 @@ RaceList["winterborn human"] = {
 			},
 
 },
-};
+},
 
 RaceList["lustrous android"] = { 
 	regExpSearch : /lustrous android/i, 
@@ -298,7 +300,7 @@ armorOptions : {
 	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
 	improvements : "Android: +2 Constitution, +2 Strength, +1 Intelligence;", 
 	scores : [2, 0, 2, 1, 0, 0], 
-	trait : "Android (+2 Constitution, +2 Strength, +1 Intelligence)\nAndroid Nature: Because of my build, I dont need to eat or suffer exhuastion but I do need to shut down for 4hours a day.\nGem Genetics:As part of the long rest, I can comsume gems for a benefit. See table..", //required; th (note that "\n" is a line break).
+	trait : "Android (+2 Constitution, +2 Strength, +1 Intelligence)\nAndroid Nature: Because of my build, I dont need to eat or suffer exhuastion but I do need to shut down for 4hours a day.\nGem Genetics:As part of the long rest, I can comsume gems for a benefit. See table.", 
 
 	abilitySave : 3,  
 	spellcastingAbility : 6, 
@@ -312,8 +314,7 @@ armorOptions : {
 	},
 			addMod : { type : "skill", field : "Init", mod : "Int", text : "I can add my Intelligence modifier to initiative rolls." } 
 
-
-};
+},
 
 RaceList["mythricborn human"] = { 
 	regExpSearch : /^(?=.*mythricborn)(?=.*human).*$/i, 
