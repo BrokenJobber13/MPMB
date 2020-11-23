@@ -204,3 +204,43 @@ ArmourList["purple mail"] = {
 	Setting this to false is the same as not including this attribute.
 */
 	
+	
+addMod : [
+	{ type : "skill", field : "Init", mod : "Int", text : "I can add my Intelligence modifier to initiative rolls." },
+	{ type : "save", field : "all", mod : "Cha", text : "While I'm conscious I can add my Charisma modifier (min 1) to all my saving throws." },
+],
+/*	addMod // OPTIONAL //
+	TYPE:	array of objects (variable length)
+	USE:	add value to a modifier field
+	You can have any number of objects in this array, each object must have the same four attributes, all of which are strings:
+	1. type
+		Can be "skill" or "save", but can also be left empty "".
+	2. field
+		What to add here depends on the type-
+		a)	for "skill" it can be the name of a skill (e.g. "Acrobatics"),
+			or "Init" for initiative,
+			or "Too" for the optional tool/skill for which you can change the name,
+			or "All" for the all skills modifier.
+		b)	for "save" it can be the three-letter abbreviation of an ability score,
+			or "All" for the all saves modifier.
+		c)	for "" it has to be the exact name of the field as used in the PDF.
+			common ones include:
+			"Proficiency Bonus Modifier",	// modifier field for proficiency bonus
+			"Passive Perception Bonus",		// modifier field for passive perception (not normal perception)
+	3. mod
+		This can be any combination of numbers, mathematical operators,
+		and three-letter ability score abbreviations for ability score modifiers,
+		or 'Prof' for the proficiency bonus.
+		Additionally, you can use min(1|2) and max(1|2), which work like Math.min(1,2) and Math.max(1,2).
+		Note that the pipe is used instead of a comma.
+		For example, to add the proficiency bonus, Constitution modifier, and subtract 2, it would look like this:
+			mod : "Prof+Con-2",
+		Or, another example, to add 1, it would look like this:
+			mod : 1,
+		Or, another example, to add the Charisma modifier with a minimum of 1, it would look like this:
+			mod : "min(Cha|1)",
+	4. text
+		This is an explanation of why the modifier was added and is used in the modifier change dialog.
+	NOTE: for modifiers to attacks, use calcChanges.
+	NOTE: for modifiers to AC, use extraAC.
+*/
