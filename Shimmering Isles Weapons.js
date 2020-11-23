@@ -1,4 +1,4 @@
-var iFileName = "Weapons.js"; 
+var iFileName = "Shimmering Isles Weapons.js"; 
 RequiredSheetVersion(12.999); 
 
 AmmoList["black powder"] = { 
