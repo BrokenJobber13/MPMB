@@ -6,21 +6,21 @@ ToolsList["marked playing cards"] = {
 	amount : "54", 
 	type : "Gaming Set",
 	weight : "", 
-};
+},
 
 ToolsList["loaded dice"] = { 
 	infoname : "Loaded dice [5 gp]", 
 	name : "Loaded Dice", 
 	amount : "2", 
 	weight : "", 
-};
+},
 
 ToolsList["grooming kit"] = { 
 	infoname : "Grooming Kit [5 gp]", 
 	name : "Grooming Kit", 
 	amount : "", 
 	weight : "1", 
-};
+},
 
 GearList["basic bomb"] = { 
 	infoname : "Basic Bomb [150 gp]", 
@@ -28,7 +28,7 @@ GearList["basic bomb"] = {
 	amount : 1, 
 	weight : 1, 
 	source : ["HB", 0] 
-};
+},
 
 GearList["grooming kit, animal"] = { 
 
@@ -37,7 +37,7 @@ GearList["grooming kit, animal"] = {
 	amount : "", 
 	weight : 1, 
 	source : ["HB", 0]
-};
+},
 
 
 GearList["grappling bolts"] = { 
@@ -47,8 +47,8 @@ GearList["grappling bolts"] = {
 	amount : 5, 
 	weight : 1, 
 	type : "Ammunitition",
-	source : ["HB", 0]
-};
+	source : ["HB", 0],
+},
 
 
 GearList["grappling arrows"] = { 
@@ -58,8 +58,8 @@ GearList["grappling arrows"] = {
 	amount : 5, 
 	weight : 1, 
 	type : "Ammunitition",
-	source : ["HB", 0]
-};
+	source : ["HB", 0],
+},
 
 GearList["black powder small keg"] = { 
 
@@ -68,8 +68,8 @@ GearList["black powder small keg"] = {
 	amount : 80, 
 	weight : 8, 
 	type : "Ammunitition",
-	source : ["HB", 0]
-};
+	source : ["HB", 0],
+},
 
 GearList["gunpowder small keg"] = { 
 
@@ -78,8 +78,8 @@ GearList["gunpowder small keg"] = {
 	amount : 1, 
 	weight : 10, 
 	type : "Ammunitition",
-	source : ["HB", 0]
-};
+	source : ["HB", 0],
+},
 
 GearList["compass"] = { 
 
@@ -88,7 +88,7 @@ GearList["compass"] = {
 	amount : "", 
 	weight : "", 
 	source : ["HB", 0],
-};
+},
 
 GearList["eye patch"] = { 
 
@@ -98,7 +98,7 @@ GearList["eye patch"] = {
 	weight : "", 
 	type : "Clothes",
 	source : ["HB", 0],
-};
+},
 
 GearList["pirate captain hat"] = { 
 
@@ -108,7 +108,7 @@ GearList["pirate captain hat"] = {
 	weight : 2, 
 	type : "Clothes",
 	source : ["HB", 0],
-};
+},
 
 GearList["pirates hat"] = { 
 
@@ -118,7 +118,7 @@ GearList["pirates hat"] = {
 	weight : 1, 
 	type : "Clothes",
 	source : ["HB", 0],
-};
+},
 
 GearList["nautical chart"] = { 
 
@@ -128,7 +128,7 @@ GearList["nautical chart"] = {
 	weight : "", 
 	type : "Nautical",
 	source : ["HB", 0],
-};
+},
 
 GearList["sextant"] = { 
 
@@ -138,7 +138,7 @@ GearList["sextant"] = {
 	weight : 2, 
 	type : "Nautical",
 	source : ["HB", 0],
-};
+},
 
 PacksList["strategists pack"] = {
 	name : "Strategists pack [75 gp]",
@@ -155,7 +155,7 @@ PacksList["strategists pack"] = {
 		["Basic Poison", 2, 1],
 		["Portable Ram", "", 4],
 		["Camouflage Net", "", 2], ],
-};
+},
 
  PacksList["oceangoer's pack"] = {
 	name : "Oceangoer's Pack (50 gp)",
@@ -168,9 +168,8 @@ PacksList["strategists pack"] = {
 		["Fishing Tackle", 20, 0.005],
 		["Long Line", 20, 5],
 		["Trap", "", 3],
-		["Repair Wood", 9, 30],
-	],
-};
+		["Repair Wood", 9, 30],	],
+     },
 
 PacksList["swordsman pack"] = {
 	name : "Swordsman pack (20 gp)",
@@ -184,7 +183,7 @@ PacksList["swordsman pack"] = {
 		["Waterskin", "", 5],
 		["Hempen rope, feet of", 50, 0.2],
 	],
-};
+},
 
 PacksList["miners pack"] = {
 	name : "Miners pack (10 gp)",
@@ -196,17 +195,17 @@ PacksList["miners pack"] = {
 		["Simple Piackaxe", "", 2],
    		["Lantern", "", 5],
 		["Waterskin", "", 5],
-		["Book on Metal Ores", "", 1]
-	]
-};
+		["Book on Metal Ores", "", 1],
+	],
+},
 
-ToolsList["appraiser's tools"] = {
+		ToolsList["appraiser's tools"] = {
 	infoname : "Appraiser's tools [30 gp]",
 	name : "Appraiser's tools",
 	amount : "",
 	weight : 12,
 	type : "artisan's tools",
-		source : ["HB", 0], };
+		source : ["HB", 0], },
     
             ToolsList["harp"] = {
 	infoname : "Harp [50 gp]",
@@ -214,7 +213,7 @@ ToolsList["appraiser's tools"] = {
 	amount : "",
 	weight : 3,
 	type : "Musical Instrument",
-		source : ["HB", 0], };
+		source : ["HB", 0], },
     
         ToolsList["singing voice"] = {
 	infoname : "Singing Voice [0 gp]",
@@ -222,7 +221,7 @@ ToolsList["appraiser's tools"] = {
 	amount : "",
 	weight : 0.05,
 	type : "Musical Instrument",
-		source : ["HB", 0], };
+		source : ["HB", 0], },
     
     ToolsList["dial kits"] = {
 	infoname : "Dial Kits [500 gp]",
@@ -230,7 +229,7 @@ ToolsList["appraiser's tools"] = {
 	amount : "",
 	weight : 8,
 	type : "artisan's tools",
-		source : ["HB", 0], };
+		source : ["HB", 0], },
     
    
    ToolsList["gunsmith's tools"] = {
@@ -239,14 +238,15 @@ ToolsList["appraiser's tools"] = {
 	amount : "",
 	weight : 15,
 	type : "artisan's tools",
-		source : ["HB", 0], };
+		source : ["HB", 0], },
+     
     ToolsList["guitar"] = {
 	infoname : "Guitar [25 gp]",
 	name : "Guitar",
 	amount : "",
 	weight : 2,
 	type : "musical instrument",
-		source : ["HB", 0], };
+		source : ["HB", 0], },
     
     ToolsList["surfer"] = {
 	infoname : "Surfer [500 gp]",
@@ -254,7 +254,7 @@ ToolsList["appraiser's tools"] = {
 	amount : "",
 	weight : "",
 	type : "Sky Vehicle",
-		source : ["HB", 0], };
+		source : ["HB", 0], },
     
     ToolsList["shooters"] = {
 	infoname : "Shooters [500 gp]",
@@ -262,7 +262,7 @@ ToolsList["appraiser's tools"] = {
 	amount : "",
 	weight : "",
 	type : "Sky Vehicle",
-		source : ["HB", 0], };
+		source : ["HB", 0], },
     
     ToolsList["waver"] = {
 	infoname : "Waver [500 gp]",
@@ -270,7 +270,7 @@ ToolsList["appraiser's tools"] = {
 	amount : "",
 	weight : "",
 	type : "Sky Vehicle",
-		source : ["HB", 0], };
+		source : ["HB", 0], },
     
     ToolsList["miner's tools"] = {
 	infoname : "Miner's tools [500 gp]",
@@ -278,7 +278,7 @@ ToolsList["appraiser's tools"] = {
 	amount : "",
 	weight : 8,
 	type : "artisan's tools",
-		source : ["HB", 0], };
+		source : ["HB", 0], },
     
         GearList["powder horn"] = {
 	infoname : "Powder Horn (20) [2 gp]",
@@ -286,7 +286,7 @@ ToolsList["appraiser's tools"] = {
 	amount : 1,
 	weight : 1,
 	type : "Ammunitition",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
     
     GearList["log pose"] = {
 	infoname : "Log Pose [50 sp]",
@@ -294,7 +294,7 @@ ToolsList["appraiser's tools"] = {
 	amount : 1,
 	weight : "",
 	type : "Nautical",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
   
     GearList["south region map"] = {
 	infoname : "South Region Map [50 sp]",
@@ -302,7 +302,7 @@ ToolsList["appraiser's tools"] = {
 	amount : 1,
 	weight : "",
 	type : "Nautical",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
   
   GearList["southern sea map"] = {
 	infoname : "Southern Sea Map [50 gp]",
@@ -310,7 +310,7 @@ ToolsList["appraiser's tools"] = {
 	amount : 1,
 	weight : "",
 	type : "Nautical",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
   
   GearList["preservation box"] = {
 	infoname : "Preservation Box [500 gp]",
@@ -318,7 +318,7 @@ ToolsList["appraiser's tools"] = {
 	amount : 1,
 	weight : "",
 	type : "Nautical",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
   
   GearList["vivre card"] = {
 	infoname : "Vivre Card [50 sp]",
@@ -326,7 +326,7 @@ ToolsList["appraiser's tools"] = {
 	amount : 1,
 	weight : "",
 	type : "Nautical",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
   
   GearList["whetstone"] = {
 	infoname : "Whetstone [50 sp]",
@@ -334,7 +334,7 @@ ToolsList["appraiser's tools"] = {
 	amount : 1,
 	weight : 1,
 	type : "Nautical",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
   
   GearList["bounty poster"] = {
 	infoname : "Bounty Poster [1 cp]",
@@ -342,7 +342,7 @@ ToolsList["appraiser's tools"] = {
 	amount : 1,
 	weight : "",
 	type : "Nautical",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
   
   GearList["weapon oil"] = {
 	infoname : "Weapon Oil [50 sp]",
@@ -350,7 +350,7 @@ ToolsList["appraiser's tools"] = {
 	amount : 1,
 	weight : "",
 	type : "Nautical",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
   
   GearList["steel mirror"] = {
 	infoname : "Steel Mirror [2 gp]",
@@ -358,7 +358,7 @@ ToolsList["appraiser's tools"] = {
 	amount : 1,
 	weight : "",
 	type : "",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
   
   PacksList["apparatus"] = {
 	name : "Apparatus (50 gp)",
@@ -369,7 +369,8 @@ ToolsList["appraiser's tools"] = {
 		["Dial Set", "", ""],
 		["Experimental Device", "", 5],
 	],
-};
+},
+    
 PacksList["doctor's kit"] = {
 	name : "Doctor's Kit (15 gp)",
 	source : ["HB", 0],
@@ -380,7 +381,8 @@ PacksList["doctor's kit"] = {
 		["Set of Needles", "", ""],
 		["Roll of Bandages", 20, ""],
 	],
-};
+},
+    
 PacksList["appraiser's kit"] = {
 	name : "Appraiser's Kit (20 gp)",
 	source : ["HB", 0],
@@ -391,7 +393,7 @@ PacksList["appraiser's kit"] = {
 		["Small Hammer", "", ""],
   		["Weighing Scales", "", 1],
 	],
-};
+},
 
 GearList["basic transponder snail"] = {
 	infoname : "Basic Transponder Snail [100 gp]",
@@ -399,7 +401,7 @@ GearList["basic transponder snail"] = {
 	amount : 1,
 	weight : 10,
 	type : "Nautical",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
   
   GearList["black transponder snail"] = {
 	infoname : "Black Transponder Snail [5000 gp]",
@@ -407,7 +409,7 @@ GearList["basic transponder snail"] = {
 	amount : 1,
 	weight : 0.05,
 	type : "Nautical",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
   
   GearList["cameko transponder snail"] = {
 	infoname : "Cameko Transponder Snail [200 gp]",
@@ -415,7 +417,7 @@ GearList["basic transponder snail"] = {
 	amount : 1,
 	weight : 1,
 	type : "Nautical",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
   
   GearList["horned transponder snail"] = {
 	infoname : "Horned Transponder Snail [1000 gp]",
@@ -423,7 +425,7 @@ GearList["basic transponder snail"] = {
 	amount : 1,
 	weight : 9,
 	type : "Nautical",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
   
   GearList["proko transponder snail"] = {
 	infoname : "Proko Transponder Snail [600 gp]",
@@ -431,7 +433,7 @@ GearList["basic transponder snail"] = {
 	amount : 1,
 	weight : 12,
 	type : "Nautical",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
   
   GearList["surveillance transponder snail"] = {
 	infoname : "Surveillance Transponder Snail [250 gp]",
@@ -439,7 +441,7 @@ GearList["basic transponder snail"] = {
 	amount : 1,
 	weight : 8,
 	type : "Nautical",
-	source : ["HB", 0], };
+	source : ["HB", 0], },
 
 PacksList["tamer"] = { 
 	name : "Tamer's Kit (3 gp)", 
@@ -449,7 +451,7 @@ PacksList["tamer"] = {
 		["pieces of Dried animal food", 16, ""],
 		["Vials of animal scents", 10, ""],
 	],
-};
+},
 
 PacksList["archaeologists"] = { 
 	name : "Archaeologists Tools [50 gp]", 
@@ -474,7 +476,7 @@ PacksList["archaeologists"] = {
 		["Miner's Pick", "", 2],
 		["10Coin Slot container", "", 2],
 	],
-};
+},
 
 PacksList["pirates pack"] = { 
 	name : "Pirate's pack (10 gp)", 
@@ -493,7 +495,7 @@ PacksList["pirates pack"] = {
 		["Waterskin", "", 5],
 		["Hempen rope, feet of", 50, 0.2],
 	],
-};
+},
 
 PacksList["pirate captain's pack"] = { 
 	name : "Pirate Captain's pack (50 gp)", 
@@ -515,7 +517,7 @@ PacksList["pirate captain's pack"] = {
 		["Waterskin", "", 5],
 		["Hempen rope, feet of", 50, 0.2],
 	],
-};
+},
 
 PacksList["cook's supplies"] = { 
 	name : "Cook's Supplies (15 gp)", 
@@ -535,4 +537,7 @@ PacksList["cook's supplies"] = {
 		["Waterskin", "", 5],
 		["Hempen rope, feet of", 50, 0.2],
 	],
+},
+	
+	
 };
