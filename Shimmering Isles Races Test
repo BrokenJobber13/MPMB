@@ -913,7 +913,7 @@ RaceList["cambion"] = {
 				firstCol : "oncelr"		},
 									},
 },
-};
+},
 
 RaceList["Elnofae"] = { 
 	regExpSearch : /elnofae/i, 
@@ -976,7 +976,7 @@ RaceList["Elnofae"] = {
       },
 			
 
-};
+},
 
 
 RaceList["fishmen"] = { 
