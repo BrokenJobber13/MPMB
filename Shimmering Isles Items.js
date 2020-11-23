@@ -1,6 +1,5 @@
 var iFileName = "Shimmering Isles Items.js"; 
 RequiredSheetVersion(12.999); 
-
 ToolsList["marked playing cards"] = { 
 	infoname : "Marked Playing Cards [5 gp]", 
 	name : "Marked Playing Cards", 
@@ -88,7 +87,7 @@ GearList["compass"] = {
 	name : "Compass",
 	amount : "", 
 	weight : "", 
-	source : ["HB", 0]
+	source : ["HB", 0],
 };
 
 GearList["eye patch"] = { 
@@ -98,7 +97,7 @@ GearList["eye patch"] = {
 	amount : 1, 
 	weight : "", 
 	type : "Clothes",
-	source : ["HB", 0]
+	source : ["HB", 0],
 };
 
 GearList["pirate captain hat"] = { 
@@ -108,7 +107,7 @@ GearList["pirate captain hat"] = {
 	amount : 1, 
 	weight : 2, 
 	type : "Clothes",
-	source : ["HB", 0]
+	source : ["HB", 0],
 };
 
 GearList["pirates hat"] = { 
@@ -118,7 +117,7 @@ GearList["pirates hat"] = {
 	amount : 1, 
 	weight : 1, 
 	type : "Clothes",
-	source : ["HB", 0]
+	source : ["HB", 0],
 };
 
 GearList["nautical chart"] = { 
@@ -128,7 +127,7 @@ GearList["nautical chart"] = {
 	amount : 1, 
 	weight : "", 
 	type : "Nautical",
-	source : ["HB", 0]
+	source : ["HB", 0],
 };
 
 GearList["sextant"] = { 
@@ -138,16 +137,16 @@ GearList["sextant"] = {
 	amount : 1, 
 	weight : 2, 
 	type : "Nautical",
-	source : ["HB", 0]
+	source : ["HB", 0],
 };
 
-PacksList["strategist's pack"] = {
-	name : "Strategists pack (75 gp)",
+PacksList["strategists pack"] = {
+	name : "Strategists pack [75 gp]",
 	source : ["HB", 0],
 	items : [
 		["Backpack, with:", "", 5], 
 		["Manacles", "", ""],
-		["Ball Bearings" "", ""],
+		["Ball Bearings", "", ""],
 		["Caltrops, Bag of", "", ""],
 		["Hunting Trap", "", ""],
 		["Acid", "", ""],
@@ -155,8 +154,7 @@ PacksList["strategist's pack"] = {
 		["Alchemist Fire", 3, 3],
 		["Basic Poison", 2, 1],
 		["Portable Ram", "", 4],
-		["Camouflage Net", "", 2],
-	],
+		["Camouflage Net", "", 2], ],
 };
 
  PacksList["oceangoer's pack"] = {
@@ -167,10 +165,10 @@ PacksList["strategist's pack"] = {
 		["Bait", 10, ""],
 		["Barrel, Small", 10, 8,
 		["Bed Roll", "", ""],
-		[Fishing Tackle", 20, 0.005],
+		["Fishing Tackle", 20, 0.005],
 		["Long Line", 20, 5],
 		["Trap", "", 3],
-		["Repair Wood, 9, 30],
+		["Repair Wood", 9, 30],
 	],
 };
 
@@ -184,7 +182,7 @@ PacksList["swordsman pack"] = {
 		["Tinderbox", "", 1],
    		["Oil, Flasks of", 2, 1],
 		["Waterskin", "", 5],
-		["Hempen rope, feet of", 50, 0.2]
+		["Hempen rope, feet of", 50, 0.2],
 	],
 };
 
@@ -450,11 +448,11 @@ PacksList["tamer"] = {
 		["Backpack, with:", "", 5], 
 		["pieces of Dried animal food", 16, ""],
 		["Vials of animal scents", 10, ""],
-	]
+	],
 };
 
 PacksList["archaeologists"] = { 
-	name : "Archaeologists Tools (50 gp)", 
+	name : "Archaeologists Tools [50 gp]", 
 	source : ["HB", 0], 
 	items : [ 
 		["Backpack, with:", "", 5], 
@@ -464,7 +462,7 @@ PacksList["archaeologists"] = {
 		["Ink", "", ""],
 		["Set of Brushes", "", 1],
 		["Full Body Harness", "", 5],
-		["Pitons", 10, .25],
+		["Pitons", 10, 0.25],
 		["Argil", "", ""],
 		["Calipers", "", ""],
 		["Rations", 5, 2],
@@ -473,9 +471,9 @@ PacksList["archaeologists"] = {
 		["Book of History", "", 1],
 		["Book of Languages", "", 1],
 		["Waterskin", "", 5],
-		["Miner's Pick", "", 2]
+		["Miner's Pick", "", 2],
 		["10Coin Slot container", "", 2],
-	]
+	],
 };
 
 PacksList["pirates pack"] = { 
@@ -493,8 +491,8 @@ PacksList["pirates pack"] = {
 		["Rations, days of", 5, 2],
 		["Tinderbox", "", 1],
 		["Waterskin", "", 5],
-		["Hempen rope, feet of", 50, 0.2]
-	]
+		["Hempen rope, feet of", 50, 0.2],
+	],
 };
 
 PacksList["pirate captain's pack"] = { 
@@ -515,8 +513,8 @@ PacksList["pirate captain's pack"] = {
 		["Rations, days of", 5, 2],
 		["Tinderbox", "", 1],
 		["Waterskin", "", 5],
-		["Hempen rope, feet of", 50, 0.2]
-	]
+		["Hempen rope, feet of", 50, 0.2],
+	],
 };
 
 PacksList["cook's supplies"] = { 
@@ -535,6 +533,6 @@ PacksList["cook's supplies"] = {
 		["Rations, days of", 5, 2],
 		["Tinderbox", "", 1],
 		["Waterskin", "", 5],
-		["Hempen rope, feet of", 50, 0.2]
-	]
+		["Hempen rope, feet of", 50, 0.2],
+	],
 };
