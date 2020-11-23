@@ -1,6 +1,15 @@
 var iFileName = "Weapons.js"; 
 RequiredSheetVersion(12.999); 
 
+AmmoList["black powder"] = { 
+	name : "Black Powder", 
+	source : ["HB", 0], 
+	weight : 0.05, 
+	icon : "Bullets", 
+	checks : [".Bullet"], 
+	display : 50, 
+	invName : "Black Powder", 
+};
 
 WeaponsList["wire net"] = { 
 	regExpSearch : /Wire Net/i, 
