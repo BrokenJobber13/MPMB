@@ -154,11 +154,12 @@ PacksList["strategists pack"] = {
 		["Alchemist Fire", 3, 3],
 		["Basic Poison", 2, 1],
 		["Portable Ram", "", 4],
-		["Camouflage Net", "", 2], ],
+		["Camouflage Net", "", 2], 
+  ],
 },
 
  PacksList["oceangoer's pack"] = {
-	name : "Oceangoer's Pack (50 gp)",
+	name : "Oceangoer's Pack [50 gp]",
 	source : ["HB", 0],
 	items : [
 		["Backpack, with:", "", 5],
@@ -169,24 +170,25 @@ PacksList["strategists pack"] = {
 		["Long Line", 20, 5],
 		["Trap", "", 3],
 		["Repair Wood", 9, 30],	],
-     },
+    	],
+ },
 
 PacksList["swordsman pack"] = {
-	name : "Swordsman pack (20 gp)",
+	name : "Swordsman Pack [20 gp]",
 	source : ["HB", 0],
 	items : [
 		["Backpack, with:", "", 5],
-    		["Whetstone", "", ""],
+    ["Whetstone", "", ""],
 		["Rations, days of", 5, 2],
 		["Tinderbox", "", 1],
-   		["Oil, Flasks of", 2, 1],
+   	["Oil, Flasks of", 2, 1],
 		["Waterskin", "", 5],
 		["Hempen rope, feet of", 50, 0.2],
 	],
 },
 
 PacksList["miners pack"] = {
-	name : "Miners pack (10 gp)",
+	name : "Miners pack [10 gp]",
 	source : ["HB", 0],
 	items : [
 		["Backpack, with:", "", 5],
@@ -537,7 +539,7 @@ PacksList["cook's supplies"] = {
 		["Waterskin", "", 5],
 		["Hempen rope, feet of", 50, 0.2],
 	],
-},
-	
-	
 };
+   
+ 
+	
