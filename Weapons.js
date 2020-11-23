@@ -2,6 +2,140 @@ var iFileName = "Weapons.js";
 RequiredSheetVersion(12.999); 
 
 
+WeaponsList["wire net"] = { 
+	regExpSearch : /Wire Net/i, 
+	name : "Wire Net", 
+	source : ["HB", 0], 
+	list : "ranged", 
+	ability : 1, 
+	type : "Simple", 
+	damage : [1, 8, "bludgeoning"], 
+	range : "Range 10/20ft", 
+	description : "Thrown, Upto Large creature restrianed on hit, Resistant to slashing dmg. Escape DC 15 Str.", 
+	abilitytodamage : true, 
+	weight : 15, 
+	modifiers : [1, "STR"], 
+};
+
+WeaponsList["grappling hook"] = { 
+	regExpSearch : /Grappling Hook/i, 
+	name : "Grappling Hook", 
+	source : ["HB", 0], 
+	list : "ranged", 
+	ability : 1, 
+	type : "Simple", 
+	damage : [1, 4, "piercing"], 
+	range : "Range 10/30ft", 
+	description : "Thrown, Range 10/30ft, On hit target is grappled, Adv on Climbing.", 
+	abilitytodamage : true, 
+	weight : 1, 
+	modifiers : [1, "STR"], 
+};
+
+WeaponsList["grenado"] = { 
+	regExpSearch : /Grenado/i, 
+	name : "Grenado", 
+	source : ["HB", 0], 
+	list : "ranged", 
+	ability : 2, 
+	type : "Martial", 
+	damage : [2, 4, "fire"], 
+	range : "Range 10/30ft", 
+	description : "Thrown 10/30ft, Light, Sphere: 5ft radius, Dex DC save 12, fail dmg on succuss. ", 
+	abilitytodamage : true, 
+	weight : 2, 
+	modifiers : [1, "DEX"], 
+};
+
+WeaponsList["hook hand"] = { 
+	regExpSearch : /Hook Hand/i, 
+	name : "Hook Hand", 
+	source : ["HB", 0], 
+	list : "melee", 
+	ability : 2, 
+	type : "Martial", 
+	damage : [1, 4, "piercing"], 
+	range : "Melee", 
+	description : "Affixed, Light", 
+	abilitytodamage : true, 
+	weight : 2, 
+	modifiers : [1, "DEX"], 
+};
+
+WeaponsList["poisoned net"] = { 
+	regExpSearch : /Poisoned Net/i, 
+	name : "Poisoned Net", 
+	source : ["HB", 0], 
+	list : "ranged", 
+	ability : 2, 
+	type : "Simple", 
+	damage : [1, 4, "piercing"], 
+	range : "Range 5/15ft", 
+	description : "Thrown 5/15, 1Attack, upto Large creature hit is restrained. Con DC 10 save or be poisoned, 1min. 1d6 poison dmg.", 
+	abilitytodamage : true, 
+	weight : 3, 
+	modifiers : [1, "DEX"], 
+};
+
+WeaponsList["greased net"] = { 
+	regExpSearch : /Greased Net/i, 
+	name : "Greased Net", 
+	source : ["HB", 0], 
+	list : "ranged", 
+	ability : 2, 
+	type : "Simple", 
+	damage : [1, 4, "bludgeoning"], 
+	range : "Range 5/15ft", 
+	description : "Thrown 5/15, 1Attack, upto Large creature hit is restrained. Dex DC save 10 or fail prone", 
+	abilitytodamage : true, 
+	weight : 3, 
+	modifiers : [1, "DEX"], 
+};
+
+WeaponsList["weighted net"] = { 
+	regExpSearch : /Weighted Net/i, 
+	name : "Weighted Net", 
+	source : ["HB", 0], 
+	list : "ranged", 
+	ability : 2, 
+	type : "Simple", 
+	damage : [1, 8, "bludgeoning"], 
+	range : "Range 10/20ft", 
+	description : "Thrown, Upto Large creature restrianed on hit, Vulnerable to slashing dmg. Escape DC 15 Str.", 
+	abilitytodamage : true, 
+	weight : 8, 
+	modifiers : [1, "DEX"], 
+};
+
+WeaponsList["bladed net"] = { 
+	regExpSearch : /Bladed Net/i, 
+	name : "Bladed Net", 
+	source : ["HB", 0], 
+	list : "ranged", 
+	ability : 2, 
+	type : "Simple", 
+	damage : [2, 4, "piercing"], 
+	range : "Range 5/15ft", 
+	description : "Thrown, Upto Large creature restrianed on hit, All within 10ft make Dex save DC13, half damage on success.", 
+	abilitytodamage : true, 
+	weight : 10, 
+	modifiers : [1, "DEX"], 
+};
+
+WeaponsList["barbed net"] = { 
+	regExpSearch : /Barbed Net/i, 
+	name : "Barbed Net", 
+	source : ["HB", 0], 
+	list : "ranged", 
+	ability : 2, 
+	type : "Simple", 
+	damage : [1, 4, "piercing"], 
+	range : "Range 5/15ft", 
+	description : "Thrown, Upto Large creature restrianed on hit, All within 10ft make Dex save DC13, half damage on success.", 
+	abilitytodamage : true, 
+	weight : 5, 
+	modifiers : [1, "DEX"], 
+};
 
 WeaponsList["assassins hidden blade"] = { 
 	regExpSearch : /Assassins Hidden Blade/i, 
