@@ -34,5 +34,4 @@ RaceList["high dark elf"] = {
 		times : 2, 
 		prepared : true, 
 		atwill : true, },
-	},
-    };
+	};
