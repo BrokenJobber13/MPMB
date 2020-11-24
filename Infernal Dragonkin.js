@@ -24,7 +24,7 @@ RaceList["infernal"] = {
 			dc : true,
 			dbBreathWeapon : true
 		},
-		weaponsAdd : ["infernal breath weapon"],
+		weaponsAdd : ["Infernal Breath Weapon"],
 		
 			weaponOptions : {
 			regExpSearch : /Draconic Tail Whip/i,
@@ -86,18 +86,25 @@ RaceList["infernal"] = {
 				oncelr : true,
 			},
      },
-      },
-      
 		"infernal breath weapon" : {
 			name : "Infernal Breath Weapon",
+			limfeaname : "Infernal Breath Weapon",
 			minlevel : 1,
-			usages : 1,
+			usages : 2,
 			additional : ["2d6", "2d6", "2d6", "3d6", "3d6", "3d6", "3d6", "3d6", "3d6", "4d6", "4d6", "4d6", "4d6", "4d6", "4d6", "5d6", "5d6", "5d6", "5d6", "5d6"], 
 			recovery : "short rest",
 			tooltip : "",
-
 			action : ["action", ""], 
-		},
-};
-
+			calcChanges : {
+					atkAdd : [
+						function (fields, v) {
+							if (v.theWea.dbBreathWeapon && CurrentRace.known === 'infernal dragonkin') {
+                fields.Damage_Die = (CurrentRace.level < 3 ? 2 : CurrentRace.level < 9 ? 3 : CurrentRace.level < 16 ? 4 : 5) + 'd6';
+						}
+            },
+					]
+				},
+			},
+            },
+		};
 
