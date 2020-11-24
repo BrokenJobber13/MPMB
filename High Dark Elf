@@ -1,4 +1,7 @@
-"high dark elf" : {
+var iFileName = "Homebrew Syntax - RaceList.js"; 
+RequiredSheetVersion(12.999); 
+
+RaceList["high dark elf"] = { 
 		regExpSearch : /High Dark Elf/i,
 		name : "High Dark Elf",
 		sortname : "Elf, High Dark",
@@ -9,7 +12,7 @@
 			walk : { spd : 30, enc : 20 }
 		},
 		languageProfs : ["Common", "Elvish", 1],
-		vision : [["Darkvision", 120]],
+		vision : ["Darkvision", 120],
 		savetxt : {
 			text : ["Magic can't put me to sleep"],
 			adv_vs : ["charmed"]
@@ -22,9 +25,13 @@
 		heightMetric : " range from under 1,5 to over 1,8 metres tall (140 + 5d10 cm)",
 		weightMetric : " weigh around 55 kg (40 + 5d10 \xD7 2d4 / 10 kg)",
 		scores : [0, 2, 0, 1, 0, 0],
-		trait : "High Elf (+2 Dexterity, +1 Intelligence)\nTrance: Elves don't need to sleep, but meditate semiconsciously, for 4 hours a day. While meditating, I can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, I gain the same benefit that a human does from 8 hours of sleep, thus needing only 4 hours for a long rest.\nCantrip: I know one cantrip. Intelligence is my spellcasting ability for it.",
+		trait : "High Elf (+2 Dexterity, +1 Intelligence)\nTrance: Elves don't need to sleep, but meditate semiconsciously, for 4 hours a day. While meditating, I can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, I gain the same benefit that a human does from 8 hours of sleep, thus needing only 4 hours for a long rest.\nCantrip: I know the cantrip Light. Intelligence is my spellcasting ability for it.",
 		spellcastingAbility : 4,
-		spellcastingBonus : {
-			
-		}
-	},
+		spellcastingBonus : { 
+		name : "High Drow Magic", 
+		spells : ["Light"], 
+		selection : ["light"], 
+		times : 2, 
+		prepared : true, 
+		atwill : true, },
+	};
