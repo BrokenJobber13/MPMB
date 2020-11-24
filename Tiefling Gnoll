@@ -1,0 +1,109 @@
+var iFileName = "Tiefling Gnoll.js"; 
+RequiredSheetVersion(12.999); 
+RaceList["tiefling gnoll"] = { 
+	regExpSearch : /Tiefling Gnoll/i, 
+	name : "Tiefling Gnoll", 
+	sortname : "Tiefling Gnoll", 
+	source : ["HB", 0], 
+	plural : "Tiefling Gnolls", 
+	size : 3, 
+	speed : { 
+		walk : { spd : 30, enc : 20 }, 	},
+
+	toolProfs : ["Artisan's Tools", 1], 
+	languageProfs : ["Gnoll", "Abyssal", 1], 
+	weaponsAdd : ["Gnoll Claws"],
+		
+			weaponOptions : {
+			regExpSearch : /Gnoll Claws/i,
+			name : "Gnoll Claws",
+			source : ["HB", 0],
+			ability : 2,
+			type : "Natural",
+			damage : [1, 6, "slashing"],
+			range : "Melee",
+			description : "Natural, Light",
+			abilitytodamage : true, },
+	vision : ["Darkvision", 60], 
+	dmgres : ["Poison"], 
+	savetxt : { 
+		adv_vs : ["poison", "diseae"] },
+
+	weaponprofs : [true, false, [""]], 
+	skillstxt : "Choose any two skills",  
+	age : "Gnoll Tieflings mature around 16, but live a few years shorter than humans, rarly reaching 70 or 80", 
+	height : " range from 6 to over 7 feet tall (5'9\" + 2d8\")", 
+	weight : " weigh around 200 lb (200 + 2d8 \xD7 2d4 lb)", 
+	improvements : "Tiefling Gnoll: +2 Dexterity or Strength, +1 Consititution;", 
+	scores : [0, 0, 1, 0, 0, 0], 
+	trait : "Tiefling Gnoll (+2 Dexterity or Strength, +1 Consititution)\n   .", 
+
+	abilitySave : 3,  
+	spellcastingAbility : 3, 
+	
+  features : { 
+		"green flame blade" : { 
+			name : "Fiends Heritage (Level 1)", 
+      limfeaname : "Green Flame Blade",
+			minlevel : 0, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Fiends Heritage (level 1)",
+				spells : ["green flame blade"],
+				selection : ["green flame blade"],
+				atwill : true,
+			},
+    },
+      "pass without trace" : { 
+			name : "Fiends Heritage (Level 3)", 
+      limfeaname : "Pass Without Trace",
+			minlevel : 3, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Fiends Heritage (level 3)",
+				spells : ["pass without trace"],
+				selection : ["pass without trace"],
+				oncelr : true,
+			},
+      },
+     "Hunter's mark" : { 
+			name : "Fiends Heritage (Level 5)", 
+      limfeaname : "Hunter's mark",
+			minlevel : 5, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Fiends Heritage (level 5)",
+				spells : ["Hunter's mark"],
+				selection : ["Hunter's mark"],
+				oncelr : true,
+			},
+     },
+  
+  
+  
+
+	features : { //optional; the racial features. Each works the same way, so only a couple of example are given. You can add as many as you want. If the race has no level-dependent or limited features, you can just delete the whole feature entry all together
+
+		"lesser restoration" : { //note the use of lower case characters
+
+			name : "Lesser Restoration", //required; the name of the racial feature
+			minlevel : 3, //required; the level at which the feature is gained
+
+			usages : 1, //optional; number of times it can be used. This can be one value, but can also be an array of 20 values, one for each level
+
+			recovery : "long rest", //required if "usages" is defined; way of getting the limited feature recharged. If you can use anything, but use either "long rest" or "short rest" (note the lower case) for best compatibility with the limited features section. This can be one value, but can also be an array of 20 values, one for each level
+
+			tooltip : " (Celestial Legacy)", //optional; the tooltip added to the entry in the Limited Feature section, this example will read "Lesser Restoration is gained from Something Catlike (Celestial Legacy)"
+
+			action : ["action", ""], //optional; adds the name of the feature to the action list when chosen. The options are "action", "bonus action", and "reaction" //the second value in the array is added as a suffix for the "name" of the feature when entered into the action field
+
+			spellcastingBonus : { //optional; works just like the "spellcastingBonus" object defined above
+				name : "Celestial Legacy (level 3)",
+				spells : ["lesser restoration"],
+				selection : ["lesser restoration"],
+				oncelr : true,
+			},
+
+
+
+};
