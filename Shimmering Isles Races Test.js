@@ -64,7 +64,7 @@ RaceList["Skaven"] = {
 	weight : " weigh around 55 lb (50 + 2d8 \xD7 2d4 lb)", 
 	improvements : "Skaven: +1 Dexterity, +1 Wisdom, +1 Intelligence;", 
 	scores : [0, 1, 0, 1, 1, 0], 
-	trait : "Skaven (+1 Dexterity, 12 Wisdom, +1 Intelligence)\n .", //required; Racial Trait  (note that "\n" is a line break).
+	trait : "Skaven (+1 Dexterity, +1 Wisdom, +1 Intelligence)\n .", //required; Racial Trait  (note that "\n" is a line break).
 
 	abilitySave : 5,  
 
@@ -88,7 +88,7 @@ WeaponsList["skaven bite"] = {
 	type : "Natural", 
 	damage : [1, 6, "piercing"], 
 	range : "Melee", 
-  description : "Brutal: Reroll 1's. Target-DC15 Con save or take 1d6poison damage.", 
+  description : "Brutal: Reroll 1's. Target-DC15 Con save or take extra 1d6poison damage.", 
 	abilitytodamage : true, 
 	modifiers : [1, 1], 
 };
@@ -129,12 +129,20 @@ RaceList["succubus"] = {
 	scores : [0, 0, 0, 1, 0, 2], 
 	trait : "Succubus (+2 Charisma, +1 Intelligence)\nTraits Details here.", 
 	spellcastingAbility : 6, 
-	spellcastingBonus : {
-		name : "Succubus Arts",
-		spells : ["Charm Person"],
-		selection : ["charm person"],
-		firstCol : "atwill"	},	
+		
 	features : { 
+		"druidcraft" : { 
+			name : "Dark Arts", 
+     			limfeaname : "Charm Person",
+			minlevel : 1, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Dark Arts",
+				spells : ["charm person"],
+				selection : ["cham person"],
+				atwill : true,
+			},
+    },
 		"transmorph" : { 
 			name : "Transmorph", 
 			minlevel : 3, 
@@ -193,7 +201,7 @@ RaceList["taintblood demon"] = {
 		walk : { spd : 30, enc : 20 }, 	},
 	languageProfs : ["Common", "Abyssal"], 
 	vision : ["Darkvision", 30], 
-	dmgres : ["Fire", "Radiant"], 
+	dmgres : ["Fire"], 
 	savetxt : { 
 		text : ["Adv social checks on demons", "Disadv on social checks by infernals"], 	},
 	age : " A taintblood lives for about two centuries, reaching maturity at the age of 20", 
@@ -238,24 +246,14 @@ RaceList["winterborn human"] = {
 
 	weaponprofs : [false, false, ["battleaxe", "longsword", "great axes", "greatswords"]], 
 	skills : ["Survival"], 
-	age : " reach adulthood in their late teens and live around 100 years", //optional; the age tooltip/mouseover text (will be displayed in combination with the "plural" entry)
+	age : " reach adulthood in their late teens and live around 100 years", 
+	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", 
+	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
+	improvements : "Winterborn Human: +1 Free Choice, +2 Constitution;", 
+	scores : [0, 0, 2, 0, 0, 0], 
+	trait : "Winterborn Human (+1 Free Choice, +2 Constitution)\n   .", 
 
-	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", //optional; the height tooltip/mouseover text (will be displayed in combination with the "plural" entry)
-
-	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", //optional; the weight tooltip/mouseover text (will be displayed in combination with the "plural" entry)
-
-	heightMetric : " range from 1,5 to over 1,8 metres tall (145 + 5d8 cm)", //optional; the height tooltip/mouseover text (will be displayed in combination with the "plural" entry), when the metric system is chosen
-
-	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", //optional; the weight tooltip/mouseover text (will be displayed in combination with the "plural" entry), when the metric system is chosen
-
-	improvements : "Winterborn Human: +1 Free Choice, +2 Constitution;", //required; the text that is displayed when listing all the ability score improvements
-
-	scores : [0, 0, 1, 0, 0, 0], //required; the ability score improvements as used by the Ability Score dialog. The syntax is: [Str, Dex, Con, Int, Wis, Cha]
-
-	trait : "Winterborn Human (+1 Free Choice, +2 Constitution)\nCelestial Legacy:\n   I know the Light cantrip.\n   Once I reach 3rd level, I can cast Lesser Restoration once per long rest.\nBreath Weapon: Exhale destructive energy as an action with a size, shape, saving throw type, and damage type as found in the table. All in the area must make a saving throw with DC 8 + Wis modifier + prof bonus. It does 2d6 (+1d6 at level 6, 11, 16) damage, half as much damage on a successful save. I can use it again after a short rest.", //required; the racial trait as it will be put in the Racial Trait field on the second page (note that "\n" is a line break).
-
-	abilitySave : 5,  //optional; the ability score to use for the Ability Saving Throws. Remove this line if your race has no Ability that requires Saving Throws. (Str=1, Dex=2, Con=3, Int=4, Wis=5, Cha=6)
-
+	abilitySave : 5,  
 	
 
 	features : { 
@@ -304,13 +302,19 @@ armorOptions : {
 
 	abilitySave : 3,  
 	spellcastingAbility : 6, 
-	spellcastingBonus : { 
-		name : "Lustrous Shield", 
-		spells : ["Shield"], 
-		selection : ["shield"], 
-		times : 2, 
-		prepared : true, 
-		oncelr : true, 
+	features : {
+		"shield" : { 
+			name : "Lustrous Shield", 
+      			limfeaname : "Shield",
+			minlevel : 1, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Lustrous Shield",
+				spells : ["shield"],
+				selection : ["shield"],
+				atwill : true,
+			},
+	},
 	},
 			addMod : { type : "skill", field : "Init", mod : "Int", text : "I can add my Intelligence modifier to initiative rolls." } 
 
@@ -379,8 +383,8 @@ RaceList["plainsborn human"] = {
 	plural : "Plainborns", 
 	size : 3, 
 	speed : { walk : { spd : 30, enc : 20 } },
-	toolProfs : ["Artisan's tools"],
-	languageProfs : ["Common", "From Human"], 
+	toolProfs : ["Artisan's tools", 3],
+	languageProfs : ["Common", 1], 
 	skillstxt : "Choose any two skills", 
 	age : " reach adulthood in their late teens and live around 100 years", 
 	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")",
@@ -389,7 +393,7 @@ RaceList["plainsborn human"] = {
 	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", 
 	improvements : "Plainsborn Human: +1 Charisma, +2 Intelligence;", 
 	scores : [0, 0, 0, 2, 0, 1], 
-	trait : "Plansborn Human (+1 Free Choice, +2 Intelligence)\nVersatile  Culture.\nYou gain proficiency in two skills of your choice.\nCrafting  Expertise.\nYou gain proficiency in one artisan's tools of your choice. When you craft an object using the artisan's tools you're proficient with, you count as two characters working for the amount of gp worth of effort for every day spent creating the item, allowing you to craft objects faster than others.", //required; the racial trait as it will be put in the Racial Trait field on the second page (note that "\n" is a line break).
+	trait : "Plansborn Human (+1 Free Choice, +2 Intelligence)\nVersatile Culture.\nYou gain proficiency in two skills of your choice.\nCrafting Expertise.\nYou gain proficiency in one artisan's tools of your choice. When you craft an object using the artisan's tools you're proficient with, you count as two characters working for the amount of gp worth of effort for every day spent creating the item, allowing you to craft objects faster than others.", //required; the racial trait as it will be put in the Racial Trait field on the second page (note that "\n" is a line break).
 
 };
 
@@ -402,10 +406,10 @@ RaceList["seaborn human"] = {
 	size : 3, 
 	speed : { 
 		walk : { spd : 30, enc : 20 }, 
-		swim : { spd : "30", enc : "20" },
+		swim : { spd : 30, enc : 20 },
 	},
 	toolProfs : ["Vehicles Water"],
-	languageProfs : [1, "Common"],
+	languageProfs : ["Common", 1],
 	savetxt : { 
 		adv_vs : ["negotiating"] 	},
 
@@ -481,7 +485,7 @@ RaceList["gatorkin"] = {
 
 
 WeaponsList["gators greater bite"] = {
-	regExpSearch : /gators greater bite/i,
+	regExpSearch : /Gators Greater Bite/i,
 	name : "Gators Greater Bite",
 	source : ["HB", 0],
 	list : "Natural",
@@ -508,7 +512,7 @@ RaceList["glacier dwarf"] = {
 	vision : [["Darkvision", 60]], 
 	dmgres : ["Cold"], 
 	savetxt : { 
-		text : ["Survival checks in cold climates"], 
+		text : ["Survival checks profx2 in cold climates"], 
 		adv_vs : ["cold"]
 	},
 
@@ -519,9 +523,9 @@ RaceList["glacier dwarf"] = {
 	age : " reach adulthood in their late 40's and live around 300 years", 
 	height : " range from 4 to over 5 feet tall (4'9\" + 2d8\")", 
 	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
-	improvements : "Glacier Dwarf: +1 Dexterity, +1 Strength, +Consititution;", 
+	improvements : "Glacier Dwarf: +1 Dexterity, +1 Strength, +2 Consititution;", 
 	scores : [1, 1, 2, 0, 0, 0], 
-	trait : "Glacier Dwarf (+1 Dexterity, +1 Strength +2 Consititution)\nDwarven Resilience: Unlike the dwarves of the mainland, glacier dwarves possess an innate resistance to cold\nIce  Walk:\n I can move across and climb icy surfaces without needing to make an ability check. Additionally\ndifficult terrain composed of ice or snow doesn’t cost you extra moment and my speed is not reduced by wearing heavy armor\nIcebound Navigation: Whenever you make a Wisdom (Survival) checks for navigating forzen territory, Iam\nconsidered proficient in the Survival skill and add double your proficiency bonus to the check.", 
+	trait : "Glacier Dwarf (+1 Dexterity, +1 Strength +2 Consititution)\nDwarven Resilience: Unlike the dwarves of the mainland, glacier dwarves possess an innate resistance to cold\nIce Walk: I can move across and climb icy surfaces without needing to make an ability check. Additionallydifficult terrain composed of ice or snow doesn’t cost you extra moment and my speed is not reduced by wearing heavy armor\nIcebound Navigation: Whenever you make a Wisdom (Survival) checks for navigating forzen territory, I am considered proficient in the Survival skill and add double your proficiency bonus to the check.", 
 
 };
 
@@ -533,7 +537,7 @@ RaceList["half taxabi"] = {
 	size : 3, 
 	speed : { 
 		walk : { spd : 30, enc : 20 }, 
-		climb : { spd : "20", enc : 10 }, 	},
+		climb : { spd : 20, enc : 10 }, 	},
 	toolProfs : ["Artisan's Tools", 2], 
 	languageProfs : ["Common", 1], 
 		weaponOptions : {
@@ -580,7 +584,7 @@ RaceList["kaijuborn"] = {
 	size : 3, 
 	speed : { 
 		walk : { spd : 30, enc : 20 }, 
-		swim : { spd : "30", enc : "20" }, 	},
+		swim : { spd : 30, enc : 20 }, 	},
 
 	languageProfs : ["Common", 1], 
 		armorOptions : {
@@ -601,9 +605,9 @@ RaceList["kaijuborn"] = {
 	weight : " weigh around 255 lb (210 + 2d8 \xD7 2d4 lb)", 
 	improvements : "Kaijuborn: +1 Strength, +2 Constitution;", 
 	scores : [1, 0, 2, 0, 0, 0], 
-	trait : "Kaijuborn (+1 Strength, +2 Constitution) \nAmphibious: I can breath air and water.\nKaiju Sense - I can sense other kaijuborn within a mile.\nAtomic Breath: Your energy weapon deals radiantdamage in a line 30 feet long and 5 feet wide, imposes a Dex saving throw(DC8+Con+Prof), Half damage on success,\nRed Spiral Atomic Breath: You possess the ability toenhance your atomic breath by risking yourself. \nI can overclock your radioactive heart to deal max damage with my atomic breath to one target, \nbut I take half damage too and make a Con savingthrow (DC 15) or suffer one level of exhaustion.", 
+	trait : "Kaijuborn (+1 Strength, +2 Constitution) \nAmphibious: I can breath air and water.\nKaiju Sense - I can sense other kaijuborn within a mile.\nAtomic Breath: Your energy weapon deals radiantdamage in a line 30 feet long and 5 feet wide, imposes a Dex saving throw(DC8+Con+Prof), Half damage on success,\nRed Spiral Atomic Breath: You possess the ability to enhance your atomic breath by risking yourself. I can overclock your radioactive heart to deal max damage with my atomic breath to one target but I take half damage too and make a Con savingthrow (DC 15) or suffer one level of exhaustion.", 
 
-	abilitySave : 2,  
+	abilitySave : 3,  
 
 	features : { 
 		"atomic breath" : {
@@ -671,7 +675,7 @@ RaceList["lizardfolk blackscale"] = {
 		},
 		
 	},
-	trait : "Lizardfolk Blackscale (+2 Constitution, +1 Strength) Bite: I can use my fanged maw to make unarmed strikes dealing 1d6 piercing damage." + (typePF ? "\n" : " ") + "Cunning Artisan: As part of a short rest I can harvest parts of a slain creature to make a shield, club, javelin, or 1d4 darts/blowgun needles." + (typePF ? "\n" : " ") + "Hold Breath: I can hold my breath for up to 15 minutes at a time." + (typePF ? "\n" : " ") + "Natural Armor: I have an AC of 13 + Dexterity modifier + shield." + (typePF ? "\n" : " ") + "Acid Resistance – You have resistance to acid damage.\nPowerful Build: I count as one size larger when determining my carrying capacity and the weight I can push, drag, or lift.\n\nAggressive: As a bonus action, I can move up to my speed toward an enemy that I can see or hear. I must end my move closer to this enemy than I started.",
+	trait : "Lizardfolk Blackscale (+2 Constitution, +1 Strength)\nBite: I can use my fanged maw to make unarmed strikes dealing 1d6 piercing damage.\nCunning Artisan: As part of a short rest I can harvest parts of a slain creature to make a shield, club, javelin, or 1d4 darts/blowgun needles.\nHold Breath: I can hold my breath for up to 15 minutes at a time.\nAcid Resistance – You have resistance to acid damage.\nPowerful Build: I count as one size larger when determining my carrying capacity and the weight I can push, drag, or lift.\nAggressive: As a bonus action, I can move up to my speed toward an enemy that I can see or hear. I must end my move closer to this enemy than I started.",
 	action : ["bonus action", "Aggressive (dash to enemy)"],
 	carryingCapacity : 2
 };
@@ -728,7 +732,7 @@ RaceList["lizardfolk poisondusk"] = {
 			action : ["bonus action", ""]
 		}
 	},
-	trait : "Lizardfolk Poisondusk(+2 Constitution, +1 Dexterity)\nChameleon skin\nI can try to hide when you are unobscured by pressing yourself up against a olsid surface thats atleast as tall and wide as you. You can hide by pressing against the ground.\n While hiding this way you have advantage on Dex (stelth) check, provided you are out of combat and you remian there without moving or takng actions.\nRacial poison - As part of  long rest you can distill poison from your own glands.\n You gain a number of odese of racial posion equal to half your prof rounded down.\nYou can use a dose to coat one slashing or piercing weapon or upto 3 pieces of ammo.\nApplying the poson takes an action. A creature hit takes 1d4 poison damage.\nOnce applied, the posion retais potency for 1mnutes before drying. Doses last 24hours only.\nPredator - I have advantage on Wisdom (survival)checks to follows tracks and hunt wild game."
+	trait : "Lizardfolk Poisondusk(+2 Constitution, +1 Dexterity)\nChameleon skin\nI can try to hide when you are unobscured by pressing yourself up against a solid surface thats atleast as tall and wide as you. You can hide by pressing against the ground.\n While hiding this way you have advantage on Dex (stelth) check, provided you are out of combat and you remian there without moving or takng actions.\nRacial poison - As part of  long rest you can distill poison from your own glands.\n You gain a number of odese of racial posion equal to half your prof rounded down.\nYou can use a dose to coat one slashing or piercing weapon or upto 3 pieces of ammo. Applying the poson takes an action. A creature hit takes 1d4 poison damage. Once applied, the posion retais potency for 1min before drying. Doses last 24hours only.\nPredator - I have advantage on Wisdom (survival)checks to follows tracks and hunt wild game."
 };
 
 RaceList["lizardfolk sharptooth"] = {
@@ -791,9 +795,9 @@ RaceList["Forestborn human"] = {
 	plural : "Forestborns", 
 	size : 3, 
 	speed : { walk : { spd : 35, enc : 20 } },
-	toolProfs : ["Herbalism Kit"],
-	languageProfs : ["Common", "From Human"], 
-	savetxt : { adv_vs : ["poisons", "diease"] },
+	toolProfs : ["Herbalism Kit", 1],
+	languageProfs : ["Common", 2], 
+	savetxt : { adv_vs : ["poisons", "diease", "Wis checks in forests"] },
 	skills : ["Nature"],
 	skillstxt : "Choose any two skills", 
 	age : " reach adulthood in their late teens and live around 100 years", 
@@ -867,7 +871,7 @@ RaceList["cambion"] = {
 	vision : ["Darkvision", 120], 
 	dmgres : ["Necrotic"], 
 
-	weaponprofs : [false, false, ["spears", "tridants"]], 
+	weaponprofs : [false, false, ["spears", "trident"]], 
 	skillstxt : "Choose any two skills",  
 	age : " reach adulthood in their late teens and live around 600 years while retaining ther youngful looks", 
 	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", 
@@ -879,14 +883,6 @@ RaceList["cambion"] = {
 	trait : "Cambion (+1 Charisma, +2 Strength)\nFiend Magic\n.", 
 
 	spellcastingAbility : 6, 
-	spellcastingBonus : {
-		name : "Fiend Magic",
-		spells : ["Fire Bolt"],
-		selection : ["fire bolt"],
-		times : 2, 
-		prepared : true, 
-		atwill : true, },
-	
 		features : {
 			"fire bolt" : { 
 			name : "Fiend Magic (Level 1)", 
@@ -924,7 +920,7 @@ RaceList["Elnofae"] = {
 	size : 3, 
 	speed : { 
 		walk : { spd : 30, enc : 20 }, 
-    fly : { spd : "fixed 50", enc : "fixed 50" },
+  		fly : { spd : 50, enc : 50 },
           },
 	languageProfs : ["Common", "Slyvan", "Elnofae"], 
 	vision : ["Darkvision", 60], 
@@ -940,7 +936,7 @@ RaceList["Elnofae"] = {
 	features : { 
 		"druidcraft" : { 
 			name : "Part of Nature", 
-      limfeaname : "Druidcraft",
+     			limfeaname : "Druidcraft",
 			minlevel : 1, 
 			tooltip : "", 
 			spellcastingBonus : { 
@@ -988,7 +984,7 @@ RaceList["fishmen"] = {
 	size : 3, 
 	speed : { 
 		walk : { spd : 30, enc : 20 }, 
-		swim : { spd : "fixed 40", enc : "fixed 40" },
+		swim : { spd : 40, enc : 40 },
 	},
 
 	languageProfs : ["Common", 1], 
