@@ -42,15 +42,15 @@ RaceList["tiefling gnoll"] = {
 	spellcastingAbility : 3, 
 	
   features : { 
-		"green flame blade" : { 
+		"green-flame blade" : { 
 			name : "Fiends Heritage (Level 1)", 
-      limfeaname : "Green Flame Blade",
-			minlevel : 0, 
+      limfeaname : "Green-Flame Blade",
+			minlevel : 1, 
 			tooltip : "", 
 			spellcastingBonus : { 
 				name : "Fiends Heritage (level 1)",
-				spells : ["green flame blade"],
-				selection : ["green flame blade"],
+				spells : ["green-flame blade"],
+				selection : ["green-flame blade"],
 				atwill : true,
 			},
     },
