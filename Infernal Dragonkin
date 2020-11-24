@@ -1,0 +1,156 @@
+var iFileName = "Homebrew Syntax - RaceList.js"; 
+RequiredSheetVersion(12.999); 
+
+AddRacialVariant( 
+
+AddRacialVariant( 
+
+	"dragonborn", 
+	"infernal", 
+	{ 
+
+		regExpSearch : /Infernal Dragonborn/i, 
+		name : "Infernal Dragonborn", 
+		source : ["HB", 0], 
+		plural : "Infernal Dragonborns", 
+
+		speed : { 
+		walk : { spd : 30, enc : 20 }, 	},
+	languageProfs : ["Draconic", "Infernal", 1], 
+	vision : ["Darkvision", 60], 
+	dmgres : ["Fire", "Lightning"], 
+	skillstxt : "Choose any two skills",  
+	age : "Infernal dragonborn mature quickly; their reptilian ancestry produces children who can walk and talk only a few months after birth. They reach adulthood at the age of seven and live to be around 115", 
+	height : " range from 7 to over 9 feet tall (6'9\" + 2d8\")", 
+	weight : " weigh around 200 lb (200 + 2d8 \xD7 2d4 lb)", 
+	improvements : "Infernal Dragonborn: +1 Strength, +2 Charisma;", 
+	scores : [1, 0, 0, 0, 0, 2], 
+	trait : "Infernal Dragonborn (+1 Strength, +2 Charisma)\nDevilish Heritage:I am innately magic which allows me to know and cast spells at will throughtout my adventures.\nBronze Draconic Ancestry:While the blood of dragonborn runs through your veins, it has been mixed with tiefling blood. This has mixed the damge of your breath weapon and resistances. Infernal Breath Weapon: Exhale destructive energy as an action with a 5ft by 30ft Line, Dex Save. All in the area must make a saving throw with DC=8+Prof+CHA mod. It does 2d6 half Fire, Half Lightning damage, half as much damage on a successful save.", 
+	spellcastingAbility : 6, 
+
+  features : { 
+		"produce flame" : { 
+			name : "Fiery Veins (Level 1)", 
+      limfeaname : "Produce Flame",
+			minlevel : 0, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Fiery Veins (level 1)",
+				spells : ["produce flame"],
+				selection : ["produce flame"],
+				atwill : true,
+			},
+    },
+      "continual flame" : { 
+			name : "Fiery Veins (Level 3", 
+      limfeaname : "Continual Flame",
+			minlevel : 3, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Fiery Veins (level 3)",
+				spells : ["continual flame"],
+				selection : ["continual flame"],
+				oncelr : true,
+			},
+      },
+     "burning hands" : { 
+			name : "Fiery Veins (Level 5)", 
+      limfeaname : "Burning Hands",
+			minlevel : 5, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Fiery Veins (level 5)",
+				spells : ["burning hands"],
+				selection : ["burning hands"],
+				oncelr : true,
+			},
+     },
+      },
+      
+		"infernal breath weapon" : {
+			name : "Infernal Breath Weapon",
+			minlevel : 1,
+			usages : 1,
+			additional : ["2d6", "2d6", "2d6", "3d6", "3d6", "3d6", "3d6", "3d6", "3d6", "4d6", "4d6", "4d6", "4d6", "4d6", "4d6", "5d6", "5d6", "5d6", "5d6", "5d6"], 
+			recovery : "short rest",
+			tooltip : "",
+
+			action : ["action", ""], 
+		},
+  }
+);
+
+
+RaceList["Infernal Dragonborn"] = { 
+	regExpSearch : /Infernal Dragonborn/i, 
+	name : "Infernal Dragonborn", 
+	sortname : "Dragonborn, Infernal", 
+	source : ["HB", 0],
+	plural : "Infernal Dragonborns", 
+	size : 3, 
+	speed : { 
+		walk : { spd : 30, enc : 20 }, 	},
+	languageProfs : ["Draconic", "Infernal", 1], 
+	vision : ["Darkvision", 60], 
+	dmgres : ["Fire", "Lightning"], 
+	skillstxt : "Choose any two skills",  
+	age : "Infernal dragonborn mature quickly; their reptilian ancestry produces children who can walk and talk only a few months after birth. They reach adulthood at the age of seven and live to be around 115", 
+	height : " range from 7 to over 9 feet tall (6'9\" + 2d8\")", 
+	weight : " weigh around 200 lb (200 + 2d8 \xD7 2d4 lb)", 
+	improvements : "Infernal Dragonborn: +1 Strength, +2 Charisma;", 
+	scores : [1, 0, 0, 0, 0, 2], 
+	trait : "Infernal Dragonborn (+1 Strength, +2 Charisma)\nDevilish Heritage:I am innately magic which allows me to know and cast spells at will throughtout my adventures.\nBronze Draconic Ancestry:While the blood of dragonborn runs through your veins, it has been mixed with tiefling blood. This has mixed the damge of your breath weapon and resistances. Infernal Breath Weapon: Exhale destructive energy as an action with a 5ft by 30ft Line, Dex Save. All in the area must make a saving throw with DC=8+Prof+CHA mod. It does 2d6 half Fire, Half Lightning damage, half as much damage on a successful save.", 
+	spellcastingAbility : 6, 
+
+  features : { 
+		"produce flame" : { 
+			name : "Fiery Veins (Level 1)", 
+      limfeaname : "Produce Flame",
+			minlevel : 0, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Fiery Veins (level 1)",
+				spells : ["druidcraft"],
+				selection : ["druidcraft"],
+				atwill : true,
+			},
+    },
+      "continual flame" : { 
+			name : "Fiery Veins (Level 3", 
+      limfeaname : "Continual Flame",
+			minlevel : 3, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Fiery Veins (level 3)",
+				spells : ["continual flame"],
+				selection : ["continual flame"],
+				oncelr : true,
+			},
+      },
+     "burning hands" : { 
+			name : "Fiery Veins (Level 5)", 
+      limfeaname : "Burning Hands",
+			minlevel : 5, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Fiery Veins (level 5)",
+				spells : ["burning hands"],
+				selection : ["burning hands"],
+				oncelr : true,
+			},
+     },
+      },
+      
+		"infernal breath weapon" : {
+			name : "Infernal Breath Weapon",
+			minlevel : 1,
+			usages : 1,
+			additional : ["2d6", "2d6", "2d6", "3d6", "3d6", "3d6", "3d6", "3d6", "3d6", "4d6", "4d6", "4d6", "4d6", "4d6", "4d6", "5d6", "5d6", "5d6", "5d6", "5d6"], 
+			recovery : "short rest",
+			tooltip : "",
+
+			action : ["action", ""], 
+		},
+	}
+
+};
