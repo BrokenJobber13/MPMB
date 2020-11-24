@@ -78,32 +78,5 @@ RaceList["tiefling gnoll"] = {
 				oncelr : true,
 			},
      },
-  
-  
-  
-
-	features : { //optional; the racial features. Each works the same way, so only a couple of example are given. You can add as many as you want. If the race has no level-dependent or limited features, you can just delete the whole feature entry all together
-
-		"lesser restoration" : { //note the use of lower case characters
-
-			name : "Lesser Restoration", //required; the name of the racial feature
-			minlevel : 3, //required; the level at which the feature is gained
-
-			usages : 1, //optional; number of times it can be used. This can be one value, but can also be an array of 20 values, one for each level
-
-			recovery : "long rest", //required if "usages" is defined; way of getting the limited feature recharged. If you can use anything, but use either "long rest" or "short rest" (note the lower case) for best compatibility with the limited features section. This can be one value, but can also be an array of 20 values, one for each level
-
-			tooltip : " (Celestial Legacy)", //optional; the tooltip added to the entry in the Limited Feature section, this example will read "Lesser Restoration is gained from Something Catlike (Celestial Legacy)"
-
-			action : ["action", ""], //optional; adds the name of the feature to the action list when chosen. The options are "action", "bonus action", and "reaction" //the second value in the array is added as a suffix for the "name" of the feature when entered into the action field
-
-			spellcastingBonus : { //optional; works just like the "spellcastingBonus" object defined above
-				name : "Celestial Legacy (level 3)",
-				spells : ["lesser restoration"],
-				selection : ["lesser restoration"],
-				oncelr : true,
-			},
-
-
-
+  },
 };
