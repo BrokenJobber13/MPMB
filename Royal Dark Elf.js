@@ -1,12 +1,12 @@
-var iFileName = "High Dark Elf.js"; 
+var iFileName = "Royal Dark Elf.js"; 
 RequiredSheetVersion(12.999); 
 
-RaceList["high dark elf"] = { 
-		regExpSearch : /High Dark Elf/i,
-		name : "High Dark Elf",
-		sortname : "Elf, High Dark",
+RaceList["royal dark elf"] = { 
+		regExpSearch : /Royal Dark Elf/i,
+		name : "Royal Dark Elf",
+		sortname : "Elf, Royal Dark",
 		source : ["HB", 0],
-		plural : "High Dark elves",
+		plural : "Royal Dark elves",
 		size : 3,
 		speed : {
 			walk : { spd : 30, enc : 20 }
@@ -27,11 +27,18 @@ RaceList["high dark elf"] = {
 		scores : [0, 2, 0, 1, 0, 0],
 		trait : "High Elf (+2 Dexterity, +1 Intelligence)\nTrance: Elves don't need to sleep, but meditate semiconsciously, for 4 hours a day. While meditating, I can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, I gain the same benefit that a human does from 8 hours of sleep, thus needing only 4 hours for a long rest.\nCantrip: I know the cantrip Light. Intelligence is my spellcasting ability for it.",
 		spellcastingAbility : 4,
-		spellcastingBonus : { 
-		name : "High Drow Magic", 
-		spells : ["Light"], 
-		selection : ["light"], 
-		times : 2, 
-		prepared : true, 
-		atwill : true, },
-	};
+		features : {
+		"light" : { 
+			name : "Royal Drow Magic", 
+     			limfeaname : "Light",
+			minlevel : 1, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Royal Drow Magic",
+				spells : ["light"],
+				selection : ["light"],
+				atwill : true,
+			},
+    },
+    },
+};
