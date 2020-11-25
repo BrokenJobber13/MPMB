@@ -11,6 +11,7 @@ RaceList["infernal"] = {
 		speed : { 
 		walk : { spd : 30, enc : 20 }, 	},
 	languageProfs : ["Draconic", "Infernal", "Common"], 
+	weaponsAdd : ["Infernal Breath Weapon"],
 	weaponOptions : {
 			regExpSearch : /infernal breath weapon/i,
 			name : "Infernal Breath weapon",
@@ -24,7 +25,7 @@ RaceList["infernal"] = {
 			dc : true,
 			dbBreathWeapon : true
 		},
-		weaponsAdd : ["Infernal Breath Weapon"],
+		weaponsAdd : ["Braconic Tail Whip"],
 		
 			weaponOptions : {
 			regExpSearch : /Draconic Tail Whip/i,
@@ -37,7 +38,6 @@ RaceList["infernal"] = {
 			description : "Light",
 			abilitytodamage : true,
 		},
-		weaponsAdd : ["Draconic Tail Whip"],
 	vision : ["Darkvision", 60], 
 	dmgres : ["Fire", "Lightning"], 
 	skillstxt : "Choose any two skills",  
