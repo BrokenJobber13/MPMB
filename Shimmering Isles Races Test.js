@@ -11,7 +11,7 @@ RaceList["mountainborn human"] = {
 	size : 3, 
 	speed : { 
 		walk : { spd : 30, enc : 20 }, },
-	toolProfs : ["Smith's or Mason's tools", 1], 
+	toolProfs : ["Smith's or Mason's tools", ["1"]], 
 	languageProfs : ["Common", 1], 
 	savetxt : { 
 		text : ["I can ignore difficult Rocky terrain and double Prof for Str checks."], 	},
