@@ -604,3 +604,76 @@ BackgroundFeatureList["enhancing features"] = {
 	source : ["HB", 0], 
 };
 
+
+var iFileName = "Abandoned - BackgroundList & BackgroundFeatureList.js"; // Optional; This is how the file will be named in the sheet if you import it as a file and not copy-paste its content. Only the first occurrence of this variable will be used
+RequiredSheetVersion(12.999); 
+BackgroundList["abandoned"] = { 
+	regExpSearch : /Abandoned/i, 
+
+	name : "Abandoned", 
+	source : ["HB", 0], 
+	skillstxt : "Choose two from Survival, Nature, and Arcana", 
+	gold : 15, 
+	equipleft : [ 
+		["Hawk Medallion", 1, ""],
+		["Pan Flute", 1, 2],
+    ["Hide Clothes", "", "",], 
+    ],
+	feature : "Animal Instinct",
+	trait : [
+		"I tend to rest alot and enjoy my surroundings.",
+		"I do not like being in populated places very much and avoid them as much as possible.",
+		"I try to befriend animals that cross my path.",
+		"I love to play my pan flute out in nature, preferably sitting on a tree branch.",
+		"I am content with being alone and prefer it.",
+		"I don't play attention to the risks in a situation. Never tell me the odds.",
+		"I prefer to resolve matters as calmly as possible.",
+	], 
+
+	ideal : [
+		["Guardian",
+    "Guardian : I will be known as the guardian of the forest before I die",
+		],
+		["Searching",
+			"Freedom : It is my mission to find the tree I once encountered along with the fairy.",
+		],
+		["Charity",
+			"Charity : I will find my parents and I will get answers for why I was abandoned.",
+		],
+		["Greed",
+			"Greed : I will rase children of my own in this forest and pass down my knowledge.",
+		],
+		["People",
+			"People : I will become one with nature and use its resources for good.",
+		],
+		["Redemption",
+			"Redemption : I will follow Pan in hopes to one day meet him.",
+		],
+	], 
+
+	bond : [
+		"I protect nature and nature protects me.",
+		"My medallion is what drives me to find my parents.",
+		"The tree is why I remain in the forest, I search for the secrets it hides.",
+		"A pack of wolves protected me from a bear attack while I was resting.",
+		"I hear voices of children telling me to follow Pan.",
+		"The only people I knew left me for reasons unknown to me.",
+	], 
+	flaw : [
+		"I tend to get lost in the beauty of nature and to pay attention to my surroundings.",
+		"I scare anyone I meet and cannot figure out why.",
+		"I get overly aggressive if someone harms nature.",
+		"I trust in animals too easily when I should not.",
+		"From being alone for so long I talk to myself, People usually avoid me for this.",
+		"When talking to people I usually accidentally offend them, I do not have a filter.",
+	],  
+
+	toolProfs : [["pan flute"]],	
+};
+BackgroundFeatureList["Animal Instinct"] =   {
+  description : "Since I have been living in nature for the majority of my life, I have adapted to any terrain with trees, water, snow, and rain.",
+  source : ["HB", 0],
+    };
+
+
+
