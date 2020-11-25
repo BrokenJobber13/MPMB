@@ -1,7 +1,8 @@
 var iFileName = "Infernal Dragonkin.js"; 
-RequiredSheetVersion(12.999); 
 
-RaceList["infernal"] = { 
+
+
+				RaceList["infernal"] = { 
 
 		regExpSearch : /Infernal Dragonkin/i, 
 		name : "Infernal Dragonkin", 
@@ -20,23 +21,10 @@ RaceList["infernal"] = {
 			type : "Natural",
 			damage : [2, 6, "fire/light"],
 			range : "5by30-ft line",
-			description : "Hits all in area; Dex save, success - half damage; Usable only once per short rest",
+			description : "Hits all in area; Dex save, success - half damage; Usable only twice per short rest",
 			abilitytodamage : false,
 			dc : true,
 			idbBreathWeapon : true
-		},
-		weaponsAdd : ["Draconic Tail Whip"],
-		
-			weaponOptions : {
-			regExpSearch : /Draconic Tail Whip/i,
-			name : "Draconic Tail Whip",
-			source : ["HB", 0],
-			ability : 2,
-			type : "Natural",
-			damage : [1, 6, "bludgeoning"],
-			range : "Melee",
-			description : "Light",
-			abilitytodamage : true,
 		},
 	vision : ["Darkvision", 60], 
 	dmgres : ["Fire", "Lightning"], 
@@ -98,7 +86,7 @@ RaceList["infernal"] = {
 			calcChanges : {
 					atkAdd : [
 						function (fields, v) {
-							if (v.theWea.idbBreathWeapon && CurrentRace.known === 'infernal dragonkin') {
+							if (v.theWea.dbBreathWeapon && CurrentRace.known === 'infernal dragonkin') {
                 fields.Damage_Die = (CurrentRace.level < 3 ? 2 : CurrentRace.level < 9 ? 3 : CurrentRace.level < 16 ? 4 : 5) + 'd6';
 						}
             },
@@ -107,4 +95,3 @@ RaceList["infernal"] = {
 			},
             },
 		};
-
