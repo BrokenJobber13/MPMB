@@ -116,11 +116,22 @@ RaceList["succubus"] = {
 		walk : { spd : 30, enc : 20 }, 
 		fly : { spd : "walk", enc : 0 }, 	},
 	languageProfs : [ "Common", "Abyssal", "Infernal", "Telepathy 30ft"], 
-	weapons : ["claws"], 
+	weaponsAdd : ["Succubus Claws"],
+		
+			weaponOptions : {
+			regExpSearch : /Succubus Claws/i,
+			name : "Succubus Claws",
+			source : ["HB", 0],
+			ability : 2,
+			type : "Natural",
+			damage : [1, 6, "slashing"],
+			range : "Melee",
+			description : "Natural, Light",
+			abilitytodamage : true, },
 	vision : ["Darkvision", 120], 
 	dmgres : ["Necrotic"], 
 	skillstxt : "Choose any two skills",  
-	age : " reach adulthood in their late teens and live around 600 years while retaining their youngful appearence", 
+	age : " reach adulthood in their late teens and live around 600 years while retaining their youthful appearence", 
 	height : " range from 4 to over 5 feet tall (3'9\" + 2d8\")", 
 	weight : " weigh around 85 lb (70 + 2d8 \xD7 2d4 lb)", 
 	heightMetric : " range from 1,5 to over 1,8 metres tall (145 + 5d8 cm)", 
@@ -131,7 +142,7 @@ RaceList["succubus"] = {
 	spellcastingAbility : 6, 
 		
 	features : { 
-		"druidcraft" : { 
+		"charm person" : { 
 			name : "Dark Arts", 
      			limfeaname : "Charm Person",
 			minlevel : 1, 
@@ -437,14 +448,19 @@ RaceList["gatorkin"] = {
 	},
 	skillstxt : "Choose any two skills",
 	languageProfs : ["Draconic", 1],
-	weaponOptions : {
-		baseWeapon : "gators greater bite",
-		regExpSearch : /gators greater bite/i,
-		name : "Gators Greater Bite",
-		source : ["HB", 0],
-		damage : [2, 6, "piercing"]
-	},
 	weaponsAdd : ["Gators Greater Bite"],
+		weaponsAdd : ["Gators Greater Bite"],
+		
+			weaponOptions : {
+			regExpSearch : /Gators Greater Bite/i,
+			name : "Gators Greater Bite",
+			source : ["HB", 0],
+			ability : 1,
+			type : "Natural",
+			damage : [2, 6, "piercing"],
+			range : "Melee",
+			description : "Natural, Lunge 10ft, Finesse, Brutal Reroll 1's.",
+			abilitytodamage : true, },
 	armorOptions : {
 		regExpSearch : /^(?=.*natural)(?=.*armou?r).*$/i,
 		name : "Natural Armor",
@@ -493,7 +509,7 @@ WeaponsList["gators greater bite"] = {
 	type : "Martial",
 	damage : [2, 6, "Piercing"],
 	range : "Melee",
-	description : "Lunge 10ft, Finesse, Brutal Reroll 1's.",
+	description : "Natural, Lunge 10ft, Finesse, Brutal Reroll 1's.",
 	abilitytodamage : true,
 }; 
 
@@ -587,13 +603,26 @@ RaceList["kaijuborn"] = {
 		swim : { spd : 30, enc : 20 }, 	},
 
 	languageProfs : ["Common", 1], 
+	weaponsAdd : ["Atomic Breath"],
+		
+			weaponOptions : {
+			regExpSearch : /Atomic Breath/i,
+			name : "Atomic Breath",
+			source : ["HB", 0],
+			ability : 3,
+			type : "Natural",
+			damage : [2, 6, "radiant"],
+			range : "5by30ft Line",
+			description : "Natural, ",
+			abilitytodamage : true, 
+			dc : true,
+			},
+	armorAdd : "Natural Armor",
 		armorOptions : {
 		regExpSearch : /^(?=.*natural)(?=.*armou?r).*$/i,
 		name : "Natural Armor",
 		source : ["V", 113],
-		ac : 13
-	},
-	armorAdd : "Natural Armor",
+		ac : 13	},
 	vision : ["Darkvision", 60], 
 
 	savetxt : { 
@@ -795,8 +824,8 @@ RaceList["Forestborn human"] = {
 	plural : "Forestborns", 
 	size : 3, 
 	speed : { walk : { spd : 35, enc : 20 } },
-	toolProfs : ["Herbalism Kit", 1],
-	languageProfs : ["Common", 2], 
+	toolProfs : [["Herbalism Kit"], [2]],
+	languageProfs : ["Common", 1], 
 	savetxt : { adv_vs : ["poisons", "diease", "Wis checks in forests"] },
 	skills : ["Nature"],
 	skillstxt : "Choose any two skills", 
@@ -807,7 +836,7 @@ RaceList["Forestborn human"] = {
 	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", 
 	improvements : "Forestborn Human: +1 Free Choice, +2 Wisdom;", 
 	scores : [0, 0, 0, 2, 0, 0], 
-	trait : "Forestborn Human (+1 Free Choice, +2 Wisdom)\nNatural Resistances\nYou have advantage on saving throws against poisons and diseases.\nWatchers of the Forests\nWhenever you make a Wisdom(Perception) checks while in a forest, you are considered proficient in the Perception skill and add double your proficiency bonus to the check, instead your normal proficiency bonus.",
+	trait : "Forestborn Human (+1 Free Choice, +2 Wisdom)\nNatural Resistances\nYou have advantage on saving throws against poisons and diseases.\nWatchers of the Forests: Whenever you make a Wisdom(Perception) checks while in a forest, you are considered proficient in the Perception skill and add double your proficiency bonus to the check, instead your normal proficiency bonus.",
 };
 
 RaceList["android"] = { 
@@ -819,14 +848,14 @@ RaceList["android"] = {
 	speed : { 
 		walk : { spd : 30, enc : 30 }, 	},
 	toolProfs : ["Tinker's tools", "Int"], 
-	languageProfs : ["Common"], 
-armorOptions : {
+	languageProfs : ["", 1], 
+	armorAdd : "Natural Armor",
+	armorOptions : {
 		regExpSearch : /^(?=.*natural)(?=.*armou?r).*$/i,
 		name : "Natural Armor",
 		source : ["V", 113],
 		ac : 13
 	},
-	addarmor : "Natural Armor", 
 	vision : ["Darkvision", 60], 
 	dmgres : ["Fire"], 
 	savetxt : { 
@@ -840,21 +869,25 @@ armorOptions : {
 	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
 	improvements : "Android: +2 Constitution, +2 Strength, +1 Intelligence;", 
 	scores : [2, 0, 2, 1, 0, 0], 
-	trait : "Android (+2 Constitution, +2 Strength, +1 Intelligence)\n   .", //required; th (note that "\n" is a line break).
+	trait : "Android (+2 Constitution, +2 Strength, +1 Intelligence)\n   .", 
 
 	abilitySave : 3,  
 	spellcastingAbility : 6, 
-	spellcastingBonus : { 
-		name : "Android Nature", 
-		spells : ["Shield"], 
-		selection : ["shield"], 
-		times : 2, 
-		prepared : true, 
-		oncelr : true, 
+	features : { 
+		"shield" : { 
+			name : "Android Nature", 
+     			limfeaname : "Shield",
+			minlevel : 1, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Android Nature",
+				spells : ["shield"],
+				selection : ["shield"],
+				atwill : true,
+			},
+    },
 	},
-			addMod : { type : "skill", field : "Init", mod : "Int", text : "I can add my Intelligence modifier to initiative rolls." } 
-
-
+	addMod : { type : "skill", field : "Init", mod : "Int", text : "I can add my Intelligence modifier to initiative rolls." } 
 };
 
 RaceList["cambion"] = { 
