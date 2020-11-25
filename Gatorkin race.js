@@ -1,5 +1,5 @@
-var iFileName = "Gatorkin.js"; // Optional; This is how the file will be named in the sheet if you import it as a file and not copy-paste its content. Only the first occurrence of this variable will be used
-RequiredSheetVersion(12.999); // Optional; This is the minimum required version number of the sheet for the script to work. If the sheet being used to import the script is of an earlier version, the user will be warned
+var iFileName = "Gatorkin.js"; 
+RequiredSheetVersion(12.999); 
 
 
 RaceList["gatorkin"] = {
@@ -14,14 +14,19 @@ RaceList["gatorkin"] = {
 	},
 	skillstxt : "Choose any two skills",
 	languageProfs : ["Draconic", 1],
-	weaponOptions : {
-		baseWeapon : "gators greater bite",
-		regExpSearch : /gators greater bite/i,
-		name : "Gators Greater Bite",
-		source : ["HB", 0],
-		damage : [2, 6, "piercing"]
-	},
 	weaponsAdd : ["Gators Greater Bite"],
+		
+			weaponOptions : {
+			regExpSearch : /Gators Greater Bite/i,
+			name : "Gators Greater Bite",
+			source : ["HB", 0],
+			ability : 1,
+			type : "Natural",
+			damage : [2, 6, "piercing"],
+			range : "Melee",
+			description : "Natural, Lunge 10ft, Finesse, Brutal Reroll 1's.",
+			abilitytodamage : true, },
+
 	armorOptions : {
 		regExpSearch : /^(?=.*natural)(?=.*armou?r).*$/i,
 		name : "Natural Armor",
@@ -70,6 +75,6 @@ WeaponsList["gators greater bite"] = {
 	type : "Martial",
 	damage : [2, 6, "Piercing"],
 	range : "Melee",
-	description : "Lunge 10ft, Finesse, Brutal Reroll 1's.",
+	description : "Natural, Lunge 10ft, Finesse, Brutal Reroll 1's.",
 	abilitytodamage : true,
 }; 
