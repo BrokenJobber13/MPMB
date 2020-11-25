@@ -23,9 +23,9 @@ RaceList["infernal"] = {
 			description : "Hits all in area; Dex save, success - half damage; Usable only once per short rest",
 			abilitytodamage : false,
 			dc : true,
-			dbBreathWeapon : true
+			idbBreathWeapon : true
 		},
-		weaponsAdd : ["Braconic Tail Whip"],
+		weaponsAdd : ["Draconic Tail Whip"],
 		
 			weaponOptions : {
 			regExpSearch : /Draconic Tail Whip/i,
@@ -98,7 +98,7 @@ RaceList["infernal"] = {
 			calcChanges : {
 					atkAdd : [
 						function (fields, v) {
-							if (v.theWea.dbBreathWeapon && CurrentRace.known === 'infernal dragonkin') {
+							if (v.theWea.idbBreathWeapon && CurrentRace.known === 'infernal dragonkin') {
                 fields.Damage_Die = (CurrentRace.level < 3 ? 2 : CurrentRace.level < 9 ? 3 : CurrentRace.level < 16 ? 4 : 5) + 'd6';
 						}
             },
