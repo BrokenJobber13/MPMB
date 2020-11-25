@@ -1,6 +1,22 @@
 var iFileName = "Shimmering Isles Weapons.js"; 
 RequiredSheetVersion(12.999); 
 
+WeaponsList["draconic tail whip"] = { 
+	regExpSearch : /Draconic Tail Whip/i, 
+	name : "Draconic Tail Whip", 
+	source : ["HB", 0], 
+	list : "melee", 
+	ability : 2, 
+	type : "Natural", 
+	damage : [1, 6, "bludgeoning"], 
+	range : "Melee, 10 ft", 
+	description : "Natural, Reach - 10ft", 
+	abilitytodamage : true, 
+	weight : "", 
+	monkweapon : true, 	
+	modifiers : ["Dex", "Dex"], 
+};
+
 AmmoList["black powder"] = { 
 	name : "Black Powder", 
 	source : ["HB", 0], 
