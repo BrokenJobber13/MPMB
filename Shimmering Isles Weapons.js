@@ -114,7 +114,6 @@ WeaponsList["greased net"] = {
 	description : "Thrown 5/15, 1Attack, upto Large creature hit is restrained. Dex DC save 10 or fail prone", 
 	abilitytodamage : true, 
 	weight : 3, 
-	modifiers : [1, "DEX"], 
 };
 
 WeaponsList["weighted net"] = { 
@@ -129,7 +128,6 @@ WeaponsList["weighted net"] = {
 	description : "Thrown, Upto Large creature restrianed on hit, Vulnerable to slashing dmg. Escape DC 15 Str.", 
 	abilitytodamage : true, 
 	weight : 8, 
-	modifiers : [1, "DEX"], 
 };
 
 WeaponsList["bladed net"] = { 
@@ -143,8 +141,7 @@ WeaponsList["bladed net"] = {
 	range : "Range 5/15ft", 
 	description : "Thrown, Upto Large creature restrianed on hit, All within 10ft make Dex save DC13, half damage on success.", 
 	abilitytodamage : true, 
-	weight : 10, 
-	modifiers : [1, "DEX"], 
+	weight : 10,  
 };
 
 WeaponsList["barbed net"] = { 
@@ -158,8 +155,7 @@ WeaponsList["barbed net"] = {
 	range : "Range 5/15ft", 
 	description : "Thrown, Upto Large creature restrianed on hit, All within 10ft make Dex save DC13, half damage on success.", 
 	abilitytodamage : true, 
-	weight : 5, 
-	modifiers : [1, "DEX"], 
+	weight : 5,  
 };
 
 WeaponsList["assassins hidden blade"] = { 
@@ -174,7 +170,6 @@ WeaponsList["assassins hidden blade"] = {
 	description : "Affixed, Light, Finesse, Concealed, Special: Adv to keep hidden.", 
 	abilitytodamage : true, 
 	weight : 2, 
-	modifiers : [1, "DEX"], 
 };
 WeaponsList["hidden blade"] = { 
 	regExpSearch : /Hidden Blade/i, 
@@ -187,8 +182,7 @@ WeaponsList["hidden blade"] = {
 	range : "Melee", 
 	description : "Affixed, Light, Finesse, Concealed, Special: Adv to keep hidden.", 
 	abilitytodamage : true, 
-	weight : 2, 
-	modifiers : ["", "DEX"], 
+	weight : 2,  
 };
 WeaponsList["boot dagger"] = { 
 	regExpSearch : /Boot Dagger/i, 
@@ -202,7 +196,6 @@ WeaponsList["boot dagger"] = {
 	description : "Light, Finesse, Concealed, Special: Adv to keep hidden.", 
 	abilitytodamage : true, 
 	weight : 2, 
-	modifiers : [1, "DEX"], 
 };
 WeaponsList["explosive tag"] = { 
 	regExpSearch : /Explosive Tag/i, 
@@ -216,7 +209,6 @@ WeaponsList["explosive tag"] = {
 	description : "Thrown, Range 30ft, All within 10ft make Dex save DC13, half damage on success.", 
 	abilitytodamage : true, 
 	weight : 1, 
-	modifiers : [1, "DEX"], 
 };
 WeaponsList["boarding axe"] = { 
 	regExpSearch : /Boarding Axe/i, 
@@ -229,8 +221,7 @@ WeaponsList["boarding axe"] = {
 	range : "Melee", 
 	description : "Light, Special: Adv to Str checks for climbing.", 
 	abilitytodamage : true, 
-	weight : 3, 
-	modifiers : [1, "STR"], 
+	weight : 3,  
 };
 WeaponsList["spiked sickle"] = { 
 	regExpSearch : /Spiked Sickle/i, 
@@ -260,12 +251,11 @@ WeaponsList["great cannon"] = {
 	source : ["HB", 0],
 	list : "Other",
 	ability : 4,
-	type : "Simple",
-	damage : [3, 6, "force"],
+	type : "Martial",
+	damage : [2, 10, "force"],
 	range : "Ranged 40/200",
 	weight : 3,
-	ammo : "lead ball", 
-	dc : true, 
+	ammo : "cannon ball", 
 	description : "Launch (40/200), Firearm, Ammunition, Misfire (1), Reload:Bonus Action",
 	abilitytodamage : true
 }; 
@@ -276,12 +266,11 @@ WeaponsList["standard cannon"] = {
 	list : "Other",
 	ability : 4,
 	type : "Simple",
-	damage : [2, 6, "force"],
-	range : "Ranged 40/200",
+	damage : [1, 10, "force"],
+	range : "Ranged 40/150",
 	weight : 3,
-	ammo : "lead ball", 
-	dc : true, 
-	description : "Launch (40/200), Firearm, Ammunition, Misfire (1), Reload:Action",
+	ammo : "cannon ball", 
+	description : "Launch (40/150), Firearm, Ammunition, Misfire (1), Reload:Action",
 	abilitytodamage : true
 }; 
 WeaponsList["small cannon"] = {
@@ -291,12 +280,11 @@ WeaponsList["small cannon"] = {
 	list : "Other",
 	ability : 4,
 	type : "Simple",
-	damage : [2, 6, "force"],
-	range : "Ranged 40/200",
+	damage : [1, 10, "force"],
+	range : "Ranged 40/100",
 	weight : 3,
-	ammo : "lead ball", 
-	dc : true, 
-	description : "Launch (40/200), Firearm, Ammunition, Misfire (4), Reload:Action",
+	ammo : "cannon ball", 
+	description : "Launch (40/100), Firearm, Ammunition, Misfire (4), Reload:Action",
 	abilitytodamage : true
 }; 
 WeaponsList["odachi katana"] = { 
@@ -311,7 +299,6 @@ WeaponsList["odachi katana"] = {
 	description : "Two Handed. Special: Adv against being Disarmed.", 
 	abilitytodamage : true, 
 	weight : 4, 
-	modifiers : [1, "STR"], 
 };
 
 WeaponsList["cutlass"] = { 
@@ -325,8 +312,7 @@ WeaponsList["cutlass"] = {
 	range : "Melee", 
 	description : "Finesse, Light, Special: Adv against being Disarmed.", 
 	abilitytodamage : true, 
-	weight : 4, 
-	modifiers : [1, "STR"], 
+	weight : 4,  
 };
 
 WeaponsList["harpoon"] = { 
@@ -340,12 +326,11 @@ WeaponsList["harpoon"] = {
 	range : "Melee, 10/80 ft", 
 	description : "Special, Thrown (10/80)", 
 	abilitytodamage : true, 
-	weight : 6, 
-	modifiers : [1, "Dex"], 
+	weight : 6,
 };
 
 WeaponsList["kunai"] = { 
-	regExpSearch : /^ninja(?=.*kunai).*$/i, 
+	regExpSearch : /Kunai/i, 
 	name : "Kunai", 
 	source : ["HB", 0], 
 	list : "Ranged", 
@@ -355,9 +340,7 @@ WeaponsList["kunai"] = {
 	range : "Ranged, 10/80 ft", 
 	description : "Light, Thrown(10/80)", 
 	abilitytodamage : true, 
-	weight : 1, 
-	monkweapon : false, 
-	modifiers : [1, "DEX"], 
+	weight : 1,  
 };
 
 WeaponsList["sharks powerful bite"] = {
