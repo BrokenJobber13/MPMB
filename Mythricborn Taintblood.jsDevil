@@ -8,11 +8,11 @@ RaceList["Mythricborn Taintblood Devil"] = {
 		walk : { spd : 30, enc : 20 }, 	},
 	languageProfs : ["Common", "Infernal", 2], 
 	vision : ["Darkvision", 30], 
-	dmgres : ["Poison", "Neurotic"], 
+	dmgres : ["Poison", "Necrotic"], 
 	savetxt : { 
 		text : ["Adv on social checks with demons.", "Disadv on social checks demons make on me.", "on Persuasion to Good alignments"], 	},
   weaponprofs : [false, false, ["gladius", "spears", "claymore", "staff"]],
-	age : " A taintblood lives for about two centuries, reaching maturity at the age of 20", 
+	age : " A Mythricborn Taintblood is rare so lifespare isn't known, they maturely slowert than others, still looking young at 20.", 
 	height : " range from 5 to over 7 feet tall (4'9\" + 2d8\")", 
 	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
 	improvements : "Taintblood Devil: +2 Dexterity, +1 Intelligence, +1 Charisma;", 
@@ -41,4 +41,6 @@ RaceList["Mythricborn Taintblood Devil"] = {
 			recovery : "long rest", 
 			tooltip : "", 
 			action : ["bonus action", ""], 
+},
+  },
 };
