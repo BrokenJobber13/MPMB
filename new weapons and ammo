@@ -38,7 +38,7 @@ GearList["new world log pose"] = {
 	weight : 0.5,
 	type : "",
 	source : ["HB", 0],
-}
+},
 
 GearList["log pose"] = {
 	infoname : "Log Pose [50 gp]",
@@ -47,7 +47,7 @@ GearList["log pose"] = {
 	weight : 0.5,
 	type : "",
 	source : ["HB", 0],
-}
+},
 
 GearList["eternal log pose"] = {
 	infoname : "Eternal Log Pose [350 gp]",
@@ -56,7 +56,7 @@ GearList["eternal log pose"] = {
 	weight : 0.5,
 	type : "",
 	source : ["HB", 0],
-}
+},
 
 PacksList["weaponsmiths kit"] = {
 	name : "Weaponsmiths Kit (50 gp)",
@@ -67,9 +67,9 @@ PacksList["weaponsmiths kit"] = {
 		["Vial of Oil", "", 1],
 		["Rotary Tool", "", 5],
 		["Metal Files", "", 2],
-		["Hammer", "", 1]
-	]
-}
+		["Hammer", "", 1],
+	],
+},
 
 GearList["portal scroll"] = {
 	infoname : "Portal Scroll [350 gp]",
@@ -78,7 +78,7 @@ GearList["portal scroll"] = {
 	weight : 0.5,
 	type : "",
 	source : ["HB", 0],
-}
+},
 
 GearList["purification kit"] = {
 	infoname : "Purification kit [5 gp]",
@@ -87,16 +87,16 @@ GearList["purification kit"] = {
 	weight : 3,
 	type : "",
 	source : ["HB", 0],
-}
+},
 
-GearList[surgeons kit"] = {
+GearList["surgeons kit"] = {
 	infoname : "Surgeons kit [25 gp]",
 	name : "Surgeons kit",
 	amount : 5,
 	weight : 5,
 	type : "",
 	source : ["HB", 0],
-}
+},
 
 WeaponsList["flame dial"] = { 
 	regExpSearch : /Flame Dial/i, 
@@ -110,7 +110,7 @@ WeaponsList["flame dial"] = {
 	description : "One Target, All in line make Dex save DC17, half damage on success.", 
 	abilitytodamage : true, 
 	weight : 1, 
-};
+},
 
 WeaponsList["cannon ball, smoke round"] = { 
 	regExpSearch : /Cannon Ball, Smoke Round/i, 
@@ -124,7 +124,7 @@ WeaponsList["cannon ball, smoke round"] = {
 	description : "Launch: Area-30ft Radius, Special: Cloud of Fog effect 1min, unless heavy wind ", 
 	abilitytodamage : true, 
 	weight : 5, 
-};
+},
 
 WeaponsList["cannon ball, exploding shell"] = { 
 	regExpSearch : /Cannon Ball, Exploding Shell/i, 
@@ -138,7 +138,7 @@ WeaponsList["cannon ball, exploding shell"] = {
 	description : "Launch: Area, Range: 20/150ft, Dex save DC16, half damage on success, Fire:1d6 per turn", 
 	abilitytodamage : true, 
 	weight : 14, 
-};
+},
 
 WeaponsList["cannon ball, chain shot"] = { 
 	regExpSearch : /Cannon Ball, Chain Shot/i, 
@@ -152,7 +152,7 @@ WeaponsList["cannon ball, chain shot"] = {
 	description : "Launch: One Target, All in line make Dex save DC14, half damage on success.", 
 	abilitytodamage : true, 
 	weight : 10, 
-};
+},
 
 WeaponsList["cannon ball, grapeshot"] = { 
 	regExpSearch : /Cannon Ball, Grapeshot/i, 
@@ -166,7 +166,7 @@ WeaponsList["cannon ball, grapeshot"] = {
 	description : "Launch, All in area make Dex save DC13, half damage on success.", 
 	abilitytodamage : true, 
 	weight : 10, 
-};
+},
 
 WeaponsList["cannon ball, large round"] = { 
 	regExpSearch : /Cannon Ball, Large Round/i, 
@@ -180,7 +180,7 @@ WeaponsList["cannon ball, large round"] = {
 	description : "Launch: One Target, All in line make Dex save DC16, half damage on success.", 
 	abilitytodamage : true, 
 	weight : 14, 
-};
+},
 
 WeaponsList["cannon ball, medium round"] = { 
 	regExpSearch : /Cannon Ball, Medium Round/i, 
@@ -194,7 +194,7 @@ WeaponsList["cannon ball, medium round"] = {
 	description : "Launch: One Target, All in line make Dex save DC14, half damage on success.", 
 	abilitytodamage : true, 
 	weight : 10, 
-};
+},
 
 WeaponsList["cannon ball, round"] = { 
 	regExpSearch : /Cannon Ball, Round/i, 
@@ -208,7 +208,7 @@ WeaponsList["cannon ball, round"] = {
 	description : "Launch: One Target, All in line make Dex save DC13, half damage on success.", 
 	abilitytodamage : true, 
 	weight : 8, 
-};
+},
 
 WeaponsList["hunting knife"] = { 
 	regExpSearch : /Hunting knife/i, 
@@ -222,7 +222,7 @@ WeaponsList["hunting knife"] = {
 	description : "Finesse, Special:Must be Prof in Survival to use, Adv on harvesting", 
 	abilitytodamage : true, 
 	weight : 1, 
-};
+},
 
 WeaponsList["machete"] = { 
 	regExpSearch : /Machete/i, 
@@ -236,7 +236,7 @@ WeaponsList["machete"] = {
 	description : "Light, Special:Must be Prof in Nature to use +1d12 v Plants", 
 	abilitytodamage : true, 
 	weight : 3, 
-};
+},
 
 WeaponsList["repeating flintlock pistol"] = {
 
@@ -247,9 +247,9 @@ WeaponsList["repeating flintlock pistol"] = {
 	ability : 4,
 	abilitytodamage : true,
 	damage : [1, 10, "piercing"],
-  range : "Ranged 20/60ft",
+  	range : "Ranged 20/60ft",
 	description : "Ammunition (range 20/60), Capacity (7), Loading: Action",
 	list : "firearms",
 	weight : 4,
 	ammo : "pistol bullet",
-};
+}, 
