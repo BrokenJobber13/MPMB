@@ -1,0 +1,45 @@
+
+
+WeaponsList["hunting knife"] = { 
+	regExpSearch : /Hunting knife/i, 
+	name : "Hunting Knife", 
+	source : ["HB", 0], 
+	list : "melee", 
+	ability : 1, 
+	type : "Simple", 
+	damage : [1, 4, "slash/pierc"], 
+	range : "Melee", 
+	description : "Finesse, Special:Must be Prof in Survival to use, Adv on harvesting", 
+	abilitytodamage : true, 
+	weight : 1, 
+};
+
+WeaponsList["machete"] = { 
+	regExpSearch : /Machete/i, 
+	name : "Machete", 
+	source : ["HB", 0], 
+	list : "melee", 
+	ability : 1, 
+	type : "Simple", 
+	damage : [1, 4, "slashing"], 
+	range : "Melee", 
+	description : "Light, Special:Must be Prof in Nature to use +1d12 v Plants", 
+	abilitytodamage : true, 
+	weight : 3, 
+};
+
+WeaponsList["repeating flintlock pistol"] = {
+
+	name : "Repeating Flintlock Pistol",
+	source : ["HB", 0],
+	regExpSearch : /Repeating Flintlock Pistol/i,
+	type : "Firearm",
+	ability : 4,
+	abilitytodamage : true,
+	damage : [1, 10, "piercing"],
+  range : "Ranged 20/60ft",
+	description : "Ammunition (range 20/60), Capacity (7), Loading: Action",
+	list : "firearms",
+	weight : 4,
+	ammo : "pistol bullet",
+};
