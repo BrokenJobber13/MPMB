@@ -22,24 +22,24 @@ RaceList["Mythricborn Taintblood Devil"] = {
   spellcastingAbility : 6, 
 	features : { 
 		"light" : { 
-			name : "Mythric Heritage", 
+			name : "Mythric Mixed Heritage", 
       limfeaname : "Light",
 			minlevel : 1, 
 			tooltip : "", 
 			spellcastingBonus : { 
-				name : "Mythric Heritage (level 1)",
+				name : "Mythric Mixed Heritage (level 1)",
 				spells : ["light"],
 				selection : ["light"],
 				atwill : true,
 			},
     },
 		"control flames" : { 
-			name : "Mythric Heritage 2", 
+			name : "Mythric Mixed Heritage", 
       			limfeaname : "Control Flames",
 			minlevel : 1, 
 			tooltip : "", 
 			spellcastingBonus : { 
-				name : "Mythric Heritage 2(level 1)",
+				name : "Mythric Mixed Heritage (level 1)",
 				spells : ["control flames"],
 				selection : ["contol flames"],
 				atwill : true,
