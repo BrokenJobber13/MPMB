@@ -33,6 +33,18 @@ RaceList["Mythricborn Taintblood Devil"] = {
 				atwill : true,
 			},
     },
+		"control flames" : { 
+			name : "Mythric Heritage 2", 
+      			limfeaname : "Control Flames",
+			minlevel : 1, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Mythric Heritage 2(level 1)",
+				spells : ["control flames"],
+				selection : ["contol flames"],
+				atwill : true,
+			},
+    },
     "mulan's bond of honor" : { 
 			name : "Mulan's Bond of Honor", 
 			minlevel : 1, 
