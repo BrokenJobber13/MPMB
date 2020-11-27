@@ -2,7 +2,7 @@ var iFileName = "Shimmering Isles Races Test.js";
 RequiredSheetVersion(12.999); 
 
 
-RaceList["Taintblood Devil"] = { 
+RaceList["taintblood devil"] = { 
 	regExpSearch : /Taintblood Devil/i, 
 	name : "Taintblood Devil", 
 	source : ["HB", 0], 
@@ -22,7 +22,7 @@ RaceList["Taintblood Devil"] = {
 	scores : [0, 2, 0, 0, 0, 1], 
 	trait : "Taintblood Devil (+2 Dexterity, +1 Charisma)\nHeritage:\nI bear a mark on my body from my evil parent\nMask of the Taint:\nI can make minor changes to my looks like having normal eyes, hide teeth to appear human.\nPoisonous Veins: If a creature consumes my blood, it takes a Con save throw DC8+Prof+Spellcasting ability mod.\n on fail is Poisoned for 1min, also 2d6 damage a start of turn, target can repeat at end of their turn.", 
 	abilitySave : 5,  
-},
+};
 
 RaceList["taintblood demon"] = { 
 	regExpSearch : /Taintblood Demon/i, 
@@ -60,7 +60,7 @@ RaceList["taintblood demon"] = {
 			},
     },		
 	},
-},
+};
 
 RaceList["gatorkin"] = {
 	regExpSearch : /gatorkin/i,
@@ -147,7 +147,7 @@ RaceList["salt gnome"] = {
 	scores : [0, 0, 2, 1, 0, 0], 
 	trait : "Salt Gnome (+1 Intelligence, +2 Constitution)\nGnome Cunning - I have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.\nDivers Talent - I can hold my breath upto 15min.", 
 
-},
+};
 
 RaceList["tiefling gnoll"] = { 
 	regExpSearch : /Tiefling Gnoll/i, 
@@ -215,9 +215,9 @@ RaceList["tiefling gnoll"] = {
 				oncelr : true,
 			},
       },
-     "Hunter's mark" : { 
+     "hunter's mark" : { 
 			name : "Fiends Heritage (Level 5)", 
-      limfeaname : "Hunter's mark",
+      			limfeaname : "Hunter's mark",
 			minlevel : 5, 
 			tooltip : "", 
 			spellcastingBonus : { 
@@ -228,7 +228,7 @@ RaceList["tiefling gnoll"] = {
 			},
      },
   },
-},
+};
 
 RaceList["royal dark elf"] = { 
 		regExpSearch : /Royal Dark Elf/i,
@@ -270,7 +270,7 @@ RaceList["royal dark elf"] = {
 			},
     },
     },
-},
+};
 
 RaceList["mythricborn taintblood devil"] = { 
 	regExpSearch : /Mythricborn Taintblood Devil/i, 
@@ -329,7 +329,7 @@ RaceList["mythricborn taintblood devil"] = {
 			action : ["bonus action", ""], 
 },
   },
-},
+};
 
 RaceList["mermaid"] = { 
 	regExpSearch : /Mermaid/i, 
@@ -394,7 +394,7 @@ RaceList["mermaid"] = {
 			},
     },
   },
-},
+};
   
 RaceList["lotan"] = { 
 	regExpSearch : /Lotan/i, 
@@ -425,7 +425,7 @@ RaceList["lotan"] = {
 			action : ["action", ""], 
 			},
   },
-},
+};
 
 RaceList["infernal dragonkin"] = { 
 
@@ -520,7 +520,7 @@ RaceList["infernal dragonkin"] = {
 				},
 			},
             },
-            },
+            };
 
 RaceList["mountainborn human"] = { 
 	regExpSearch : /Mountainborn Human/i, 
@@ -546,9 +546,9 @@ RaceList["mountainborn human"] = {
 	trait : "Mountainborn Human (+1 Free Choice, +2 Strength)\nMountaineer\nWhenever you make a Strength(Athletics) check to climb rocks, you are considered proficient in the Athletics skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.\nStrong as a Rock\nYour hit point maximum increases by 1 and by 1 every time you gain a level.",
 	carryingCapacity : 2
 
-},
+};
 
-RaceList["Skaven"] = { 
+RaceList["skaven"] = { 
 	regExpSearch : /Skaven/i, 
 	name : "Skaven", 
 	source : ["HB", 0], 
@@ -596,7 +596,7 @@ RaceList["Skaven"] = {
 		times : 2, 
 		oncelr : true, 	},
 
-},
+};
 
 WeaponsList["skaven bite"] = { 
 	regExpSearch : /skaven bite/i, 
@@ -610,7 +610,7 @@ WeaponsList["skaven bite"] = {
   description : "Brutal: Reroll 1's. Target-DC15 Con save or take extra 1d6poison damage.", 
 	abilitytodamage : true, 
 	modifiers : [1, 1], 
-},
+};
 WeaponsList["skaven claws"] = { 
 	regExpSearch : /skaven claws/i, 
 	name : "Skaven Claws", 
@@ -623,7 +623,7 @@ WeaponsList["skaven claws"] = {
 	description : "Light. Concealed", 
 	abilitytodamage : true, 
 	modifiers : [1, 1], 
-},
+};
 
 RaceList["succubus"] = { 
 	regExpSearch : /Succubus/i, 
@@ -698,7 +698,7 @@ RaceList["succubus"] = {
 			action : ["action", ""], 	},
   },
 
-  },
+  };
 
 RaceList["winterborn human"] = { 
 	regExpSearch : /^(?=.*winterborn)(?=.*human).*$/i, 
@@ -737,7 +737,7 @@ RaceList["winterborn human"] = {
 			},
 
 },
-},
+};
 
 RaceList["lustrous android"] = { 
 	regExpSearch : /lustrous android/i, 
@@ -787,9 +787,9 @@ armorOptions : {
 			},
 	},
 	},
-			addMod : { type : "skill", field : "Init", mod : "Int", text : "I can add my Intelligence modifier to initiative rolls." } 
+			addMod : { type : "skill", field : "Init", mod : "Int", text : "I can add my Intelligence modifier to initiative rolls." },
 
-},
+};
 
 RaceList["mythricborn human"] = { 
 	regExpSearch : /^(?=.*mythricborn)(?=.*human).*$/i, 
@@ -838,7 +838,7 @@ RaceList["mythricborn human"] = {
 															},
 							},
 
-},
+};
 
 RaceList["plainsborn human"] = {
 
@@ -861,7 +861,7 @@ RaceList["plainsborn human"] = {
 	scores : [0, 0, 0, 2, 0, 1], 
 	trait : "Plansborn Human (+1 Free Choice, +2 Intelligence)\nVersatile Culture.\nYou gain proficiency in two skills of your choice.\nCrafting Expertise.\nYou gain proficiency in one artisan's tools of your choice. When you craft an object using the artisan's tools you're proficient with, you count as two characters working for the amount of gp worth of effort for every day spent creating the item, allowing you to craft objects faster than others.", //required; the racial trait as it will be put in the Racial Trait field on the second page (note that "\n" is a line break).
 
-},
+};
 
 RaceList["seaborn human"] = { 
 	regExpSearch : /^(?=.*seaborn)(?=.*human).*$/i, 
@@ -888,7 +888,7 @@ RaceList["seaborn human"] = {
 	improvements : "Seaborn Human: +1 Free Choice, +2 Charisma;", 
 	scores : [0, 0, 0, 0, 0, 2], 
 	trait : "Seaborn Human (+1 Free Choice, +2 Charisma)\nAppraiser\nYou have advantage on checks to determine the value and craftwork of items.\nNatural Trader\nyou have advantage on Charisma (Persuasion) checks when negotiating prices with others that aren't hostile toward you.", 
-},
+};
 
 RaceList["glacier dwarf"] = { 
 	regExpSearch : /glacier dwarf/i, 
@@ -920,7 +920,7 @@ RaceList["glacier dwarf"] = {
 	scores : [1, 1, 2, 0, 0, 0], 
 	trait : "Glacier Dwarf (+1 Dexterity, +1 Strength +2 Consititution)\nDwarven Resilience: Unlike the dwarves of the mainland, glacier dwarves possess an innate resistance to cold\nIce Walk: I can move across and climb icy surfaces without needing to make an ability check. Additionallydifficult terrain composed of ice or snow doesn’t cost you extra moment and my speed is not reduced by wearing heavy armor\nIcebound Navigation: Whenever you make a Wisdom (Survival) checks for navigating forzen territory, I am considered proficient in the Survival skill and add double your proficiency bonus to the check.", 
 
-},
+};
 
 RaceList["half taxabi"] = { 
 	regExpSearch : /half taxabi/i, 
@@ -966,7 +966,7 @@ WeaponsList["taxabi claws"] = {
 	description : "Light. Concealed", 
 	abilitytodamage : true, 
 	modifiers : [1, 1], 
-},
+};
 
 RaceList["kaijuborn"] = { 
 	regExpSearch : /kaijuborn/i, 
@@ -1034,7 +1034,7 @@ RaceList["kaijuborn"] = {
 			action : ["action", ""], 
 			},
 		},
-},
+};
 
 RaceList["lizardfolk blackscale"] = {
 	regExpSearch : /lizardfolk blackscale/i,
@@ -1083,7 +1083,7 @@ RaceList["lizardfolk blackscale"] = {
 	trait : "Lizardfolk Blackscale (+2 Constitution, +1 Strength)\nBite: I can use my fanged maw to make unarmed strikes dealing 1d6 piercing damage.\nCunning Artisan: As part of a short rest I can harvest parts of a slain creature to make a shield, club, javelin, or 1d4 darts/blowgun needles.\nHold Breath: I can hold my breath for up to 15 minutes at a time.\nAcid Resistance – You have resistance to acid damage.\nPowerful Build: I count as one size larger when determining my carrying capacity and the weight I can push, drag, or lift.\nAggressive: As a bonus action, I can move up to my speed toward an enemy that I can see or hear. I must end my move closer to this enemy than I started.",
 	action : ["bonus action", "Aggressive (dash to enemy)"],
 	carryingCapacity : 2
-},
+};
 
 
 RaceList["lizardfolk poisondusk"] = {
@@ -1138,7 +1138,7 @@ RaceList["lizardfolk poisondusk"] = {
 		},
 	},
 	trait : "Lizardfolk Poisondusk(+2 Constitution, +1 Dexterity)\nChameleon skin\nI can try to hide when you are unobscured by pressing yourself up against a solid surface thats atleast as tall and wide as you. You can hide by pressing against the ground.\n While hiding this way you have advantage on Dex (stelth) check, provided you are out of combat and you remian there without moving or takng actions.\nRacial poison - As part of  long rest you can distill poison from your own glands.\n You gain a number of odese of racial posion equal to half your prof rounded down.\nYou can use a dose to coat one slashing or piercing weapon or upto 3 pieces of ammo. Applying the poson takes an action. A creature hit takes 1d4 poison damage. Once applied, the posion retais potency for 1min before drying. Doses last 24hours only.\nPredator - I have advantage on Wisdom (survival)checks to follows tracks and hunt wild game."
-},
+};
 
 RaceList["lizardfolk sharptooth"] = {
 	regExpSearch : /lizardfolk sharptooth/i,
@@ -1189,7 +1189,7 @@ RaceList["lizardfolk sharptooth"] = {
 		},
 	},
 	trait : "Lizardfolk Sharptooth (+2 Constitution, +1 Wisdom) Bite: I can use my fanged maw to make unarmed strikes dealing 1d6 piercing damage." + (typePF ? "\n" : " ") + "Cunning Artisan: As part of a short rest I can harvest parts of a slain creature to make a shield, club, javelin, or 1d4 darts/blowgun needles. This requires a suitable corpse and appropriate tools." + (typePF ? "\n" : " ") + "Hold Breath: I can hold my breath for up to 15 minutes at a time." + (typePF ? "\n" : " ") + "Natural Armor: I have an AC of 13 + Dexterity modifier + shield." + (typePF ? "\n" : " ") + "Hungry Jaws: As a bonus action, once per short rest, I can make a special bite attack and if it hits I gain temporary HP equal to my Con modifier (min 1)."
-},
+};
 
 RaceList["Forestborn human"] = {
 
@@ -1213,7 +1213,7 @@ RaceList["Forestborn human"] = {
 	improvements : "Forestborn Human: +1 Free Choice, +2 Wisdom;", 
 	scores : [0, 0, 0, 2, 0, 0], 
 	trait : "Forestborn Human (+1 Free Choice, +2 Wisdom)\nNatural Resistances\nYou have advantage on saving throws against poisons and diseases.\nWatchers of the Forests: Whenever you make a Wisdom(Perception) checks while in a forest, you are considered proficient in the Perception skill and add double your proficiency bonus to the check, instead your normal proficiency bonus.",
-},
+};
 
 RaceList["android"] = { 
 	regExpSearch : /android/i, 
@@ -1264,7 +1264,7 @@ RaceList["android"] = {
     },
 	},
 	addMod : { type : "skill", field : "Init", mod : "Int", text : "I can add my Intelligence modifier to initiative rolls." }, 
-},
+};
 
 RaceList["cambion"] = { 
 
@@ -1319,7 +1319,7 @@ RaceList["cambion"] = {
 				firstCol : "oncelr"		},
 									},
 },
-},
+};
 
 RaceList["Elnofae"] = { 
 	regExpSearch : /elnofae/i, 
@@ -1380,7 +1380,7 @@ RaceList["Elnofae"] = {
 			},
      },
       },
-},
+};
 
 RaceList["fishmen"] = { 
 	regExpSearch : /fishmen/i, 
