@@ -1,8 +1,8 @@
 
-var iFileName = "Homebrew Syntax - RaceList.js"; 
+var iFileName = "Skaven.js"; 
 RequiredSheetVersion(12.999); 
 
-RaceList["Skaven"] = { 
+RaceList["skaven"] = { 
 	regExpSearch : /Skaven/i, 
 	name : "Skaven", 
 	source : ["HB", 0], 
