@@ -1,3 +1,85 @@
+var iFileName = "Homebrew Syntax - CreatureList.js"; 
+RequiredSheetVersion(12.999); 
+
+CreatureList["big cat"] = { 
+	name : "Big Cat", 
+	source : ["HB", 0], 
+	size : 2, // Required; the size of the race (Gargantuan = 0, Huge = 1, Large = 2, Medium = 3, Small = 4, Tiny = 5)
+
+	type : "Fiend",
+	subtype : "devil", 
+	companion : "mount", // Optional; whether or not the creature will be added to the menu on the companion page, except the ranger's companion, that is based on other criteria.
+	/* The options are the following within the quotation marks (note the use of only lower case):
+		- "familiar" (Find Familiar spell AND Pact of the Chain warlock feature)
+		- "familiar_not_al" [only available from v13 onwards, same as "familiar" but ignored if the sheet is used for Adventurers League]
+		- "mount" (Find Steed spell)
+		- "steed" (Find Greater Steed spell)
+		- "pact_of_the_chain" (Pact of the Chain warlock feature)
+		- "companion" (UA: Revised Ranger's Beast Conclave feature)
+	Note that for the creature to be available to the PHB ranger, you don't need to do anything
+	*/
+
+	alignment : "Unaligned", 
+	ac : 11, 
+	hp : 19, 
+	hd : [3, 10], //[#, die].
+	speed : "45 ft", 
+	scores : [14, 20, 14, 6, 10, 6], 
+
+	saves : ["", "", "", "", "", ""], 
+
+	skills : { 
+		"perception" : 5,
+	}, 
+
+	damage_vulnerabilities : "radiant", 
+	damage_resistances : "lightning; thunder; bludgeoning, piercing, and slashing from nonmagical weapons", 
+	damage_immunities : "poison", 
+	condition_immunities : "exhaustion", 
+	senses : "Darkvision 60 ft", 
+	languages : "", 
+	challengeRating : "5", 
+	proficiencyBonus : 3, 
+	attacksAction : 2, 
+
+	attacks : [{ 
+			name : "Slam", 
+			ability : 1, 
+			damage : [2, 8, "bludgeoning"], // [#, die, type] First entry is the amount of dice, second is the type of dice, and third is the damage type. //"" for die is allowed, meaning no die will be given, only the first digit will be present.
+			range : "Melee (10 ft)", // the attack's range
+			description : "Two slam attacks as an Attack action", // the attack's description
+			modifiers : [1, "", ""], // bonuses to: [to hit, to damage, add ability to damage]; "" means ignore. //For the first two (to hit and to damage), you can also enter the three-letter abbreviation of an ability score (Str, Dex, Con, Int, Wis, or Cha), to have that ability's modifier added to it. //The last one can be either "" (meaning you add ability modifier to damage) or false (meaning you don't add the ability modifier to damage)
+			dc : true, // optional, will make the To Hit field display a DC instead. This will overwrite the first value you put in Modifiers
+			tooltip : "Each creature in the elemental's space must make a DC 13 Strength saving throw. On a failure, a target takes 15 (3d8 + 2) bludgeoning damage and is flung up 20 feet away from the elemental in a random direction and knocked prone. If a thrown target strikes an object, such as a wall or floor, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 13 Dexterity saving throw or take the same damage and be knocked prone.\nIf the saving throw is successful, the target takes half the bludgeoning damage and isn't flung away or knocked prone." // optional, this text will be added to the tooltip of the description field of the attack of the Wild Shape. It will do nothing for the attack on the Companion page
+		}, 
+	], 
+
+	features : [{ 
+			name : "Air Form", 
+			description : "The writing goes here.", 
+		},
+	], 
+
+	actions : [{ 
+			name : "Ethereal Stride", 
+			description : "As an action, theerial Plane, or vice versa.", 
+		},
+	],
+
+	traits : [{ 
+			name : "Air Form", 
+			description : "The elemental can enter a hostile.", 
+		},
+	], 
+	
+	wildshapeString : "Darkvisir Manual page 124", 
+};
+
+
+
+
+
+
 var iFileName = "Weapons v13.js";
 
 WeaponsList["sword of purple"] = {
