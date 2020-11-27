@@ -2,7 +2,7 @@ var iFileName = "Infernal Dragonkin.js";
 
 
 
-				RaceList["infernal"] = { 
+				RaceList["infernal dragonkin"] = { 
 
 		regExpSearch : /Infernal Dragonkin/i, 
 		name : "Infernal Dragonkin", 
