@@ -124,19 +124,6 @@ RaceList["gatorkin"] = {
 };
 
 
-WeaponsList["gators greater bite"] = {
-	regExpSearch : /gators greater bite/i,
-	name : "Gators Greater Bite",
-	source : ["HB", 0],
-	list : "Natural",
-	ability : 1,
-	type : "Martial",
-	damage : [2, 6, "Piercing"],
-	range : "Melee",
-	description : "Natural, Lunge 10ft, Finesse, Brutal Reroll 1's.",
-	abilitytodamage : true,
-}; 
-
 
 RaceList["salt gnome"] = { 
 	regExpSearch : /Salt Gnome/i, 
