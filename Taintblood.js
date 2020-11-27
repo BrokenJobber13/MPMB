@@ -57,4 +57,5 @@ RaceList["taintblood demon"] = {
 				atwill : true,
 			},
     },		
+	},
 };
