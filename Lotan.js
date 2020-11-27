@@ -1,5 +1,5 @@
 
-var iFileName = "Homebrew Syntax - RaceList.js"; 
+var iFileName = "Lotan.js"; 
 RequiredSheetVersion(12.999); 
 RaceList["lotan"] = { 
 	regExpSearch : /Lotan/i, 
