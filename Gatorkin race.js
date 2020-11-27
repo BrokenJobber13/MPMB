@@ -46,8 +46,7 @@ RaceList["gatorkin"] = {
 	improvements : "Gatorkin : +1 Constitution, +1 Wisdom, +2 Strength;", 
 
 	scores : [2, 0, 1, 0, 1, 0],
-	trait : "Gatorkin (+2 Strength +1 Constitution, +1 Wisdom) Powerful jaws - My jaws cause more damage on impact and allow me as a Bonus action to grapple the target." + (typePF ? "\n" : " ") + "Cunning Artisan: As part of a short rest I can harvest parts of a slain creature to make a shield, club, javelin, or 1d4 darts/blowgun needles. This requires a suitable corpse and appropriate tools." + (typePF ? "\n" : " ") + "Hold Breath: I can hold my breath for up to 30 minutes at a time." + (typePF ? "\n" : " ") + "Natural Armor: I have an AC of 13 + Dexterity modifier + shield." + (typePF ? "\n" : " ") "
-	abilitySave : 1,  
+	trait : "Gatorkin (+2 Strength +1 Constitution, +1 Wisdom) Powerful jaws - My jaws cause more damage on impact and allow me as a Bonus action to grapple the target.\nCunning Artisan: As part of a short rest I can harvest parts of a slain creature to make a shield, club, javelin, or 1d4 darts/blowgun needles. This requires a suitable corpse and appropriate tools\nHold Breath: I can hold my breath for up to 30 minutes at a time.\nNatural Armor: I have an AC of 13 + Dexterity modifier + shield. ",  
 	features : {
 		"cunning artisan" : {
 			name : "Cunning Artisan",
@@ -60,7 +59,7 @@ RaceList["gatorkin"] = {
 			minlevel : 1,
 			recovery : "long rest",
 			action : ["bonus action", ""]
-		}
+		},
 	},
 	
 };
