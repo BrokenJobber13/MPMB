@@ -33,23 +33,23 @@ CreatureList["war raven"] = {
 			range : "Melee (5 ft)",
 			description : "One claw and one bite attack as an Attack action"
         },  {
-        name : Ram
+        name : "Ram",
         ability : 2,
         damage : [3, 6, "bludgeoning"],
         range : "Melee (5ft)",
         description : "One Ram attack as an action"
-		}],
+		}	],
 			
 		
 	features : [{ 
 			name : "Mimicry", 
-			description : "The Raven can mimic simple sounds it's heard. A creature that hears the sounds can tell they are imitations with a successful DC 12 Wisdom "Insight" Check.", 
+			description : "The Raven can mimic simple sounds it's heard. A creature that hears the sounds can tell they are imitations with a successful DC 12 Wisdom Insight Check.", 
 		},  {
       name : "Charge",
       description : "If the War Raven move at least 30ft in a line towards a target and hits the ram attack on the same turn, the targets takes an extra 2d6 piercing dmg and make a DC11 STR save throw, falls prone on fail.",
 	},], 
 
-};
+},
 
 
 CreatureList["giant raven"] = { 
@@ -82,14 +82,13 @@ CreatureList["giant raven"] = {
       		}, {
 			name : "Bladed Claws",
 			ability : 2,
-			damage : [1, 6 "slashing"],
+			damage : [1, 6, "slashing"],
 			range : "Melee (5 ft)",
-			description : "One claw and one bite attack as an Attack action"
+			description : "One claw and one bite attack as an Attack action",
 		},  ],
 			
 	features : [{ 
 			name : "Mimicry", 
-			description : "The Raven can mimic simple sounds it's heard. A creature that hears the sounds can tell they are imitations with a successful DC 12 Wisdom "Insight" Check.", 
+			description : "The Raven can mimic simple sounds it's heard. A creature that hears the sounds can tell they are imitations with a successful DC 12 Wisdom Insight Check.", 
 		}, ], 
-
 };
