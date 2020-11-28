@@ -94,7 +94,7 @@ var iFileName = "SI Races 2 v1.js";
 			},
             },
 		},
-
+            
 
 RaceList["mermaid"] = { 
 	regExpSearch : /Mermaid/i, 
@@ -398,5 +398,4 @@ RaceList["Mythricborn Taintblood Devil"] = {
 			},
      },
   },
-},
 };
