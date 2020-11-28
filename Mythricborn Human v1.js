@@ -24,22 +24,19 @@ RaceList["mythricborn human"] = {
 
 
 	spellcastingAbility : 6, 
-	spellcastingBonus : { //optional; an object that adds something to the "Bonus Spells" section of the spell selection dialog //this object can have all the same attributes as the "spellcastingList" object as defined in the ClassList, but must also have a "name" defined //the other things that can be defined in this that are not in the "spellcastingList" object, are the "selection", "times" and "prepared" values
-
-		name : "Mythric Heritage", //required; this is used to identify the object, so must be an unique name
-		spells : ["light"], //Optional, but required if not including the "class" entry; If a "spells" array is present, all other objects will be ignored and only this list of spells will populate the list of available spells. each entry has to match the name of the spell in the SpellsList
-
-		selection : ["light"], //optional if "spells" is defined; this is the default selection for the array specified in "spells"
-
-		times : 1, //optional; this is the number of times the bonus spells should be added. //This can also be an array of 20 values. That way the number of times are level-dependent
-
-		prepared : true, //optional; if set to 'true', this makes the spell selected for this/these bonus spells to automatically get a checked off checkbox in the first column, similar to domain spells for a cleric
-
-		atwill : true, //optional; if set to 'true', this makes the spell selected for this/these bonus spells to get "At Will" in the first column
-
-	},
-
 	features : { 
+		"light" : { 
+			name : "Mythric Heritage", 
+      			limfeaname : "Light",
+			minlevel : 1, 
+			tooltip : "", 
+			spellcastingBonus : { 
+				name : "Mythric Heritage (level 1)",
+				spells : ["light"],
+				selection : ["light"],
+				atwill : true,
+			},
+    },
 		"mulan's bond of honor" : { 
 			name : "Mulan's Bond of Honor", 
 			minlevel : 1, 
@@ -48,9 +45,7 @@ RaceList["mythricborn human"] = {
 			recovery : "long rest", 
 			tooltip : "", 
 			action : ["bonus action", ""], 
-															}
-
-
-							}
+															},
+							},
 
 };
