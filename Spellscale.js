@@ -1,5 +1,3 @@
-
-
 var iFileName = "Spellscale.js"; 
 RequiredSheetVersion(12.999); 
 
@@ -52,4 +50,5 @@ features : {
 				oncelr : true,
 			},
       },
-      };
+      },
+};
