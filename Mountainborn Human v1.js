@@ -13,7 +13,7 @@ RaceList["mountainborn human"] = {
 	toolProfs : ["Smith's or Mason's tools", 1], 
 	languageProfs : ["Common", 1], 
 	savetxt : { 
-		text : ["I can ignore difficult Rocky terrain and double Prof for Str checks."], 	},
+		text : ["I can ignore difficult Rocky terrain", "double Prof for Str checks."], 	},
 	weaponprofs : [false, false, ["light hammer", "warhammer"]], 
 	armor : [false, false, false, false], 
 	skillstxt : "Choose any two skills",  
@@ -23,6 +23,8 @@ RaceList["mountainborn human"] = {
 	improvements : "Mountainborn Human: +1 Free Choice, +2 Strength;", 
 	scores : [2, 0, 0, 0, 0, 0], 
 	trait : "Mountainborn Human (+1 Free Choice, +2 Strength)\nMountaineer\nWhenever you make a Strength(Athletics) check to climb rocks, you are considered proficient in the Athletics skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.\nStrong as a Rock\nYour hit point maximum increases by 1 and by 1 every time you gain a level.",
-	carryingCapacity : 2
-
+	carryingCapacity : 2,
+	calcChanges : {
+			hp : function (totalHD) { return [totalHD, "Mountaineer"]; },
+},
 };
