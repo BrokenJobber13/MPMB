@@ -12,6 +12,20 @@ RaceList["draconic elf"] = {
 		walk : { spd : 30, enc : 20 }, 	},
 
 	languageProfs : ["Elvish", "Draconic", "Common"], 
+		weaponsAdd : ["Elven Breath Weapon"],
+	weaponOptions : {
+			regExpSearch : /Elven breath weapon/i,
+			name : "Elven Breath weapon",
+			source : ["HB", 0],
+			ability : 6,
+			type : "Natural",
+			damage : [2, 6, "fire/light"],
+			range : "5by30-ft line",
+			description : "Hits all in area; Dex save, success - half damage; Usable only twice per short rest",
+			abilitytodamage : false,
+			dc : true,
+			edbBreathWeapon : true
+		},
 	vision : ["Darkvision", 60], 
 	dmgres : ["Necrotic", "Radiant"], //optional; damage resistance(s)
 
@@ -58,6 +72,20 @@ RaceList["winged draconic elf"] = {
     fly : { spd : 30, enc : 20 }, },
 
 	languageProfs : ["Elvish", "Draconic", "Common"], 
+		weaponsAdd : ["Elven Breath Weapon"],
+	weaponOptions : {
+			regExpSearch : /Elven breath weapon/i,
+			name : "Elven Breath weapon",
+			source : ["HB", 0],
+			ability : 6,
+			type : "Natural",
+			damage : [2, 6, "fire/light"],
+			range : "5by30-ft line",
+			description : "Hits all in area; Dex save, success - half damage; Usable only twice per short rest",
+			abilitytodamage : false,
+			dc : true,
+			idbBreathWeapon : true
+		},
 	vision : ["Darkvision", 60], 
 	dmgres : ["Necrotic"], //optional; damage resistance(s)
 
