@@ -28,3 +28,15 @@ RaceList["houzi wong"] = {
 	scores : [0, 2, 0, 0, 1, 0], 
 	trait : "Houzi Wong (+2 Dexterity, +1 Wisdom)\n\nMonkey's Paw: My Unarmed Strikes do 1d6 + DEX damage.\nMask of the Wild: I can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.\nHybrid Creature: I count as a Humanoid and a Beast for the purpose of game effects, and can be affected anything that affects either.", 
 };
+WeaponsList["monkey paws"] = { 
+	regExpSearch : /onkey paws/i, 
+	name : "Monkey Paws", 
+	source : ["HB", 0], 
+	list : "melee", 
+	ability : 2, 
+	type : "Natural", 
+	damage : [1, 6, "bludgeoning"], 
+	range : "Melee", 
+	description : "Nature", 
+	abilitytodamage : true, 
+};
