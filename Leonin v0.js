@@ -140,7 +140,7 @@ RaceList["royal leonin"] = {
 	height : " range from 6 to over 7 feet tall (5'9\" + 2d8\")", 
 	weight : " weigh around 230 lb (210 + 2d8 \xD7 2d4 lb)", 
 	improvements : "Royal Leonin: +1 Charisma, +2 Strength;", 
-	scores : [1, 0, 0, 0, 0, 1], 
+	scores : [2, 0, 0, 0, 0, 1], 
 	trait : "Royal Leonin (+1 Charisma, +2 Strength)\nRoar: As can action, release an almightly roar. All in 20ft who hear must make a Wis DC save (8+Cha+Prof) or be frightened for 1min. Once per short rest.\n Interpeter: I have advantage on Cha checks when I'm the only one to interpret between two or more groups.", 
 	abilitySave : 6, 
   
