@@ -327,5 +327,126 @@ RaceList["draconic elf"] = {
 				},
 			},
 		},
-		variants : ["draconic black", "draconic blue", "draconic brass", "draconic bronze", "draconic copper", "draconic gold", "draconic green", "draconic red", "draconic silver", "draconic white"]
+		variants : ["draconic black elf", "draconic blue elf", "draconic brass elf", "draconic bronze elf", "draconic copper elf", "draconic gold elf", "draconic green elf", "draconic red elf", "draconic silver elf", "draconic white elf"]
 	};
+
+
+  
+ AddRacialVariant(
+  "draconic elf",
+  "draconic black elf", 
+	{ 
+		regExpSearch : /^(?=.*black)(?=.*draconic)(?=.*elf).*$/i, 
+		name : "Black Draconic Elf", 
+		source : ["HB", 0], 
+		plural : "Black DracoElves", 
+  	trait : "Black Draconic Elf (+1 Strength, +2 Dexterity)\nAcid Breath Weapon:\nAs an action, I exhale destructive energy in a 5 ft by 30 ft line.\nAll in the area must make a Dex saving throw with DC 8 + Con modifier + prof bonus.\nIt does 2d6 acid damage, half as much damage on a successful save.\nThe damage increases to 3d6 at level 6, 4d6 at level 11, and 5d6 at level 16.\nI can't use this feature again until I finish a short rest.",
+		dmgres : ["Acid"],
+    abilitySave : 6,
+  }
+   );
+
+
+AddRacialVariant(
+  "draconic elf",
+"draconic blue elf",
+  {
+		regExpSearch : /draconic blue elf/i,
+		name : "Blue draconic elf",
+    source : ["HB", 0],
+    plural : "Blue DracoElves",
+		trait : "Blue Draconic Elf (+1 Strength, +2 Dexterity)\nLightning Breath Weapon: As an action, I exhale destructive energy in a 5 ft by 30 ft line. All in the area must make a Dex saving throw with DC 8 + Con modifier + prof bonus. It does 2d6 lightning damage, half as much damage on a successful save. The damage increases to 3d6 at level 6, 4d6 at level 11, and 5d6 at level 16. I can't use this feature again until I finish a short rest.",
+		dmgres : ["Lightning"]
+	}
+  );
+
+AddRacialVariant(
+  "draconic elf",
+"draconic brass elf",
+  {
+		regExpSearch : /draconic brass elf/i,
+		name : "Brass draconic elf",
+    source : ["HB", 0],
+    plural : "Brass DracoElves",
+		trait : "Brass Draconic Elf (+1 Strength, +2 Dexterity)\nFire Breath Weapon: As an action, I exhale destructive energy in a 5 ft by 30 ft line. All in the area must make a Dex saving throw with DC 8 + Con modifier + prof bonus. It does 2d6 fire damage, half as much damage on a successful save. The damage increases to 3d6 at level 6, 4d6 at level 11, and 5d6 at level 16. I can't use this feature again until I finish a short rest.",
+		dmgres : ["Fire"]
+	}
+  );
+
+AddRacialVariant(
+  "draconic elf",
+"draconic bronze elf",
+  {
+		regExpSearch : /draconic bronze elf/i,
+		name : "Bronze draconic elf",
+    source : ["HB", 0],
+    plural : "Bronze DracoElves",
+		trait : "Bronze Draconic Elf (+1 Strength, +2 Deterity)\nLightning Breath Weapon: As an action, I exhale destructive energy in a 5 ft by 30 ft line. All in the area must make a Dex saving throw with DC 8 + Con modifier + prof bonus. It does 2d6 lightning damage, half as much damage on a successful save. The damage increases to 3d6 at level 6, 4d6 at level 11, and 5d6 at level 16. I can't use this feature again until I finish a short rest.",
+		dmgres : ["Lightning"]
+	}
+  );
+
+AddRacialVariant(
+  "draconic elf",
+"draconic copper elf",
+  {
+		regExpSearch : /draconic copper elf/i,
+		name : "Copper draconic elf",
+  source : ["HB", 0],
+  plural : "Copper DracoElves",
+		trait : "Copper Draconic Elf (+1 Strength, +2 Dexterity)\nAcid Breath Weapon: As an action, I exhale destructive energy in a 5 ft by 30 ft line. All in the area must make a Dex saving throw with DC 8 + Con modifier + prof bonus. It does 2d6 acid damage, half as much damage on a successful save. The damage increases to 3d6 at level 6, 4d6 at level 11, and 5d6 at level 16. I can't use this feature again until I finish a short rest.",
+		dmgres : ["Acid"]
+	}
+  );
+
+AddRacialVariant(
+  "draconic elf",
+"draconic gold elf",
+  {
+		regExpSearch : /draconic gold elf/i,
+		name : "Gold draconic elf",
+    source : ["HB", 0],
+    pural : "Gold DracoElves",
+		trait : "Gold Draconic Elf (+1 Strength, +2 Dexterity)\nFire Breath Weapon: As an action, I exhale destructive energy in a 15 ft cone. All in the area must make a Dex saving throw with DC 8 + Con modifier + prof bonus. It does 2d6 fire damage, half as much damage on a successful save. The damage increases to 3d6 at level 6, 4d6 at level 11, and 5d6 at level 16. I can't use this feature again until I finish a short rest.",
+		dmgres : ["Fire"]
+	}
+  );
+
+AddRacialVariant(
+  "draconic elf",
+  "draconic green elf",
+  {
+		regExpSearch : /draconic green elf/i,
+		name : "Green draconic elf",
+    source : ["HB", 0],
+    pural : "Green DracoElves",
+		trait : "Green Draconic Elf (+1 Strength, +2 Dexterity)\nPoison Breath Weapon: As an action, I exhale destructive energy in a 15 ft cone. All in the area must make a Con saving throw with DC 8 + Con modifier + prof bonus. It does 2d6 poison damage, half as much damage on a successful save. The damage increases to 3d6 at level 6, 4d6 at level 11, and 5d6 at level 16. I can't use this feature again until I finish a short rest.",
+		dmgres : ["Poison"]
+	}
+  );
+
+AddRacialVariant(
+  "draconic elf",
+  "draconic silver elf",
+  {
+		regExpSearch : /draconic silver elf/i,
+		name : "Silver draconic elf",
+    source : ["HB", 0],
+    pural : "Silver DracoElves",
+		trait : "Silver Draconic Elf (+1 Strength, +2 Dexterity)\nCold Breath Weapon: As an action, I exhale destructive energy in a 15 ft cone. All in the area must make a Con saving throw with DC 8 + Con modifier + prof bonus. It does 2d6 cold damage, half as much damage on a successful save. The damage increases to 3d6 at level 6, 4d6 at level 11, and 5d6 at level 16. I can't use this feature again until I finish a short rest.",
+		dmgres : ["Cold"]
+	}
+  );
+
+AddRacialVariant(
+  "draconic elf",
+  "draconic white elf",
+  {
+		regExpSearch : /draconic white elf/i,
+		name : "White draconic elf",
+    source : ["HB", 0],
+    pural : "White DracoElves",
+		trait : "White Draconic Elf (+1 Strength, +2 Dexterity)\nCold Breath Weapon: As an action, I exhale destructive energy in a 15 ft cone. All in the area must make a Con saving throw with DC 8 + Con modifier + prof bonus. It does 2d6 cold damage, half as much damage on a successful save. The damage increases to 3d6 at level 6, 4d6 at level 11, and 5d6 at level 16. I can't use this feature again until I finish a short rest.",
+		dmgres : ["Cold"]
+	}
+  );
