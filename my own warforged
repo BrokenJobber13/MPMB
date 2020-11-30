@@ -1,0 +1,55 @@
+Warforged	Traits
+	Constitution		1.	
+\nWarforged	Resilience. You	were	created	to	have	remarkable	fortitude,	represented	by	the	following	benefits, You	don’t need to eat, drink, breathe or sleep.
+\nSentry’s	Rest. When	you	take	a	long	rest,	you	must	spend	at	least	six	hours	of it in an inactive, motionless state, rather than sleeping. 
+In this state, you	appear inert but it doesn’t	render you	unconscious, and you can see and hear	as normal.
+Integrated	Protection. Your	body	has	built-in	protective	layers,	which	determine	your	Armor	Class.	You	gain	no	benefit	from	wearing	armor,
+but	if	you	are	using	a	shield, you	apply	its	bonus	as	normal.
+You	can	alter	your	body	to	enter	different	defensive	modes;	each	time	you	finish a	long	rest,	choose one	mode to	adopt from	the	Integrated	Protection	table,
+provided	you	meet the	mode’s prerequisite.
+Common.	
+
+
+var iFileName = "Dragon? Warforged.js"; 
+RequiredSheetVersion(12.999); 
+
+RaceList["dragon warforged"] = { 
+	regExpSearch : /^(?=.*dragon)(?=.*warforged).*$/i, 
+	name : "Dragon Warforged", 
+	sortname : "Warforged, Dragon", 
+	source : ["HB", 0], 
+	plural : "Dracoforged", 
+	size : 3, 
+	speed : { 
+		walk : { spd : 30, enc : 20 }, 	},
+	languageProfs : ["Common or Draconic"], 
+	addarmor : "Natural Armor", 
+	vision : [["Darkvision", 60]], 
+	dmgres : ["Poison"], 
+	savetxt : { 
+		text : ["Dont suffer exhaustion", "Magic can't put me to sleep"], 
+		immune : ["disease"], 
+		adv_vs : ["poisons"], 	},
+	age : "A typical warforged is between two	and	thirty years old. The maximum	lifespan of the	warforged	remains	a	mystery; so far, warforged have shown	no signs of deterioration due	to age.", 
+	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", 
+	weight : " weigh around 300 lb (299 + 2d8 \xD7 2d4 lb)", 
+	improvements : "Dragon Warforged: +1 Constitution, +2 Free Choice;",  
+	scores : [0, 0, 1, 0, 0, 0], 
+	trait : "Dragon Warforged (+1 Constitution, +2 Free Choice)\n",
+	abilitySave : 3,  
+	spellcastingAbility : 6, 
+
+	features : { 
+		"breath weapon" : {
+			name : "Breath Weapon",
+			minlevel : 1,
+			usages : 1,
+			additional : ["2d6", "2d6", "2d6", "2d6", "3d6", "3d6", "3d6", "4d6", "4d6", "4d6", "5d6", "5d6", "5d6", "5d6", "5d6", "5d6", "6d6", "6d6", "6d6", "6d6"],  
+			recovery : "short rest",
+			tooltip : "",
+			action : ["bonus action", ""], 
+		},
+	}
+
+};
+
