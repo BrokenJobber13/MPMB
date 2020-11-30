@@ -1,4 +1,4 @@
-var iFileName = "Homebrew Syntax - RaceList.js"; 
+var iFileName = "Leonin.js"; 
 RequiredSheetVersion(12.999); 
 
 RaceList["grey leonin"] = { 
@@ -21,7 +21,6 @@ RaceList["grey leonin"] = {
 		range : "Melee",
 		description : "Natural, Brutal Reroll 1's.",
 		abilitytodamage : true, },
-		},
 	skillstxt : "Choose one of Intimidation, Performance or Persuasion.",  
 	age : "Leonin reach adulthood around the age of 15, and generally live to be about 150 years old.", 
 	height : " range from 6 to over 7 feet tall (5'9\" + 2d8\")", 
@@ -101,7 +100,6 @@ RaceList["wild leonin"] = {
 		range : "Melee",
 		description : "Natural, Brutal Reroll 1's.",
 		abilitytodamage : true, },
-		},
 	skills : ["Survival"], 
 	skillstxt : "Choose one of Intimidation, Performance or Persuasion.",  
 	age : "Leonin reach adulthood around the age of 15, and generally live to be about 150 years old.", 
@@ -143,7 +141,6 @@ RaceList["royal leonin"] = {
 		range : "Melee",
 		description : "Natural, Brutal Reroll 1's.",
 		abilitytodamage : true, },
-		},
 	dmgres : ["Radiant"], 
 	savetxt : { 
 		text : ["Adv on Cha checks if only one to interpret"], 	},
