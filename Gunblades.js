@@ -273,6 +273,22 @@ WeaponsList["Lead Rounds"] = {
 	weight : 0.05,
  };
 
+WeaponsList["gunbreaker blade"] = {
+
+	name : "Gunbreaker Blade",
+	source : ["HB", 0],
+	defaultExcluded : true,
+	regExpSearch : /Gunbreaker Blade/i,
+	type : "Exotic",
+	ability : 1,
+	abilitytodamage : true,
+	damage : [1, 8, "slashing"],
+	range : "Melee",
+	description : "Ammunition (6), Finesse, Reload: Bonus Action, Special: Burst Fire, Spread Shot",
+	list : "Exotic",
+	weight : 5,
+ };
+
 WeaponsList["Extended Gunblade"] = {
 
 	name : "Extended Gunblade",
