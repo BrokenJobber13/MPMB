@@ -24,10 +24,10 @@ RaceList["spellscale"] = {
 
 	spellcastingAbility : 6, 
 	
-features : { 
+	features : { 
 		"create bonfire" : { 
 			name : "Firetouched", 
-      limfeaname : "Create Bonfire",
+      			limfeaname : "Create Bonfire",
 			minlevel : 1, 
 			tooltip : "", 
 			spellcastingBonus : { 
@@ -37,12 +37,12 @@ features : {
 				atwill : true,
 			},
     },
-      "shield" : { 
+      			"shield" : { 
 			name : "Draconic Protection", 
-      limfeaname : "Shield",
+      			limfeaname : "Shield",
 			minlevel : 1, 
 			tooltip : "", 
-      action : ["action", ""],
+      			action : ["action", ""],
 			spellcastingBonus : { 
 				name : "Draconic Protection (level 1)",
 				spells : ["shield"],
