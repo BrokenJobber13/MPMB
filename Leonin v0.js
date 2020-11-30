@@ -11,7 +11,7 @@ RaceList["grey leonin"] = {
 	speed : { 
 		walk : { spd : 30, enc : 20 }, },
 	languageProfs : ["Common"], 
-	weaponsadd : ["Leonin Jaws"], 
+	weaponadd : ["Leonin Jaws"], 
     		weaponOptions : {
 		baseWeapon : "leonin jaws",
 		regExpSearch : /Leonin Jaws/i,
