@@ -1,5 +1,108 @@
 var iFileName = "Weapons v13.js";
 
+Single Barrel Free A regular old iron barrel. Capable of single shot fire.
+Double Barrel 30 Ds Two iron barrels attached to eachother. Can handle shooting up to two shots simultaneously.
+Strong Barrel 80 Ds A strong steal barrel. Capable of granting Semi-Auto, an uncommon gunblade barrel.
+Rifled Barrel 120 Ds Increases range by 100 feet. Mostly found on high-grade Gunblades. [ Rare. ]
+Cooling Barrel 120 Ds Capable of granting Full-Auto. Mostly found on high-grade Gunblades. [ Super Rare. ]
+
+
+WeaponsList["Barrel, Single"] = {
+
+	name : "Barrel, Single",
+	source : ["HB", 0],
+	defaultExcluded : false,
+	regExpSearch : /Barrel, Single/i,
+	type : "Exotic",
+	ability : 1,
+	abilitytodamage : false,
+	damage : [1, 4, "piercing"],
+	range : "Melee",
+	description : "Gunblade Barrel, Single (1), Reload: Action",
+	list : "Exotic",
+	weight : 0.05,
+ };
+
+WeaponsList["Freezer Shots"] = {
+
+	name : "Freezer Shots",
+	source : ["HB", 0],
+	defaultExcluded : true,
+	regExpSearch : /Freezer Shots/i,
+	type : "Exotic",
+	ability : 1,
+	abilitytodamage : false,
+	damage : [3, 4, "cold"],
+	range : "Melee",
+	description : "Gunblade Ammunition (6)",
+	list : "Exotic",
+	weight : 0.05,
+ };
+
+WeaponsList["Chemical Shots"] = {
+
+	name : "Chemical Shots",
+	source : ["HB", 0],
+	defaultExcluded : true,
+	regExpSearch : /Chemical Shots/i,
+	type : "Exotic",
+	ability : 1,
+	abilitytodamage : false,
+	damage : [2, 6, "acid"],
+	range : "Melee",
+	description : "Gunblade Ammunition (6)",
+	list : "Exotic",
+	weight : 0.05,
+ };
+
+WeaponsList["Incindiery Shots"] = {
+
+	name : "Incindiery Shots",
+	source : ["HB", 0],
+	defaultExcluded : true,
+	regExpSearch : /Incindiery Shots/i,
+	type : "Exotic",
+	ability : 1,
+	abilitytodamage : false,
+	damage : [1, 8, "fire"],
+	range : "Melee",
+	description : "Gunblade Ammunition (8)",
+	list : "Exotic",
+	weight : 0.05,
+ };
+
+WeaponsList["Scattershot Shells"] = {
+
+	name : "Scattershot Shells",
+	source : ["HB", 0],
+	defaultExcluded : true,
+	regExpSearch : /Scattershot Shells/i,
+	type : "Exotic",
+	ability : 1,
+	abilitytodamage : false,
+	damage : [4, 4, "piercing"],
+	range : "20ft Cone",
+	description : "Gunblade Ammunition (10)",
+	list : "Exotic",
+	weight : 0.05,
+ };
+
+WeaponsList["Lead Rounds"] = {
+
+	name : "Lead Rounds",
+	source : ["HB", 0],
+	defaultExcluded : true,
+	regExpSearch : /Lead Rounds/i,
+	type : "Exotic",
+	ability : 1,
+	abilitytodamage : true,
+	damage : [2, 6, "piercing"],
+	range : "Melee",
+	description : "Gunblade Ammunition (15)",
+	list : "Exotic",
+	weight : 0.05,
+ };
+
 WeaponsList["Extended Gunblade"] = {
 
 	name : "Extended Gunblade",
@@ -80,18 +183,4 @@ WeaponsList["Small Gunblade"] = {
 	weight : 2,
  };
  
-AmmoList["cartridges"] = {
-	name : "Cartridges",
-	source : ["HB", 0],
-	defaultExcluded : true,
-	icon : "Bullets",
-	weight : 0.05,
-};
 
-Ammunition
-Names Price Damage Description
-Lead Rounds (15) 30 Ds 2d6 Piercing Regular old lead round.
-Scattershot Shells (10) 25 Ds 4d4 Piercing Regular shells filled with lead pellets, creating a 20 foot cone.
-Incindiery Shots (8) 30 Ds 1d8 fire Special rounds of a mix of metal and chemicals creating searing heat on impact.
-Chemical Shots (6) 35 Ds 2d6 acid Special rounds filled with corosive chemicals, releases a blob of acid on impact.
-Freezer Shots (6) 20 Ds 3d4 cold Special rounds filled with liquid nitrigon, a splash of freezing liquid on impact.
