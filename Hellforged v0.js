@@ -11,8 +11,7 @@ RaceList["nightcrawler hellforged"] = {
 	size : 3, 
 	speed : { 
 		walk : { spd : 30, enc : 20 }, 	},
-	languageProfs : ["Abyssal or Infernal"], 
-	weapons : ["talons"], 
+	languageProfs : ["Abyssal or Infernal"],  
 	addarmor : "Natural Armor", 
 	vision : ["Darkvision", 60], 
 	dmgres : ["Poison", "Fire"], 
@@ -67,12 +66,6 @@ RaceList["nightcrawler hellforged"] = {
       },
 };
 
-
-
-
-
-
-
 RaceList["hellion hellforged"] = { 
 	regExpSearch : /^(?=.*hellion)(?=.*hellforged).*$/i, 
 	name : "Hellion Hellforged", 
@@ -83,7 +76,6 @@ RaceList["hellion hellforged"] = {
 	speed : { 
 		walk : { spd : 30, enc : 20 }, 	},
 	languageProfs : ["Abyssal or Infernal"], 
-	weapons : ["talons"], 
 	addarmor : "Natural Armor", 
 	vision : ["Darkvision", 60], 
 	dmgres : ["Poison", "Fire"], 
@@ -157,7 +149,6 @@ RaceList["painkiller hellforged"] = {
 	speed : { 
 		walk : { spd : 30, enc : 20 }, 	},
 	languageProfs : ["Abyssal or Infernal"], 
-	weapons : ["talons"], 
 	addarmor : "Natural Armor", 
 	vision : ["Darkvision", 60], 
 	dmgres : ["Poison", "Fire"], 
