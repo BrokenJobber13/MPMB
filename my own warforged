@@ -26,7 +26,7 @@ RaceList["knight hellforged"] = {
 	vision : ["Darkvision", 60], 
 	dmgres : ["Poison", "Fire"], 
 	savetxt : { 
-		text : ["Double Prof to checks for Devils"],
+		text : ["Cant suffer exhaustion"],
 		immune : ["poison", "disease"], 	
 		adv_vs : ["Cha checks v Devils", "frightened"],	},
 	weaponprofs : [false, true, ["gunblade", "hellknights sword"]],
@@ -43,36 +43,36 @@ RaceList["knight hellforged"] = {
 	spellcastingAbility : 4,
 		features : { 
 		"produce flame" : { 
-			name : "Brimstone Soul", 
+			name : "HellKnight Focus", 
       			limfeaname : "Produce Flame",
 			minlevel : 1, 
 			tooltip : "", 
 			spellcastingBonus : { 
-				name : "Brimstone Soul (level 1)",
+				name : "HellKnight Focus (level 1)",
 				spells : ["produce flame"],
 				selection : ["produce flame"],
 				atwill : true,
 			},
     },
       		"hellish rebuke" : { 
-			name : "Brimstone Soul", 
+			name : "HellKnight Focus", 
       			limfeaname : "Hellish Rebuke",
 			minlevel : 3, 
 			tooltip : "", 
 			spellcastingBonus : { 
-				name : "Brimstone Soul (level 3)",
+				name : "HellKnight Focus (level 3)",
 				spells : ["hellish rebuke"],
 				selection : ["hellish rebuke"],
 				oncelr : true,
 			},
       },
      		"scorching ray" : { 
-			name : "Brimstone Soul", 
+			name : "HellKnight Focus", 
       			limfeaname : "Scorching Ray",
 			minlevel : 5, 
 			tooltip : "", 
 			spellcastingBonus : { 
-				name : "Brimstone Soul (level 5)",
+				name : "HellKnight Focus (level 5)",
 				spells : ["scorching ray"],
 				selection : ["scorching ray"],
 				oncelr : true,
@@ -126,47 +126,4 @@ WeaponsList["hellknights strike"] = {
 	list : "melee",
 	weight : "",
 	isAlwaysProf : true,	};
-
-var iFileName = "Dragon? Warforged.js"; 
-RequiredSheetVersion(12.999); 
-
-RaceList["dragon warforged"] = { 
-	regExpSearch : /^(?=.*dragon)(?=.*warforged).*$/i, 
-	name : "Dragon Warforged", 
-	sortname : "Warforged, Dragon", 
-	source : ["HB", 0], 
-	plural : "Dracoforged", 
-	size : 3, 
-	speed : { 
-		walk : { spd : 30, enc : 20 }, 	},
-	languageProfs : ["Common or Draconic"], 
-	addarmor : "Natural Armor", 
-	vision : [["Darkvision", 60]], 
-	dmgres : ["Poison"], 
-	savetxt : { 
-		text : ["Dont suffer exhaustion", "Magic can't put me to sleep"], 
-		immune : ["disease"], 
-		adv_vs : ["poisons"], 	},
-	age : "A typical warforged is between two	and	thirty years old. The maximum	lifespan of the	warforged	remains	a	mystery; so far, warforged have shown	no signs of deterioration due	to age.", 
-	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", 
-	weight : " weigh around 300 lb (299 + 2d8 \xD7 2d4 lb)", 
-	improvements : "Dragon Warforged: +1 Constitution, +2 Free Choice;",  
-	scores : [0, 0, 1, 0, 0, 0], 
-	trait : "Dragon Warforged (+1 Constitution, +2 Free Choice)\n",
-	abilitySave : 3,  
-	spellcastingAbility : 6, 
-
-	features : { 
-		"breath weapon" : {
-			name : "Breath Weapon",
-			minlevel : 1,
-			usages : 1,
-			additional : ["2d6", "2d6", "2d6", "2d6", "3d6", "3d6", "3d6", "4d6", "4d6", "4d6", "5d6", "5d6", "5d6", "5d6", "5d6", "5d6", "6d6", "6d6", "6d6", "6d6"],  
-			recovery : "short rest",
-			tooltip : "",
-			action : ["bonus action", ""], 
-		},
-	}
-
-};
 
