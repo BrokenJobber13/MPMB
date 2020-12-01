@@ -1,14 +1,5 @@
-Warforged	Traits
-	Constitution		1.	
-\nWarforged	Resilience. You	were	created	to	have	remarkable	fortitude,	represented	by	the	following	benefits, You	don’t need to eat, drink, breathe or sleep.
-\nSentry’s	Rest. When	you	take	a	long	rest,	you	must	spend	at	least	six	hours	of it in an inactive, motionless state, rather than sleeping. 
-In this state, you	appear inert but it doesn’t	render you	unconscious, and you can see and hear	as normal.
-Integrated	Protection. Your	body	has	built-in	protective	layers,	which	determine	your	Armor	Class.	You	gain	no	benefit	from	wearing	armor,
-but	if	you	are	using	a	shield, you	apply	its	bonus	as	normal.
-You	can	alter	your	body	to	enter	different	defensive	modes;	each	time	you	finish a	long	rest,	choose one	mode to	adopt from	the	Integrated	Protection	table,
-provided	you	meet the	mode’s prerequisite.
-Common.	
-
+var iFileName = "Knight Hellforged.js"; 
+RequiredSheetVersion(13); 
 
 RaceList["knight hellforged"] = { 
 	regExpSearch : /^(?=.*knight)(?=.*hellforged).*$/i, 
@@ -79,7 +70,7 @@ RaceList["knight hellforged"] = {
 			},
      },
       },
-};
+},
 
 WeaponsList["hellknights sword"] = {
 
@@ -96,6 +87,7 @@ WeaponsList["hellknights sword"] = {
 	list : "melee",
 	weight : 8,
 	modifiers : [2, ""],
+},
 
 ArmourList["hellknights armor"] = {
 	name : "HellKnights Armor",
@@ -108,7 +100,7 @@ ArmourList["hellknights armor"] = {
 	addMod : true,
 	weight : "",
 	strReq : "",
-};
+},
 
 
 WeaponsList["hellknights strike"] = {
