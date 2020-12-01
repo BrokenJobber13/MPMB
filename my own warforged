@@ -29,7 +29,7 @@ RaceList["knight hellforged"] = {
 		text : ["Double Prof to checks for Devils"],
 		immune : ["poison", "disease"], 	
 		adv_vs : ["Cha checks v Devils"],	},
-	weaponprofs : [false, true, ["gunblade", ""]],
+	weaponprofs : [false, true, ["gunblade", "hellknights sword"]],
 	armor : [false, false, true, true], 
 	skills : ["Intimidation"], 
 	skillstxt : "Choose any two skills",
