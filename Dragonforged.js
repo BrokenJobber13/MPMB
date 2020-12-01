@@ -1,5 +1,8 @@
+var iFileName = "Dragonforged.js"; 
+RequiredSheetVersion(12.999); 
 
-  RaceList["lancer dragonforged"] = { 
+
+RaceList["lancer dragonforged"] = { 
 	regExpSearch : /^(?=.*lancer)(?=.*dragonforged).*$/i, 
 	name : "Lancer Dragonforged", 
 	sortname : "Dragonforged, Lancer", 
@@ -41,7 +44,8 @@
   "mechanized defense" : {
 			name : "Mechanized Defense",
 			minlevel : 1,
-			action : ["reaction", ""]
+			action : ["reaction", ""],
+  },
       
       		"shard projection" : {
 			name : "Shard Projection",
@@ -53,13 +57,8 @@
 			action : ["bonus action", ""], 
 		},
     },
-    };
-
-
-
-
-
-
+  },
+    
  RaceList["brute dragonforged"] = { 
 	regExpSearch : /^(?=.*brute)(?=.*dragonforged).*$/i, 
 	name : "Brute Dragonforged", 
@@ -103,7 +102,8 @@
   "mechanized defense" : {
 			name : "Mechanized Defense",
 			minlevel : 1,
-			action : ["reaction", ""]
+			action : ["reaction", ""],
+  },
       
       		"shard projection" : {
 			name : "Shard Projection",
@@ -114,6 +114,8 @@
 			tooltip : "",
 			action : ["bonus action", ""], 
 		},
+  },
+},
 
 
 
@@ -158,10 +160,11 @@ RaceList["willow dragonforged"] = {
 	trait : "Willow Dragonforged (+1 Constitution, +2 Dexterity)\nHeavy Frame: Due to your density, you sink quickly in water and similar liquids. You cannot gain a swimming speed.\nSentry's Rest: When you take a long rest, you must spend at least six hours in an inactive, motionless state, rather than sleeping. In this state, you appear inert, but it doesn't render you unconscious, and you can see and hear as normal.\nRobust Robotics: I was created to have remarkable hardiness, represented by the following benefits: I don't need to eat, drink, or breathe. I have Darkvision up to 30ft. I are immune to disease. I don't need to sleep, magic can't put you to sleep.\nMechanized Defense: My body has dragon-like metal scales. As a reaction I can activate my scales, causing them to extend like daggers. I gain resistance to slashing damage until start of next turn.\nShard Projection. Since your body needs to maintain upkeep, you go through a process every time you rest in which you shed metal on the inside and it is collected inside your stomach. .", 
 	spellcastingAbility : 3,
   features : {
-  "mechanized defense" : {
+  				"mechanized defense" : {
 			name : "Mechanized Defense",
 			minlevel : 1,
-			action : ["reaction", ""]
+			action : ["reaction", ""],
+          },
       
       		"shard projection" : {
 			name : "Shard Projection",
@@ -172,6 +175,8 @@ RaceList["willow dragonforged"] = {
 			tooltip : "",
 			action : ["bonus action", ""], 
 		},
+          },
+  },
   
   
 WeaponsList["shard projection"] = {
