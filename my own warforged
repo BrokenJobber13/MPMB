@@ -27,11 +27,11 @@ RaceList["knight hellforged"] = {
 	dmgres : ["Poison", "Fire"], 
 	savetxt : { 
 		text : ["Double Prof to checks for Devils"],
-		immune : ["poison"], 	
+		immune : ["poison", "disease"], 	
 		adv_vs : ["Cha checks v Devils"],	},
 	weaponprofs : [false, true, ["gunblade", ""]],
 	armor : [false, false, true, true], 
-	skills : [""], 
+	skills : ["Intimidation"], 
 	skillstxt : "Choose any two skills",
 	age : "Built at full height, the Hellforged were designed to last for centuries at ageless warriors", 
 	height : " range from 8 to over 13 feet tall (8'9\" + 2d8\")", 
@@ -81,6 +81,21 @@ RaceList["knight hellforged"] = {
       },
 };
 
+WeaponsList["hellknights sword"] = {
+
+	name : "HellKnights Sword",
+	source : ["HB", 0],
+	defaultExcluded : false,
+	regExpSearch : /Hellknight sword/i,
+	type : "Exotic",
+	ability : 1,
+	abilitytodamage : true,
+	damage : [3, 6, "slashing"],
+	range : "Melee, 10ft",
+	description : "Heavy, Reach: 10ft, Brutal: Reroll 1's",
+	list : "melee",
+	weight : 8,
+	modifiers : [2, ""],
 
 ArmourList["hellknights armor"] = {
 	name : "HellKnights Armor",
