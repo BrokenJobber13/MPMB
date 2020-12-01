@@ -66,14 +66,25 @@ RaceList["succubus"] = {
 
   };
 
-ArmourList["succubus skin (cha)"] = {
-	name : "Succubus Skin (Cha)",
+ArmourList["succubus skin"] = {
+	name : "Succubus Skin",
 	source : ["HB", 0],
 	defaultExcluded : false,
-	regExpSearch : /Succubus Skin (Cha)/i,
+	regExpSearch : /Succubus Skin/i,
 	ac : 13,
-	type : "",
+	type : "light",
 	stealthdis : false,
-	addMod : true,
+	addMod : false,
+	extraAC : [{
+		mod : "10+Cha",
+		name : "Succubus Skin",
+		magic : false,
+		text : "I can choose to add my Cha to my AC instead of Dex.",	}],
 	weight : "",
 };
+
+	{ type : "", field : "Armor Class", mod : "Cha", text : "I can add my Charisma modifier to my AC instead of my Dex." },	],
+	weight : "",
+
+
+
