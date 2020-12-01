@@ -19,7 +19,7 @@ RaceList["knight hellforged"] = {
 	size : 3, 
 	speed : { 
 		walk : { spd : 25, enc : 20 }, 	},
-	toolProfs : [["Musical instrument", 3], ["Thieves' tools", "Dex"], "Tinker's tools"],
+	toolProfs : ["Tinker's tools"],
 	languageProfs : ["Abyssal or Infernal", 1], 
 	weapons : ["hellknights strike"], 
 	addarmor : "Hellknights Armor", 
@@ -28,18 +28,18 @@ RaceList["knight hellforged"] = {
 	savetxt : { 
 		text : ["Double Prof to checks for Devils"],
 		immune : ["poison", "disease"], 	
-		adv_vs : ["Cha checks v Devils"],	},
+		adv_vs : ["Cha checks v Devils", "frightened"],	},
 	weaponprofs : [false, true, ["gunblade", "hellknights sword"]],
 	armor : [false, false, true, true], 
 	skills : ["Intimidation"], 
 	skillstxt : "Choose any two skills",
-	age : "Built at full height, the Hellforged were designed to last for centuries at ageless warriors", 
+	age : "Built at full height, the Hellforged were designed to last for centuries as ageless warriors", 
 	height : " range from 8 to over 13 feet tall (8'9\" + 2d8\")", 
 	weight : " weigh around 455 lb (450 + 2d8 \xD7 2d4 lb)", 
-	improvements : "Knight Hellforged: +1 , +2 ;", 
-	scores : [0, 0, 0, 0, 0, 0], 
-	trait : "Knight Hellforged (+1 , +2 )\n.", 
-	abilitySave : 5,
+	improvements : "Knight Hellforged: +2 Strength , +1 Constitution ;", 
+	scores : [2, 0, 1, 0, 0, 0], 
+	trait : "Knight Hellforged (+2 Strength , +1 Constitiution)\nWeapon Storage: As part of a short or long rest I can assimulate with a number of weapons (Max=Prof bonus+Str Mod), As part of my Action if I have a free hand, I can equip any weapon stored within me.", 
+	abilitySave : 3,
 	spellcastingAbility : 4,
 		features : { 
 		"produce flame" : { 
