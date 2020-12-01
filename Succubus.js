@@ -65,3 +65,15 @@ RaceList["succubus"] = {
   },
 
   };
+
+ArmourList["succubus skin (cha)"] = {
+	name : "Succubus Skin (Cha)",
+	source : ["HB", 0],
+	defaultExcluded : false,
+	regExpSearch : /Succubus Skin (Cha)/i,
+	ac : 13,
+	type : "",
+	stealthdis : false,
+	addMod : true,
+	weight : "",
+};
