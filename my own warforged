@@ -72,12 +72,12 @@ RaceList["knight hellforged"] = {
       },
 },
 
-WeaponsList["hellknights sword"] = {
+WeaponsList["hellsteel blade"] = {
 
-	name : "HellKnights Sword",
+	name : "Hellsteel Blade",
 	source : ["HB", 0],
 	defaultExcluded : false,
-	regExpSearch : /Hellknight sword/i,
+	regExpSearch : /Hellsteel blade/i,
 	type : "Exotic",
 	ability : 1,
 	abilitytodamage : true,
