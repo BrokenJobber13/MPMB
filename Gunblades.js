@@ -12,7 +12,7 @@ WeaponsList["Chamber, Reservoir"] = {
 	abilitytodamage : false,
 	damage : [0, 4, "piercing"],
 	range : "Melee",
-	description : "Gunblade Ammo Chamber, Ammo Limit: 8, Reload: Bonus Action",
+	description : "Gunblade Ammo Chamber, Ammo Limit: 8",
 	list : "Exotic",
 	weight : 0.05,
  };
@@ -28,7 +28,7 @@ WeaponsList["Chamber, Revolver"] = {
 	abilitytodamage : false,
 	damage : [0, 4, "piercing"],
 	range : "Melee",
-	description : "Gunblade Ammo Chamber, Ammo Limit: 6, Reload: Bonus Action",
+	description : "Gunblade Ammo Chamber, Ammo Limit: 6",
 	list : "Exotic",
 	weight : 0.05,
  };
@@ -44,7 +44,7 @@ WeaponsList["Chamber, Quade"] = {
 	abilitytodamage : false,
 	damage : [0, 4, "piercing"],
 	range : "Melee",
-	description : "Gunblade Ammo Chamber, Ammo Limit: 4, Reload: Bonus Action",
+	description : "Gunblade Ammo Chamber, Ammo Limit: 4 ",
 	list : "Exotic",
 	weight : 0.05,
  };
@@ -60,7 +60,7 @@ WeaponsList["Chamber, Triple"] = {
 	abilitytodamage : false,
 	damage : [0, 4, "piercing"],
 	range : "Melee",
-	description : "Gunblade Ammo Chamber, Ammo Limit: 3, Reload: Action",
+	description : "Gunblade Ammo Chamber, Ammo Limit: 3",
 	list : "Exotic",
 	weight : 0.05,
  };
@@ -76,7 +76,7 @@ WeaponsList["Chamber, Double"] = {
 	abilitytodamage : false,
 	damage : [0, 4, "piercing"],
 	range : "Melee",
-	description : "Gunblade Ammo Chamber, Ammo Limit: 2, Reload: Action",
+	description : "Gunblade Ammo Chamber, Ammo Limit: 2",
 	list : "Exotic",
 	weight : 0.05,
  };
@@ -92,7 +92,7 @@ WeaponsList["Chamber, Single"] = {
 	abilitytodamage : false,
 	damage : [0, 4, "piercing"],
 	range : "Melee",
-	description : "Gunblade Ammo Chamber, Single (1), Reload: Action",
+	description : "Gunblade Ammo Chamber, Ammo Limit: 1",
 	list : "Exotic",
 	weight : 0.05,
  };
@@ -108,7 +108,7 @@ WeaponsList["Barrel, Cooling"] = {
 	abilitytodamage : false,
 	damage : [0, 4, "piercing"],
 	range : "Melee",
-	description : "Gunblade Barrel, Ammmo: Double (6), Reload: Reaction",
+	description : "Gunblade Barrel, Reload: Reaction, Fire rate: Auto",
 	list : "Exotic",
 	weight : 0.05,
  };
@@ -124,7 +124,7 @@ WeaponsList["Barrel, Rifled"] = {
 	abilitytodamage : false,
 	damage : [0, 4, "piercing"],
 	range : "Melee",
-	description : "Gunblade Barrel, Ammmo: Single (4), Range: +100ft, Reload: Action",
+	description : "Gunblade Barrel, Reload: Reaction, Range: +100ft, Fire Rate: Auto",
 	list : "Exotic",
 	weight : 0.05,
  };
@@ -140,7 +140,7 @@ WeaponsList["Barrel, Strong"] = {
 	abilitytodamage : false,
 	damage : [0, 4, "piercing"],
 	range : "Melee",
-	description : "Gunblade Barrel, Ammmo: Single (4), Reload: Bonus Action",
+	description : "Gunblade Barrel, Reload: Bonus Action, Fire Rate: 3 or Half of Chamber",
 	list : "Exotic",
 	weight : 0.05,
  };
@@ -156,7 +156,7 @@ WeaponsList["Barrel, Double"] = {
 	abilitytodamage : false,
 	damage : [0, 4, "piercing"],
 	range : "Melee",
-	description : "Gunblade Barrel, Ammmo: Double (2), Reload: Action",
+	description : "Gunblade Barrel, Reload: Action, Single Double Shot: Uses 2 ammo",
 	list : "Exotic",
 	weight : 0.05,
  };
@@ -172,7 +172,7 @@ WeaponsList["Barrel, Single"] = {
 	abilitytodamage : false,
 	damage : [0, 4, "piercing"],
 	range : "Melee",
-	description : "Gunblade Barrel, Ammo: Single (1), Reload: Action",
+	description : "Gunblade Barrel, Reload: Action, Fire Rate: Single Shot",
 	list : "Exotic",
 	weight : 0.05,
  };
