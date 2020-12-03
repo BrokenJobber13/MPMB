@@ -1,0 +1,59 @@
+ regExpSearch : /^(?=.*celestial)(?=.*warlock).*$/i,
+  
+  subname : "the Fallen Celestial",
+  
+  source : ["HB", 0],
+   
+  spellcastingExtra : ["sleep", "command", "lesser restoration", "calm emotions", "fireball", "revivify", "greater invisibility", "wall of fire", "flame strike", "greater restoration"],
+  
+  
+  features : {
+  
+     "subclassfeature40" : {
+        name : "Soothing Soul",
+        source : ["UA:LDU", 3],
+        minlevel : 3,
+        description : "\n   " + "You have a pool of d6s that you can spend to heal others." 
+                      + "\n   " +
+                      "The number of dice in the pool equals 1 + your warlock level." 
+                      + "\n   " +
+                      "As a bonus action, you can heal one creature you can see within 60 feet of you,"
+                      + "\n   " + "spending dice from the pool. The maximum number of dice you can spend at once equals"
+                      + "\n   " + "your Charisma modifier (minimum of one die). Roll the dice you spend, add them together,"
+                      + "\n   " + "and restore a number of hit points equal to the total." 
+                      + "\n   " +
+                      "Your pool regains all expended dice when you finish a long rest.",
+        recovery : "long rest",    
+        action : ["bonus action", ""]        
+  },
+  "subclassfeature6" : {
+     name : "Misty Escape",
+     source : ["P", 109],
+     minlevel: 6,
+     description : "\n   " + "As a reaction, when I take damage, I can turn invisible and teleport up to 60 ft" + "\n   " + "I stay invisible until the start of my next turn or until I attack or cast a spell",                  
+     action : ["reaction", " (taking damage)"],
+     recovery : "short rest",
+     usages : 1
+  },
+  "subclassfeature10" : {
+     name : "Celestial Resistance",
+     source : ["P", 109],
+     minlevel : 10,
+     description : "\n   " + "As a reaction, when a creature tries to charm me, I can turn the charm back on it" + "\n   " + "It must make a Wis save or be charmed by me for 1 minute or until taking damage" + "\n   " + "I am immune to being charmed",
+     action : ["reaction", " (when charmed)"],
+     savetxt : { immune : ["charmed"] }
+  },
+  "subclassfeature35" : {
+     name:"Hurl Through Hell",
+     source : ["P", 109],
+     minlevel : 14,
+     description : "\n   " + "Starting at 14th level, when you hit a creature with an attack, you can use this feature to"
+                   + "\n   " + "instantly transport the target through the lower planes. The creature disappears and hurtles"
+                   + "\n   " + "through a nightmare landscape. At the end of your next turn, the target returns to the space "
+                   + "\n   " + "it previously occupied, or the nearest unoccupied space. If the target is not a fiend, it takes"
+                   + "\n   " + "10d10 psychic damage as it reels from its horrific experience. Once you use this feature, you"
+                   + "\n   " + "can't use it again until you finish a long rest.",
+     recovery : "short rest",
+     usages : 1,
+     action : ["action", ""]
+  }  
