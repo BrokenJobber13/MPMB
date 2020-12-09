@@ -1,0 +1,467 @@
+Razor Horn Minotaur
+
+Ability Score Improvement. Your Strength score increases by 2.
+Age. Minotaurs age and mature at about the same rate as humans up to the age of 18. From then on they age slowly staying fit for at least 150 years.
+Weight. Minotaurs can range anywhere from 120 pounds to upwards of 350.
+Size. Your base size is Medium. Your are generally around 6-8 feet in height.
+Speed. 30ft
+Powerful Build. 1 size larger for carry, lift, push, drag
+Horns. 1d8+your strength modifier piercing damage. You are proficient with your horns.You gain an additional 1d8 per 4 levels.
+Bull Rush. When you take the Dash action on your turn, you can use your bonus action to make one melee attack with your horns.
+Languages. You can read, write and speak Common and Celestial.
+Barbed Horns. Your Horns now deal Slashing damage. If you hit an enemy with a 15 or higher they take the same damage you dealt minus their constitution modifier for 3 turns.(Bleed Damage)
+Wax Fur. Your Armor Class increases by 1.
+Water-born. You can now breathe underwater for 30 minutes and your swim speed is equal to your base movement speed.
+var iFileName = "Homebrew Syntax - RaceList.js"; // O
+RequiredSheetVersion(12.999); // O
+
+RaceList["something catlike"] = { //R
+	regExpSearch : /^(?=.*something)(?=.*catlike).*$/i, //r
+	name : "Something Catlike", //r
+	sortname : "Catlike, Something", //o
+	source : ["HB", 0], //r
+	plural : "Somethings Catlike", //R
+	size : 3, //r
+	speed : { //r
+
+		walk : { spd : 30, enc : 20 }, //R 
+		},
+
+	toolProfs : [["Musical instrument", 3], ["Thieves' tools", "Dex"], "Tinker's tools"], // o
+	languageProfs : ["Elvish", 1], // o
+	weapons : ["talons"], //o
+	addarmor : "Natural Armor", //o
+	vision : [["Darkvision", 60], ["Sunlight Sensitivity", 0]], //o
+	dmgres : ["Necrotic", "Radiant"], //op
+	savetxt : { // O
+		text : ["Dex save vs. area effects: fail \u2015 half dmg, success \u2015 no dmg", "Magic can't put me to sleep"], // O
+		immune : ["poison", "disease"], // O
+		adv_vs : ["traps", "charmed"] // O
+		},
+
+	weaponprofs : [false, false, ["longsword", "shortsword", "longbow", "shortbow"]], //o
+	armor : [false, false, false, true], //o
+	skills : ["Perception", "Deception"], //o
+	skillstxt : "Choose any two skills",  //o
+	age : " reach adulthood in their late teens and live around 100 years", //o
+	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", //o
+	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", //o
+	heightMetric : " range from 1,5 to over 1,8 metres tall (145 + 5d8 cm)", //o
+	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", //o
+	improvements : "Something Catlike: +1 Dexterity, +2 Wisdom;", //r
+	scores : [0, 1, 0, 0, 2, 0], //r
+	trait : "Something Catlike (+1 Dexterity, +2 Wisdom)\n  ",  //R
+	abilitySave : 5,  //o
+	variants : ["something great catlike"], //o
+	spellcastingAbility : 6, //r
+	spellcastingBonus : { //o
+		name : "Arcane Initiate", //r
+		class : "wizard", //o
+		school : ["Evoc", "Abjur"], //o
+		level : [0, 4], //O
+		ritual : false, //O
+		spells : ["light", "mending"], //O
+		selection : ["light"], //o
+		times : 2, //o
+		prepared : true, //o
+		atwill : true, //o
+		oncesr : true, //o
+		oncelr : true, //o
+		},
+
+	features : { //o
+		"lesser restoration" : { //note the use of lower case characters
+			name : "Lesser Restoration", //r
+			minlevel : 3, //r
+			usages : 1, //o
+			recovery : "long rest", //required if "usages" is defined
+			tooltip : " (Celestial Legacy)", //o
+			action : ["action", ""], //o
+			spellcastingBonus : { //optional; works just like the "spellcastingBonus" object defined above
+				name : "Celestial Legacy (level 3)",
+				spells : ["lesser restoration"],
+				selection : ["lesser restoration"],
+				oncelr : true,
+			},
+ 
+			dmgres : [["Bludgeoning", "Bludg. (nonmagical)"], ["Piercing", "Pierc. (nonmagical)"], ["Slashing", "Slash. (nonmagical)"]], //o
+
+			addMod : { type : "skill", field : "Init", mod : "Int", text : "I can add my Intelligence modifier to initiative rolls." } //optional; 
+			This is an object, or an array of similar objects, for adding a modifier to a modifier field. 
+			Using this will make it so that the modifier is added to any value that is already there. 
+			// The 'mod' attribute can be any combination of numbers, mathematical operators, and three-letter ability score abbreviations 
+			// The 'type' attribute can be "skill" or "save", but can also be left empty "" 
+			// The 'field' attribute depends on the type, for "skill" it can be the name of a skill, or "Init" for initiative, or "All" for the all skills modifier;
+			for "save" it can be the three-letter abbreviation of an ability score, or "All" for the all saves modifier.
+			// If the 'type' attribute is left empty, the 'field' attribute has to be the exact name of the field the modifier has to be added to
+			// The 'text' attribute is an explanation of why the modifier was added //NOTE: for modifiers to attacks, use calcChanges
+		},
+
+		"breath weapon" : {
+			name : "Breath Weapon",
+			minlevel : 1,
+			usages : 1,
+			additional : ["2d6", "2d6", "2d6", "2d6", "2d6", "3d6", "3d6", "3d6", "3d6", "3d6", "4d6", "4d6", "4d6", "4d6", "4d6", "5d6", "5d6", "5d6", "5d6", "5d6"],  //optional; text to display in the description field of the limited feature. This can be one value, but can also be an array of 20 values, one for each level.
+			recovery : "short rest",
+			tooltip : "",
+
+			action : ["action", ""], //optional; adds the name of this choice to the action list when chosen. The options are "action", "bonus action", and "reaction" //the second value in the array is added as a suffix for the "name" of the feature when entered into the action field
+		},
+	}
+
+};
+
+
+
+
+
+Minotaur, Aurochs
+Large. Your base size is now large.
+Powerful Legs. Your base movement speed is now 35 ft.
+Enraged Stride. Your Bull Rush ability has double its effective range and now pushes through up to two(2) enemies.
+Reach. You gain reach with melee attacks, including your horns.
+Ability Score Improvement. Your Strength score increases by 2.
+Age. Minotaurs age and mature at about the same rate as humans up to the age of 18. From then on they age slowly staying fit for at least 150 years.
+Weight. Minotaurs can range anywhere from 120 pounds to upwards of 350.
+Size. Your base size is Medium. Your are generally around 6-8 feet in height.
+Speed. 30ft
+Powerful Build. 1 size larger for carry, lift, push, drag
+Horns. 1d8+your strength modifier piercing damage. You are proficient with your horns.You gain an additional 1d8 per 4 levels.
+Bull Rush. When you take the Dash action on your turn, you can use your bonus action to make one melee attack with your horns.
+Languages. You can read, write and speak Common and Celestial.
+
+var iFileName = "Homebrew Syntax - RaceList.js"; // O
+RequiredSheetVersion(12.999); // O
+
+RaceList["something catlike"] = { //R
+	regExpSearch : /^(?=.*something)(?=.*catlike).*$/i, //r
+	name : "Something Catlike", //r
+	sortname : "Catlike, Something", //o
+	source : ["HB", 0], //r
+	plural : "Somethings Catlike", //R
+	size : 3, //r
+	speed : { //r
+
+		walk : { spd : 30, enc : 20 }, //R 
+		},
+
+	toolProfs : [["Musical instrument", 3], ["Thieves' tools", "Dex"], "Tinker's tools"], // o
+	languageProfs : ["Elvish", 1], // o
+	weapons : ["talons"], //o
+	addarmor : "Natural Armor", //o
+	vision : [["Darkvision", 60], ["Sunlight Sensitivity", 0]], //o
+	dmgres : ["Necrotic", "Radiant"], //op
+	savetxt : { // O
+		text : ["Dex save vs. area effects: fail \u2015 half dmg, success \u2015 no dmg", "Magic can't put me to sleep"], // O
+		immune : ["poison", "disease"], // O
+		adv_vs : ["traps", "charmed"] // O
+		},
+
+	weaponprofs : [false, false, ["longsword", "shortsword", "longbow", "shortbow"]], //o
+	armor : [false, false, false, true], //o
+	skills : ["Perception", "Deception"], //o
+	skillstxt : "Choose any two skills",  //o
+	age : " reach adulthood in their late teens and live around 100 years", //o
+	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", //o
+	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", //o
+	heightMetric : " range from 1,5 to over 1,8 metres tall (145 + 5d8 cm)", //o
+	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", //o
+	improvements : "Something Catlike: +1 Dexterity, +2 Wisdom;", //r
+	scores : [0, 1, 0, 0, 2, 0], //r
+	trait : "Something Catlike (+1 Dexterity, +2 Wisdom)\n  ",  //R
+	abilitySave : 5,  //o
+	variants : ["something great catlike"], //o
+	spellcastingAbility : 6, //r
+	spellcastingBonus : { //o
+		name : "Arcane Initiate", //r
+		class : "wizard", //o
+		school : ["Evoc", "Abjur"], //o
+		level : [0, 4], //O
+		ritual : false, //O
+		spells : ["light", "mending"], //O
+		selection : ["light"], //o
+		times : 2, //o
+		prepared : true, //o
+		atwill : true, //o
+		oncesr : true, //o
+		oncelr : true, //o
+		},
+
+	features : { //o
+		"lesser restoration" : { //note the use of lower case characters
+			name : "Lesser Restoration", //r
+			minlevel : 3, //r
+			usages : 1, //o
+			recovery : "long rest", //required if "usages" is defined
+			tooltip : " (Celestial Legacy)", //o
+			action : ["action", ""], //o
+			spellcastingBonus : { //optional; works just like the "spellcastingBonus" object defined above
+				name : "Celestial Legacy (level 3)",
+				spells : ["lesser restoration"],
+				selection : ["lesser restoration"],
+				oncelr : true,
+			},
+ 
+			dmgres : [["Bludgeoning", "Bludg. (nonmagical)"], ["Piercing", "Pierc. (nonmagical)"], ["Slashing", "Slash. (nonmagical)"]], //o
+
+			addMod : { type : "skill", field : "Init", mod : "Int", text : "I can add my Intelligence modifier to initiative rolls." } //optional; 
+			This is an object, or an array of similar objects, for adding a modifier to a modifier field. 
+			Using this will make it so that the modifier is added to any value that is already there. 
+			// The 'mod' attribute can be any combination of numbers, mathematical operators, and three-letter ability score abbreviations 
+			// The 'type' attribute can be "skill" or "save", but can also be left empty "" 
+			// The 'field' attribute depends on the type, for "skill" it can be the name of a skill, or "Init" for initiative, or "All" for the all skills modifier;
+			for "save" it can be the three-letter abbreviation of an ability score, or "All" for the all saves modifier.
+			// If the 'type' attribute is left empty, the 'field' attribute has to be the exact name of the field the modifier has to be added to
+			// The 'text' attribute is an explanation of why the modifier was added //NOTE: for modifiers to attacks, use calcChanges
+		},
+
+		"breath weapon" : {
+			name : "Breath Weapon",
+			minlevel : 1,
+			usages : 1,
+			additional : ["2d6", "2d6", "2d6", "2d6", "2d6", "3d6", "3d6", "3d6", "3d6", "3d6", "4d6", "4d6", "4d6", "4d6", "4d6", "5d6", "5d6", "5d6", "5d6", "5d6"],  //optional; text to display in the description field of the limited feature. This can be one value, but can also be an array of 20 values, one for each level.
+			recovery : "short rest",
+			tooltip : "",
+
+			action : ["action", ""], //optional; adds the name of this choice to the action list when chosen. The options are "action", "bonus action", and "reaction" //the second value in the array is added as a suffix for the "name" of the feature when entered into the action field
+		},
+	}
+
+};
+
+
+
+
+MinotaurReed Horn
+
+Lightly Built. You are a slightly slimmer Minotaur and with that the increase in Strength gained from base Minotaur is changed to Dexterity.
+Lancing Horns. You horns deal 1d10+Strength or Dexterity. You gain an additional 1d10 per 4 levels.
+Sprinter. When you dash your base movement speed is now 40 ft.
+
+Thin. You gain proficiency in Stealth.
+Ability Score Improvement. Your Strength score increases by 2.
+Age. Minotaurs age and mature at about the same rate as humans up to the age of 18. From then on they age slowly staying fit for at least 150 years.
+Weight. Minotaurs can range anywhere from 120 pounds to upwards of 350.
+Size. Your base size is Medium. Your are generally around 6-8 feet in height.
+Speed. 30ft
+Powerful Build. 1 size larger for carry, lift, push, drag
+Horns. 1d8+your strength modifier piercing damage. You are proficient with your horns.You gain an additional 1d8 per 4 levels.
+Bull Rush. When you take the Dash action on your turn, you can use your bonus action to make one melee attack with your horns.
+Languages. You can read, write and speak Common and Celestial.
+
+var iFileName = "Homebrew Syntax - RaceList.js"; // O
+RequiredSheetVersion(12.999); // O
+
+RaceList["something catlike"] = { //R
+	regExpSearch : /^(?=.*something)(?=.*catlike).*$/i, //r
+	name : "Something Catlike", //r
+	sortname : "Catlike, Something", //o
+	source : ["HB", 0], //r
+	plural : "Somethings Catlike", //R
+	size : 3, //r
+	speed : { //r
+
+		walk : { spd : 30, enc : 20 }, //R 
+		},
+
+	toolProfs : [["Musical instrument", 3], ["Thieves' tools", "Dex"], "Tinker's tools"], // o
+	languageProfs : ["Elvish", 1], // o
+	weapons : ["talons"], //o
+	addarmor : "Natural Armor", //o
+	vision : [["Darkvision", 60], ["Sunlight Sensitivity", 0]], //o
+	dmgres : ["Necrotic", "Radiant"], //op
+	savetxt : { // O
+		text : ["Dex save vs. area effects: fail \u2015 half dmg, success \u2015 no dmg", "Magic can't put me to sleep"], // O
+		immune : ["poison", "disease"], // O
+		adv_vs : ["traps", "charmed"] // O
+		},
+
+	weaponprofs : [false, false, ["longsword", "shortsword", "longbow", "shortbow"]], //o
+	armor : [false, false, false, true], //o
+	skills : ["Perception", "Deception"], //o
+	skillstxt : "Choose any two skills",  //o
+	age : " reach adulthood in their late teens and live around 100 years", //o
+	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", //o
+	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", //o
+	heightMetric : " range from 1,5 to over 1,8 metres tall (145 + 5d8 cm)", //o
+	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", //o
+	improvements : "Something Catlike: +1 Dexterity, +2 Wisdom;", //r
+	scores : [0, 1, 0, 0, 2, 0], //r
+	trait : "Something Catlike (+1 Dexterity, +2 Wisdom)\n  ",  //R
+	abilitySave : 5,  //o
+	variants : ["something great catlike"], //o
+	spellcastingAbility : 6, //r
+	spellcastingBonus : { //o
+		name : "Arcane Initiate", //r
+		class : "wizard", //o
+		school : ["Evoc", "Abjur"], //o
+		level : [0, 4], //O
+		ritual : false, //O
+		spells : ["light", "mending"], //O
+		selection : ["light"], //o
+		times : 2, //o
+		prepared : true, //o
+		atwill : true, //o
+		oncesr : true, //o
+		oncelr : true, //o
+		},
+
+	features : { //o
+		"lesser restoration" : { //note the use of lower case characters
+			name : "Lesser Restoration", //r
+			minlevel : 3, //r
+			usages : 1, //o
+			recovery : "long rest", //required if "usages" is defined
+			tooltip : " (Celestial Legacy)", //o
+			action : ["action", ""], //o
+			spellcastingBonus : { //optional; works just like the "spellcastingBonus" object defined above
+				name : "Celestial Legacy (level 3)",
+				spells : ["lesser restoration"],
+				selection : ["lesser restoration"],
+				oncelr : true,
+			},
+ 
+			dmgres : [["Bludgeoning", "Bludg. (nonmagical)"], ["Piercing", "Pierc. (nonmagical)"], ["Slashing", "Slash. (nonmagical)"]], //o
+
+			addMod : { type : "skill", field : "Init", mod : "Int", text : "I can add my Intelligence modifier to initiative rolls." } //optional; 
+			This is an object, or an array of similar objects, for adding a modifier to a modifier field. 
+			Using this will make it so that the modifier is added to any value that is already there. 
+			// The 'mod' attribute can be any combination of numbers, mathematical operators, and three-letter ability score abbreviations 
+			// The 'type' attribute can be "skill" or "save", but can also be left empty "" 
+			// The 'field' attribute depends on the type, for "skill" it can be the name of a skill, or "Init" for initiative, or "All" for the all skills modifier;
+			for "save" it can be the three-letter abbreviation of an ability score, or "All" for the all saves modifier.
+			// If the 'type' attribute is left empty, the 'field' attribute has to be the exact name of the field the modifier has to be added to
+			// The 'text' attribute is an explanation of why the modifier was added //NOTE: for modifiers to attacks, use calcChanges
+		},
+
+		"breath weapon" : {
+			name : "Breath Weapon",
+			minlevel : 1,
+			usages : 1,
+			additional : ["2d6", "2d6", "2d6", "2d6", "2d6", "3d6", "3d6", "3d6", "3d6", "3d6", "4d6", "4d6", "4d6", "4d6", "4d6", "5d6", "5d6", "5d6", "5d6", "5d6"],  //optional; text to display in the description field of the limited feature. This can be one value, but can also be an array of 20 values, one for each level.
+			recovery : "short rest",
+			tooltip : "",
+
+			action : ["action", ""], //optional; adds the name of this choice to the action list when chosen. The options are "action", "bonus action", and "reaction" //the second value in the array is added as a suffix for the "name" of the feature when entered into the action field
+		},
+	}
+
+};
+
+
+
+Minotaur, Labyrinthian
+
+Ability Score Improvement. Your Wisdom score increases by 1.
+Born of the Maze. You are never lost except for the effect of a spell. You have advantage against magic of this sort.
+Darkvision. Accustomed to life in a maze, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. Vou can't discern color in darkness, only shades of gray.
+Additional Language. You can also read, write and speak Dwarvish.
+Hardy survival. You gain proficiency in survival or nature.
+Ability Score Improvement. Your Strength score increases by 2.
+Age. Minotaurs age and mature at about the same rate as humans up to the age of 18. From then on they age slowly staying fit for at least 150 years.
+Weight. Minotaurs can range anywhere from 120 pounds to upwards of 350.
+Size. Your base size is Medium. Your are generally around 6-8 feet in height.
+Speed. 30ft
+Powerful Build. 1 size larger for carry, lift, push, drag
+Horns. 1d8+your strength modifier piercing damage. You are proficient with your horns.You gain an additional 1d8 per 4 levels.
+Bull Rush. When you take the Dash action on your turn, you can use your bonus action to make one melee attack with your horns.
+Languages. You can read, write and speak Common and Celestial.
+
+var iFileName = "Homebrew Syntax - RaceList.js"; // O
+RequiredSheetVersion(12.999); // O
+
+RaceList["something catlike"] = { //R
+	regExpSearch : /^(?=.*something)(?=.*catlike).*$/i, //r
+	name : "Something Catlike", //r
+	sortname : "Catlike, Something", //o
+	source : ["HB", 0], //r
+	plural : "Somethings Catlike", //R
+	size : 3, //r
+	speed : { //r
+
+		walk : { spd : 30, enc : 20 }, //R 
+		},
+
+	toolProfs : [["Musical instrument", 3], ["Thieves' tools", "Dex"], "Tinker's tools"], // o
+	languageProfs : ["Elvish", 1], // o
+	weapons : ["talons"], //o
+	addarmor : "Natural Armor", //o
+	vision : [["Darkvision", 60], ["Sunlight Sensitivity", 0]], //o
+	dmgres : ["Necrotic", "Radiant"], //op
+	savetxt : { // O
+		text : ["Dex save vs. area effects: fail \u2015 half dmg, success \u2015 no dmg", "Magic can't put me to sleep"], // O
+		immune : ["poison", "disease"], // O
+		adv_vs : ["traps", "charmed"] // O
+		},
+
+	weaponprofs : [false, false, ["longsword", "shortsword", "longbow", "shortbow"]], //o
+	armor : [false, false, false, true], //o
+	skills : ["Perception", "Deception"], //o
+	skillstxt : "Choose any two skills",  //o
+	age : " reach adulthood in their late teens and live around 100 years", //o
+	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", //o
+	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", //o
+	heightMetric : " range from 1,5 to over 1,8 metres tall (145 + 5d8 cm)", //o
+	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", //o
+	improvements : "Something Catlike: +1 Dexterity, +2 Wisdom;", //r
+	scores : [0, 1, 0, 0, 2, 0], //r
+	trait : "Something Catlike (+1 Dexterity, +2 Wisdom)\n  ",  //R
+	abilitySave : 5,  //o
+	variants : ["something great catlike"], //o
+	spellcastingAbility : 6, //r
+	spellcastingBonus : { //o
+		name : "Arcane Initiate", //r
+		class : "wizard", //o
+		school : ["Evoc", "Abjur"], //o
+		level : [0, 4], //O
+		ritual : false, //O
+		spells : ["light", "mending"], //O
+		selection : ["light"], //o
+		times : 2, //o
+		prepared : true, //o
+		atwill : true, //o
+		oncesr : true, //o
+		oncelr : true, //o
+		},
+
+	features : { //o
+		"lesser restoration" : { //note the use of lower case characters
+			name : "Lesser Restoration", //r
+			minlevel : 3, //r
+			usages : 1, //o
+			recovery : "long rest", //required if "usages" is defined
+			tooltip : " (Celestial Legacy)", //o
+			action : ["action", ""], //o
+			spellcastingBonus : { //optional; works just like the "spellcastingBonus" object defined above
+				name : "Celestial Legacy (level 3)",
+				spells : ["lesser restoration"],
+				selection : ["lesser restoration"],
+				oncelr : true,
+			},
+ 
+			dmgres : [["Bludgeoning", "Bludg. (nonmagical)"], ["Piercing", "Pierc. (nonmagical)"], ["Slashing", "Slash. (nonmagical)"]], //o
+
+			addMod : { type : "skill", field : "Init", mod : "Int", text : "I can add my Intelligence modifier to initiative rolls." } //optional; 
+			This is an object, or an array of similar objects, for adding a modifier to a modifier field. 
+			Using this will make it so that the modifier is added to any value that is already there. 
+			// The 'mod' attribute can be any combination of numbers, mathematical operators, and three-letter ability score abbreviations 
+			// The 'type' attribute can be "skill" or "save", but can also be left empty "" 
+			// The 'field' attribute depends on the type, for "skill" it can be the name of a skill, or "Init" for initiative, or "All" for the all skills modifier;
+			for "save" it can be the three-letter abbreviation of an ability score, or "All" for the all saves modifier.
+			// If the 'type' attribute is left empty, the 'field' attribute has to be the exact name of the field the modifier has to be added to
+			// The 'text' attribute is an explanation of why the modifier was added //NOTE: for modifiers to attacks, use calcChanges
+		},
+
+		"breath weapon" : {
+			name : "Breath Weapon",
+			minlevel : 1,
+			usages : 1,
+			additional : ["2d6", "2d6", "2d6", "2d6", "2d6", "3d6", "3d6", "3d6", "3d6", "3d6", "4d6", "4d6", "4d6", "4d6", "4d6", "5d6", "5d6", "5d6", "5d6", "5d6"],  //optional; text to display in the description field of the limited feature. This can be one value, but can also be an array of 20 values, one for each level.
+			recovery : "short rest",
+			tooltip : "",
+
+			action : ["action", ""], //optional; adds the name of this choice to the action list when chosen. The options are "action", "bonus action", and "reaction" //the second value in the array is added as a suffix for the "name" of the feature when entered into the action field
+		},
+	}
+
+};
