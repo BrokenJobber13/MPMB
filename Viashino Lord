@@ -1,0 +1,98 @@
+var iFileName = "Homebrew Syntax - RaceList.js"; // O
+RequiredSheetVersion(12.999); // O
+
+RaceList["something catlike"] = { //R
+	regExpSearch : /^(?=.*something)(?=.*catlike).*$/i, //r
+	name : "Something Catlike", //r
+	sortname : "Catlike, Something", //o
+	source : ["HB", 0], //r
+	plural : "Somethings Catlike", //R
+	size : 3, //r
+	speed : { //r
+
+		walk : { spd : 30, enc : 20 }, //R 
+		},
+
+	toolProfs : [["Musical instrument", 3], ["Thieves' tools", "Dex"], "Tinker's tools"], // o
+	languageProfs : ["Elvish", 1], // o
+	weapons : ["talons"], //o
+	addarmor : "Natural Armor", //o
+	vision : [["Darkvision", 60], ["Sunlight Sensitivity", 0]], //o
+	dmgres : ["Necrotic", "Radiant"], //op
+	savetxt : { // O
+		text : ["Dex save vs. area effects: fail \u2015 half dmg, success \u2015 no dmg", "Magic can't put me to sleep"], // O
+		immune : ["poison", "disease"], // O
+		adv_vs : ["traps", "charmed"] // O
+		},
+
+	weaponprofs : [false, false, ["longsword", "shortsword", "longbow", "shortbow"]], //o
+	armor : [false, false, false, true], //o
+	skills : ["Perception", "Deception"], //o
+	skillstxt : "Choose any two skills",  //o
+	age : " reach adulthood in their late teens and live around 100 years", //o
+	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", //o
+	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", //o
+	heightMetric : " range from 1,5 to over 1,8 metres tall (145 + 5d8 cm)", //o
+	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", //o
+	improvements : "Something Catlike: +1 Dexterity, +2 Wisdom;", //r
+	scores : [0, 1, 0, 0, 2, 0], //r
+	trait : "Something Catlike (+1 Dexterity, +2 Wisdom)\n  ",  //R
+	abilitySave : 5,  //o
+	variants : ["something great catlike"], //o
+	spellcastingAbility : 6, //r
+	spellcastingBonus : { //o
+		name : "Arcane Initiate", //r
+		class : "wizard", //o
+		school : ["Evoc", "Abjur"], //o
+		level : [0, 4], //O
+		ritual : false, //O
+		spells : ["light", "mending"], //O
+		selection : ["light"], //o
+		times : 2, //o
+		prepared : true, //o
+		atwill : true, //o
+		oncesr : true, //o
+		oncelr : true, //o
+		},
+
+	features : { //o
+		"lesser restoration" : { //note the use of lower case characters
+			name : "Lesser Restoration", //r
+			minlevel : 3, //r
+			usages : 1, //o
+			recovery : "long rest", //required if "usages" is defined
+			tooltip : " (Celestial Legacy)", //o
+			action : ["action", ""], //o
+			spellcastingBonus : { //optional; works just like the "spellcastingBonus" object defined above
+				name : "Celestial Legacy (level 3)",
+				spells : ["lesser restoration"],
+				selection : ["lesser restoration"],
+				oncelr : true,
+			},
+ 
+			dmgres : [["Bludgeoning", "Bludg. (nonmagical)"], ["Piercing", "Pierc. (nonmagical)"], ["Slashing", "Slash. (nonmagical)"]], //o
+
+			addMod : { type : "skill", field : "Init", mod : "Int", text : "I can add my Intelligence modifier to initiative rolls." } //optional; 
+			This is an object, or an array of similar objects, for adding a modifier to a modifier field. 
+			Using this will make it so that the modifier is added to any value that is already there. 
+			// The 'mod' attribute can be any combination of numbers, mathematical operators, and three-letter ability score abbreviations 
+			// The 'type' attribute can be "skill" or "save", but can also be left empty "" 
+			// The 'field' attribute depends on the type, for "skill" it can be the name of a skill, or "Init" for initiative, or "All" for the all skills modifier;
+			for "save" it can be the three-letter abbreviation of an ability score, or "All" for the all saves modifier.
+			// If the 'type' attribute is left empty, the 'field' attribute has to be the exact name of the field the modifier has to be added to
+			// The 'text' attribute is an explanation of why the modifier was added //NOTE: for modifiers to attacks, use calcChanges
+		},
+
+		"breath weapon" : {
+			name : "Breath Weapon",
+			minlevel : 1,
+			usages : 1,
+			additional : ["2d6", "2d6", "2d6", "2d6", "2d6", "3d6", "3d6", "3d6", "3d6", "3d6", "4d6", "4d6", "4d6", "4d6", "4d6", "5d6", "5d6", "5d6", "5d6", "5d6"],  //optional; text to display in the description field of the limited feature. This can be one value, but can also be an array of 20 values, one for each level.
+			recovery : "short rest",
+			tooltip : "",
+
+			action : ["action", ""], //optional; adds the name of this choice to the action list when chosen. The options are "action", "bonus action", and "reaction" //the second value in the array is added as a suffix for the "name" of the feature when entered into the action field
+		},
+	}
+
+};
