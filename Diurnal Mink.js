@@ -20,7 +20,7 @@ RaceList["diurnal mink"] = {
 	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
 	improvements : "Diurnal Mink: +2 Dexterity, +1 Intelligence;", 
 	scores : [0, 2, 0, 1, 0, 0],
-	trait : "Diurnal Mink (+2 Dexterity, +1 Intelligence)\nElectrro\nAs Part of my Action, I can produce my own electricity and channel it into my strikes giving an extra 1d6 Lightning damage.\nInnner Beast\nAs a Bonus Action I can increase my Strength and Speed, +10ft and +3 to hit/damage. Electro Unlimited times. Lasts for 1 minute and after I take one lvl of exhaustion.  ", 
+	trait : "Diurnal Mink (+2 Dexterity, +1 Intelligence)\nElectrro\nAs Part of my Action, I can produce my own electricity and channel it into my strikes giving an extra 1d6 Lightning damage.\nInnner Beast\nAs a Bonus Action I can increase my Strength and Speed, +10ft and +3 to hit/damage. Electro Unlimited times. Adv on all Str/Dex checks. Lasts for 1 minute and after I take one lvl of exhaustion.  ", 
 
 	features : { 
 		"eletro" : { 
