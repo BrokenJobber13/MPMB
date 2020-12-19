@@ -11,9 +11,9 @@ RaceList["diurnal mink"] = {
 	speed : { 
 		walk : { spd : 35, enc : 25 }, 
 		},
-	toolProfs : [["Woodcarver's tools", "Int"]], 
+	toolProfs : ["Woodcarver's tools", "Int"], 
 	languageProfs : ["Common", 1], 
-	vision : [["Darkvision", 60]], 
+	vision : ["Darkvision", 60], 
 	skillstxt : "Choose any two skills",  
 	age : " reach adulthood in their late teens and live around 100 years", 
 	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", 
