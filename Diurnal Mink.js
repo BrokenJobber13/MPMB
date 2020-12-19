@@ -4,9 +4,9 @@ RequiredSheetVersion(12.999);
 RaceList["diurnal mink"] = { 
 	regExpSearch : /^(?=.*diurnal)(?=.*mink).*$/i, 
 	name : "Diurnal Mink",
-	sortname : "Mink",
+	sortname : "Diurnal Mink",
 	source : ["HB", 0], 
-	plural : "Mink's", 
+	plural : "Diurnal Mink's", 
 	size : 3, 
 	speed : { 
 		walk : { spd : 35, enc : 25 }, 
